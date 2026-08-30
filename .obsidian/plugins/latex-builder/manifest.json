@@ -1,0 +1,9 @@
+{
+  "id": "latex-builder",
+  "name": "LaTeX Builder",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Choose a LaTeX file and build it with a local LaTeX compiler.",
+  "author": "Local vault plugin",
+  "isDesktopOnly": true
+}

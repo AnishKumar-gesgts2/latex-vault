@@ -1,0 +1,7 @@
+{
+  "name": "latex-builder",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": { "build": "esbuild main.ts --bundle --external:obsidian --external:electron --external:@codemirror/* --format=cjs --platform=node --target=es2018 --outfile=main.js" },
+  "devDependencies": { "@types/node": "^20.0.0", "esbuild": "^0.24.0", "obsidian": "latest", "typescript": "^5.0.0" }
+}

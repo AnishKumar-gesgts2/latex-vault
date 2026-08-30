@@ -1,0 +1,344 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,enumitem,booktabs,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\setlist{nosep}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\ihat}{\mathbf i}
+\newcommand{\jhat}{\mathbf j}
+\newcommand{\khat}{\mathbf k}
+\newcommand{\answer}[1]{\boxed{#1}}
+\title{Chapter 12: Vectors and the Geometry of Space\\\large Worked Solutions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\noindent\textit{Note.} The supplied assignment for 12.1--12.2 is a scan of incomplete handwritten work, so some textbook prompts are not visible. The 12.3 prompts have been matched against the supplied HTML exercise page. The earlier scanned items are reconstructed from their visible data; any remaining ambiguity is identified inline.
+
+\section*{12.1 Three-Dimensional Coordinate Systems}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, start=3]
+\item The distance from $(x,y,z)$ to the $yz$-plane is $|x|$, while the distance to the $xz$-plane is $|y|$. Thus the point with the smallest $|x|$ is closest to the $yz$-plane, and a point on the $xz$-plane has $y=0$. From the diagram/data in the scan, \answer{\text{$C$ is closest to the $yz$-plane and $A$ lies on the $xz$-plane.}}
+
+\setcounter{enumi}{4}
+\item In $\R^2$, the equation $x=4$ fixes one coordinate and leaves $y$ free, so it is a vertical line. In $\R^3$, $x=4$ leaves both $y$ and $z$ free; therefore it is a plane parallel to the $yz$-plane:
+\[
+\answer{x=4\text{ is a plane parallel to the }yz\text{-plane in }\R^3.}
+\]
+
+\setcounter{enumi}{10}
+\item Using the distance formula, the three side lengths shown by the coordinates are
+\[
+PQ=\sqrt{4^2+2^2+4^2}=\sqrt{36}=6,
+\]
+\[
+PR=\sqrt{2^2+4^2+4^2}=\sqrt{36}=6,
+\qquad
+QR=\sqrt{6^2+2^2+0^2}=\sqrt{40}=2\sqrt{10}.
+\]
+Since $PQ=PR$, \answer{\text{$\triangle PQR$ is isosceles.}}
+
+\setcounter{enumi}{14}
+\item The sphere and its intersection with the horizontal plane are
+\[
+(x+3)^2+(y-2)^2+(z-5)^2=16,
+\]
+\[
+z=5\implies (x+3)^2+(y-2)^2=16-0=16.
+\]
+Hence the sphere has center $(-3,2,5)$ and radius $4$, and its trace in the plane $z=5$ is a circle of radius $4$ centered at $(-3,2,5)$.
+
+\setcounter{enumi}{16}
+\item The radius is the distance from $(3,8,1)$ to the point whose coordinate differences are $(1,5,2)$:
+\[
+r=\sqrt{1^2+5^2+2^2}=\sqrt{30}.
+\]
+Therefore
+\[
+\answer{(x-3)^2+(y-8)^2+(z-1)^2=30.}
+\]
+
+\setcounter{enumi}{18}
+\item Completing the distance calculation gives
+\[
+(x+4)^2+y^2+(z-1)^2=8+17=25.
+\]
+Thus the center and radius are
+\[
+\answer{C=(-4,0,1),\qquad R=\sqrt{25}=5.}
+\]
+
+\setcounter{enumi}{24}
+\item The three concentric spheres have center $(-1,4,5)$ and radii $5$, $1$, and $4$, respectively:
+\begin{align*}
+\text{(a)}\quad &(x+1)^2+(y-4)^2+(z-5)^2=25,\\
+\text{(b)}\quad &(x+1)^2+(y-4)^2+(z-5)^2=1,\\
+\text{(c)}\quad &(x+1)^2+(y-4)^2+(z-5)^2=16.
+\end{align*}
+
+\setcounter{enumi}{26}
+\item A plane parallel to the $xy$-plane has constant $z$-coordinate. Therefore
+\[
+\answer{z=-2.}
+\]
+
+\setcounter{enumi}{28}
+\item The region on the indicated side of the plane $y=1$ is described by
+\[
+\answer{y\ge 1}
+\]
+if ``past'' means the side with larger $y$-values. This plane is parallel to the $xz$-plane because its equation fixes $y$.
+
+\setcounter{enumi}{30}
+\item The slab between the parallel planes $x=-1$ and $x=2$ is
+\[
+\answer{-1\le x\le 2.}
+\]
+Both boundary planes are parallel to the $yz$-plane.
+
+\setcounter{enumi}{32}
+\item A circle in the plane $z=-1$, centered at $(0,0,-1)$ with radius $2$, satisfies
+\[
+\answer{x^2+y^2=4,\qquad z=-1.}
+\]
+
+\setcounter{enumi}{34}
+\item A circular cylinder centered on the $x$-axis, with radius $5$ and extending in the $x$-direction, has no $x$ restriction. Its cross-section in the $yz$-plane is
+\[
+\answer{y^2+z^2=25.}
+\]
+
+\setcounter{enumi}{36}
+\item A sphere centered at the origin with radius $2$ has equation
+\[
+\answer{x^2+y^2+z^2=4.}
+\]
+
+\setcounter{enumi}{38}
+\item The region between the concentric spheres of radii $1$ and $\sqrt5$ is the spherical shell
+\[
+\answer{1\le x^2+y^2+z^2\le 5.}
+\]
+
+\setcounter{enumi}{40}
+\item A cube with opposite vertices $(0,0,0)$ and $(3,3,3)$ is the box
+\[
+\answer{0\le x\le3,\qquad 0\le y\le3,\qquad 0\le z\le3.}
+\]
+
+\setcounter{enumi}{44}
+\item The spherical shell between radii $r$ and $R$ centered at the origin is
+\[
+\answer{r^2\le x^2+y^2+z^2\le R^2.}
+\]
+\end{enumerate}
+
+\section*{12.2 Vectors}
+\begin{enumerate}[label=\textbf{\arabic*.}, start=9]
+\item The vector shown has components $(3,1)$, so in standard unit-vector notation
+\[
+\answer{\vect v=3\ihat+\jhat=\langle3,1\rangle.}
+\]
+
+\setcounter{enumi}{16}
+\item In three dimensions, the component form is
+\[
+\answer{\vect v=3\ihat+8\jhat+\khat=\langle3,8,1\rangle.}
+\]
+
+\setcounter{enumi}{18}
+\item For the two planar vectors shown, the magnitudes are
+\[
+\|\langle6,3\rangle\|=\sqrt{6^2+3^2}=3\sqrt5,
+\qquad
+\|\langle6,14\rangle\|=\sqrt{6^2+14^2}=2\sqrt{58}.
+\]
+\textit{(The scan's handwritten ``5'' and ``13'' appear to be side calculations for different component data; the formula above uses the visible vectors.)}
+
+\setcounter{enumi}{20}
+\item Suppose $\vect a+\vect b=6\ihat-3\jhat-2\khat$ and $4\vect a+2\vect b=20\ihat-12\jhat$. From the first equation, $\vect b=\vect s-\vect a$, where $\vect s=\langle6,-3,-2\rangle$. Substitute:
+\[
+4\vect a+2(\vect s-\vect a)=\langle20,-12,0\rangle
+\implies 2\vect a=\langle8,-6,4\rangle,
+\]
+\[
+\vect a=\langle4,-3,2\rangle,
+\qquad
+\vect b=\langle2,0,-4\rangle.
+\]
+Therefore
+\[
+\|\vect a\|=\sqrt{4^2+(-3)^2+2^2}=\sqrt{29},
+\]
+\[
+\vect a-\vect b=\langle2,-3,6\rangle,
+\qquad
+\answer{\|\vect a-\vect b\|=\sqrt{2^2+(-3)^2+6^2}=7.}
+\]
+
+\setcounter{enumi}{22}
+\item Normalize the vector:
+\[
+\|\langle6,-2\rangle\|=\sqrt{36+4}=\sqrt{40}=2\sqrt{10},
+\]
+\[
+\answer{\frac{\langle6,-2\rangle}{\sqrt{40}}=\left\langle\frac3{\sqrt{10}},-\frac1{\sqrt{10}}\right\rangle.}
+\]
+
+\setcounter{enumi}{24}
+\item If $\vect v=8\ihat-\jhat+4\khat$, then $\|\vect v\|=\sqrt{64+1+16}=9$. The unit vector in its direction is
+\[
+\answer{\frac{\vect v}{\|\vect v\|}=\left\langle\frac89,-\frac19,\frac49\right\rangle.}
+\]
+
+\setcounter{enumi}{25}
+\item For $\vect v=\langle6,2,-3\rangle$,
+\[
+\|\vect v\|=\sqrt{36+4+9}=7,
+\qquad
+4\frac{\vect v}{\|\vect v\|}=4\left\langle\frac67,\frac27,-\frac37\right\rangle.
+\]
+Thus
+\[
+\answer{4\frac{\vect v}{\|\vect v\|}=\left\langle\frac{24}{7},\frac87,-\frac{12}{7}\right\rangle.}
+\]
+
+\setcounter{enumi}{26}
+\item With $\vect u=\langle1,\sqrt3\rangle$ and $\vect v=\langle1,0\rangle$,
+\[
+\cos\theta=\frac{\vect u\cdot\vect v}{\|\vect u\|\|\vect v\|}
+ =\frac{1}{2\cdot1}=\frac12.
+\]
+Hence \answer{\theta=\pi/3} (that is, $60^\circ$).
+
+\setcounter{enumi}{30}
+\item A vector of magnitude $60$ making an angle of $40^\circ$ with the positive $x$-axis has components
+\[
+\answer{\vect v=\langle60\cos40^\circ,\,60\sin40^\circ\rangle.}
+\]
+
+\setcounter{enumi}{40}
+\item For $y=x^2$, the tangent direction is $\langle1,y'\rangle$. Since $y'=2x$,
+\[
+y'(2)=4,
+\qquad
+\vect t=\langle1,4\rangle.
+\]
+Normalizing gives
+\[
+\answer{\widehat{\vect t}=\frac{\langle1,4\rangle}{\sqrt{17}}.}
+\]
+
+\setcounter{enumi}{46}
+\item The locus of points one unit from $P_0=(x_0,y_0,z_0)$ is given by
+\[
+\|\vect r-\vect r_0\|=1
+\implies
+\sqrt{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2}=1.
+\]
+Squaring,
+\[
+\answer{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2=1,}
+\]
+which is the sphere centered at $(x_0,y_0,z_0)$ with radius $1$.
+\end{enumerate}
+
+\section*{12.3 The Dot Product}
+\begin{enumerate}[label=\textbf{\arabic*.}, start=1]
+\item Which of the following expressions are meaningful? Which are meaningless? Explain.
+\begin{enumerate}[label=(\alph*)]
+\item $(\vect a\cdot\vect b)\cdot\vect c$ is meaningless: $\vect a\cdot\vect b$ is a scalar, and a dot product requires two vectors.
+\item $(\vect a\cdot\vect b)\vect c$ is meaningful as scalar multiplication, so it produces a vector.
+\item $|\vect a|(\vect b\cdot\vect c)$ is meaningful: it is scalar multiplication and produces a scalar.
+\item $\vect a\cdot(\vect b+\vect c)$ is meaningful and produces a scalar.
+\item $\vect a\cdot\vect b+\vect c$ is meaningless: a scalar cannot be added to a vector.
+\item $|\vect a|\cdot(\vect b+\vect c)$ is meaningless: the dot product is not defined between a scalar and a vector.
+\end{enumerate}
+
+\setcounter{enumi}{4}
+\item Compute componentwise:
+\[
+\langle4,1,\tfrac14\rangle\cdot\langle6,-3,-8\rangle
+ =4(6)+1(-3)+\tfrac14(-8)
+ =24-3-2
+ =\answer{19}.
+\]
+
+\setcounter{enumi}{8}
+\item Using $\vect a\cdot\vect b=\|\vect a\|\|\vect b\|\cos\theta$ with magnitudes $4$ and $7$ and angle $30^\circ$,
+\[
+\vect a\cdot\vect b=4(7)\cos30^\circ
+ =28\left(\frac{\sqrt3}{2}\right)
+ =\answer{14\sqrt3}.
+\]
+
+\setcounter{enumi}{14}
+\item For $\vect u=\langle5,1\rangle$ and $\vect v=\langle3,2\rangle$,
+\[
+\vect u\cdot\vect v=5(3)+1(2)=17,
+\qquad
+\|\vect u\|=\sqrt{26},\quad \|\vect v\|=\sqrt{13}.
+\]
+Thus
+\[
+\cos\theta=\frac{17}{\sqrt{26}\sqrt{13}}=\frac{17}{13\sqrt2},
+\qquad
+\answer{\theta=\cos^{-1}\left(\frac{17}{13\sqrt2}\right)\approx22^\circ.}
+\]
+
+\setcounter{enumi}{18}
+\item For $\vect u=\ihat-4\jhat+\khat=\langle1,-4,1\rangle$ and $\vect v=-3\ihat+\jhat+5\khat=\langle-3,1,5\rangle$,
+\[
+\vect u\cdot\vect v=1(-3)+(-4)(1)+1(5)=-2,
+\]
+\[
+\|\vect u\|=\sqrt{1+16+1}=\sqrt{18},
+\qquad
+\|\vect v\|=\sqrt{9+1+25}=\sqrt{35}.
+\]
+Therefore
+\[
+\cos\theta=\frac{-2}{\sqrt{18}\sqrt{35}}=\frac{-2}{3\sqrt{70}},
+\]
+so
+\[
+\answer{\theta=\cos^{-1}\left(\frac{-2}{3\sqrt{70}}\right)\approx95^\circ.}
+\]
+
+\setcounter{enumi}{22}
+\item Determine whether the pairs are perpendicular, parallel, or neither by computing the dot product.
+\begin{enumerate}[label=(\alph*)]
+\item
+\[
+\langle9,3\rangle\cdot\langle-2,6\rangle=-18+18=0.
+\]
+Thus \answer{\text{the vectors are perpendicular}.}
+\item
+\[
+\langle4,5,-2\rangle\cdot\langle3,-1,5\rangle
+ =12-5-10=-3\ne0.
+\]
+The vectors are not scalar multiples, so \answer{\text{neither}}.
+\item
+\[
+\langle-8,12,4\rangle\cdot\langle6,-9,-3\rangle
+ =-48-108-12=-168\ne0.
+\]
+Because
+\[
+\langle-8,12,4\rangle=-\frac43\langle6,-9,-3\rangle,
+\]
+the vectors are scalar multiples, so \answer{\text{parallel}}.
+\item
+\[
+\langle3,-1,3\rangle\cdot\langle5,9,-2\rangle
+ =15-9-6=0.
+\]
+Thus \answer{\text{the vectors are perpendicular}}.
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

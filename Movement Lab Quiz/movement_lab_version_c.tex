@@ -1,0 +1,30 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\setlength{\parindent}{0pt}
+\newcommand{\answerbox}{\vspace{0.15in}\hrulefill\vspace{0.15in}}
+\newcommand{\graphbox}[2]{\begin{center}\begin{tikzpicture}[x=0.8cm,y=0.8cm]
+\draw[->] (0,0)--(8,0);
+\draw[->] (0,0)--(0,4.0);
+\end{tikzpicture}\end{center}}
+\begin{document}
+\begin{center}\Large\textbf{Movement Lab Quiz -- Version C}\end{center}
+\vspace{0.1in}\textbf{Name:} \rule{2.1in}{0.4pt}\hfill\textbf{Period:} \rule{0.65in}{0.4pt}\hfill\textbf{Date:} \rule{1.1in}{0.4pt}
+\vspace{0.2in}
+\begin{enumerate}[leftmargin=*, itemsep=0.35in]
+\item An object moves between two points, Point A and Point B, which are \SI{5}{\meter} apart. Starting from Point B, it has a negative velocity and a positive acceleration, pointing to the right. Upon reaching Point A, the object stops and then returns to Point B. What is the total distance covered and what is the final displacement?
+\answerbox
+\vfill
+\item An object has a constant negative velocity. Sketch a position-time graph given the object starts at $x=\SI{4}{\meter}$. (Remember to add units and label your graph.)
+\graphbox{$t$}{$x$}
+\vfill
+\item An object is moving at a constant velocity until time $t=5$. At that point, a constant positive acceleration is applied to the object. Sketch a velocity-time graph given that the object starts at $-2\frac{m}{s}$.
+\begin{center}\begin{tikzpicture}[x=0.8cm,y=0.8cm]
+\draw[->] (0,0)--(8,0);
+\draw[<->] (0,-4.0)--(0,4.0);
+\end{tikzpicture}\end{center}
+\end{enumerate}
+\end{document}

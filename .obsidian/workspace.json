@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "612fae404f61409f",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1a8a10c914e8c6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72c954b2abf2f435",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Movement Lab Quiz/movement_lab_version_c.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "movement_lab_version_c"
+            }
+          },
+          {
+            "id": "e2420e000000f598",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Multi Chapter 12/Chapter_12_Solutions.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Chapter_12_Solutions"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "68aa1c9905336ac6",
+    "type": "split",
+    "children": [
+      {
+        "id": "73761699f9335f61",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "82ff8bd32367bbbc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "860a0ed498558e30",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b39bad8e306a5469",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "668f43da368a0cb3",
+    "type": "split",
+    "children": [
+      {
+        "id": "b0bc13ffbd1e0fa0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f4600d8103419494",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "movement_lab_version_b.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b21d2ee9a94cc0e7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "movement_lab_version_b.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "3f77903c16bc4620",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "42486db9e530a865",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "939240124206f19b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "movement_lab_version_b.pdf",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "9ceb86bc0e72184f",
+            "type": "leaf",
+            "state": {
+              "type": "SC-custom-variables-view",
+              "state": {},
+              "icon": "code-glyph",
+              "title": "Shell commands: Custom variables"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-shellcommands:Shell commands: Custom variables": false
+    }
+  },
+  "active": "e2420e000000f598",
+  "lastOpenFiles": [
+    "CHAPTER_12_STATUS.md",
+    "README.md",
+    "Multi Chapter 12/Chapter_12_Solutions.pdf",
+    "Multi Chapter 12/Chapter_12_Solutions.aux",
+    "Multi Chapter 12/Chapter_12_Solutions.log",
+    "Multi Chapter 12/README.md",
+    "Multi Chapter 12/Chapter_12_Solutions.tex",
+    "Multi Chapter 12",
+    "work",
+    "Movement Lab Quiz/movement_lab_version_c.pdf",
+    "Movement Lab Quiz",
+    "Movement Lab Quiz/movement_lab_version_b.pdf",
+    "Movement Lab Quiz/movement_lab_version_a.pdf"
+  ]
+}
