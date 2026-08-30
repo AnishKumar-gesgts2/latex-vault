@@ -5,7 +5,7 @@ This repository is an Obsidian vault containing the multivariable-calculus work 
 ## Export to PDF
 
 1. Install a LaTeX distribution such as MiKTeX or TeX Live, and make sure `pdflatex` is available.
-2. In Obsidian, open `C:\Users\notso\Documents\Workspace\Latex Vault`.
+2. In Obsidian, open `C:\Users\notso\Documents\Latex Vault`.
 3. Use the command palette (`Ctrl+P`) and run **LaTeX: Build current file**, or run **LaTeX: Choose file to build** to select any `.tex` file in the vault.
 4. The resulting PDF is written beside its source file. Run the command again if you later add cross-references.
 
