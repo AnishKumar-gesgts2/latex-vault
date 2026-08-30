@@ -187,8 +187,8 @@
             "state": {
               "type": "SC-custom-variables-view",
               "state": {},
-              "icon": "code-glyph",
-              "title": "Shell commands: Custom variables"
+              "icon": "lucide-ghost",
+              "title": "SC-custom-variables-view"
             }
           }
         ],
@@ -213,19 +213,30 @@
   },
   "active": "e2420e000000f598",
   "lastOpenFiles": [
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img0075-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/GtRangy.min.js.download",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img5420-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img4574-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/GtPdfJS.min.js.download",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/onload.min.js.download",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/rangy.js.download",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img4577-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/saved_resource.html",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img4575-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/bd_ch_13_sect_06_04.html",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img4576-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img4573-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img4572-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img4571-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img4570-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img5428-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ReadSpeaker.Core.js.download",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ReadSpeaker.Styles.css",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/webReader.js.download",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/pdf.viewer.min.js.download",
     "GIT_SYNC.md",
     "CHAPTER_12_STATUS.md",
     "README.md",
-    "Multi Chapter 12/Chapter_12_Solutions.pdf",
-    "Multi Chapter 12/Chapter_12_Solutions.aux",
-    "Multi Chapter 12/Chapter_12_Solutions.log",
-    "Multi Chapter 12/README.md",
-    "Multi Chapter 12/Chapter_12_Solutions.tex",
-    "Multi Chapter 12",
-    "work",
-    "Movement Lab Quiz/movement_lab_version_c.pdf",
-    "Movement Lab Quiz",
-    "Movement Lab Quiz/movement_lab_version_b.pdf",
-    "Movement Lab Quiz/movement_lab_version_a.pdf"
+    "Multi Chapter 12/README.md"
   ]
 }

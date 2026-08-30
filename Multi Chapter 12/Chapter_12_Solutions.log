@@ -1,33 +1,33 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.25)  29 AUG 2026 21:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.16)  29 AUG 2026 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"C:/Users/notso/Documents/Latex/Multi Chapter 12/Chapter_12_Solutions.tex"
-(C:/Users/notso/Documents/Latex/Multi Chapter 12/Chapter_12_Solutions.tex
-LaTeX2e <2026-06-01>
-L3 programming layer <2026-07-20>
+**./Chapter_12_Solutions.tex
+(Chapter_12_Solutions.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
 File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count276
-\c@section=\count277
-\c@subsection=\count278
-\c@subsubsection=\count279
-\c@paragraph=\count280
-\c@subparagraph=\count281
-\c@figure=\count282
-\c@table=\count283
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen150
+\bibindent=\dimen148
 )
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2026/03/07 v6.0 Page Geometry
+Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
@@ -36,22 +36,22 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count284
-\Gm@cntv=\count285
-\c@Gm@tempcnt=\count286
-\Gm@bindingoffset=\dimen151
-\Gm@wd@mp=\dimen152
-\Gm@odd@mp=\dimen153
-\Gm@even@mp=\dimen154
-\Gm@layoutwidth=\dimen155
-\Gm@layoutheight=\dimen156
-\Gm@layouthoffset=\dimen157
-\Gm@layoutvoffset=\dimen158
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
 \Gm@dimlist=\toks18
 
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2026/05/19 v2.18d AMS math features
+Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
@@ -61,23 +61,23 @@ Package: amstext 2024/11/17 v2.01 AMS text
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
-\ex@=\dimen159
+\ex@=\dimen157
 ))
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen160
+\pmbraise@=\dimen158
 )
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count287
+\inf@bad=\count286
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count288
-\leftroot@=\count289
+\uproot@=\count287
+\leftroot@=\count288
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count290
-\DOTSCASE@=\count291
+\classnum@=\count289
+\DOTSCASE@=\count290
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -87,36 +87,36 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen161
+\big@size=\dimen159
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count292
+\macc@depth=\count291
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count293
+\c@MaxMatrixCols=\count292
 \dotsspace@=\muskip17
-\c@parentequation=\count294
-\dspbrk@lvl=\count295
+\c@parentequation=\count293
+\dspbrk@lvl=\count294
 \tag@help=\toks20
-\row@=\count296
-\column@=\count297
-\maxfields@=\count298
+\row@=\count295
+\column@=\count296
+\maxfields@=\count297
 \andhelp@=\toks21
-\eqnshift@=\dimen162
-\alignsep@=\dimen163
-\tagshift@=\dimen164
-\tagwidth@=\dimen165
-\totwidth@=\dimen166
-\lineht@=\dimen167
+\eqnshift@=\dimen160
+\alignsep@=\dimen161
+\tagshift@=\dimen162
+\tagwidth@=\dimen163
+\totwidth@=\dimen164
+\lineht@=\dimen165
 \@envbody=\toks22
 \multlinegap=\skip52
 \multlinetaggap=\skip53
 \mathdisplay@stack=\toks23
-LaTeX Info: Redefining \[ on input line 2965.
-LaTeX Info: Redefining \] on input line 2966.
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
 )
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -143,61 +143,61 @@ Package: amsthm 2020/05/29 v2.20.6
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip57
-\enit@outerparindent=\dimen168
+\enit@outerparindent=\dimen166
 \enit@toks=\toks30
 \enit@inbox=\box55
-\enit@count@id=\count299
-\enitdp@description=\count300
+\enit@count@id=\count298
+\enitdp@description=\count299
 )
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen169
-\lightrulewidth=\dimen170
-\cmidrulewidth=\dimen171
-\belowrulesep=\dimen172
-\belowbottomsep=\dimen173
-\aboverulesep=\dimen174
-\abovetopsep=\dimen175
-\cmidrulesep=\dimen176
-\cmidrulekern=\dimen177
-\defaultaddspace=\dimen178
-\@cmidla=\count301
-\@cmidlb=\count302
-\@aboverulesep=\dimen179
-\@belowrulesep=\dimen180
-\@thisruleclass=\count303
-\@lastruleclass=\count304
-\@thisrulewidth=\dimen181
+\heavyrulewidth=\dimen167
+\lightrulewidth=\dimen168
+\cmidrulewidth=\dimen169
+\belowrulesep=\dimen170
+\belowbottomsep=\dimen171
+\aboverulesep=\dimen172
+\abovetopsep=\dimen173
+\cmidrulesep=\dimen174
+\cmidrulekern=\dimen175
+\defaultaddspace=\dimen176
+\@cmidla=\count300
+\@cmidlb=\count301
+\@aboverulesep=\dimen177
+\@belowrulesep=\dimen178
+\@thisruleclass=\count302
+\@lastruleclass=\count303
+\@thisrulewidth=\dimen179
 )
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count305
-\calc@Bcount=\count306
-\calc@Adimen=\dimen182
-\calc@Bdimen=\dimen183
+\calc@Acount=\count304
+\calc@Bcount=\count305
+\calc@Adimen=\dimen180
+\calc@Bdimen=\dimen181
 \calc@Askip=\skip58
 \calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count307
+\calc@Ccount=\count306
 \calc@Cskip=\skip60
 )
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count308
-\l_MT_multwidth_dim=\dimen184
+\g_MT_multlinerow_int=\count307
+\l_MT_multwidth_dim=\dimen182
 \origjot=\skip61
-\l_MT_shortvdotswithinadjustabove_dim=\dimen185
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen186
-\l_MT_above_intertext_sep=\dimen187
-\l_MT_below_intertext_sep=\dimen188
-\l_MT_above_shortintertext_sep=\dimen189
-\l_MT_below_shortintertext_sep=\dimen190
+\l_MT_shortvdotswithinadjustabove_dim=\dimen183
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen184
+\l_MT_above_intertext_sep=\dimen185
+\l_MT_below_intertext_sep=\dimen186
+\l_MT_above_shortintertext_sep=\dimen187
+\l_MT_below_shortintertext_sep=\dimen188
 \xmathstrut@box=\box56
-\xmathstrut@dim=\dimen191
+\xmathstrut@dim=\dimen189
 ) (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 )
@@ -244,8 +244,8 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
-File: l3backend-pdftex.def 2026-07-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count309
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count308
 ) (Chapter_12_Solutions.aux)
 \openout1 = `Chapter_12_Solutions.aux'.
 
@@ -299,10 +299,10 @@ LaTeX Font Info:    ... okay on input line 17.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
@@ -319,16 +319,16 @@ File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count310
-\scratchdimen=\dimen192
+\scratchcounter=\count309
+\scratchdimen=\dimen190
 \scratchbox=\box57
-\nofMPsegments=\count311
-\nofMParguments=\count312
+\nofMPsegments=\count310
+\nofMParguments=\count311
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count313
-\MPscratchDim=\dimen193
-\MPnumerator=\count314
-\makeMPintoPDFobject=\count315
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen191
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
 \everyMPtoPDFconversion=\toks32
 )))
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -341,50 +341,53 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\Gin@req@height=\dimen194
-\Gin@req@width=\dimen195
+\Gin@req@height=\dimen192
+\Gin@req@width=\dimen193
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-4.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+8.
  (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-4.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+8.
 
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-24.
+18.
 
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-24.
+18.
 
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 24.
+(Font)              <12> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 24.
+(Font)              <8> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 24.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+(Font)              <6> on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
 
 
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
 
 
 (C:\Users\notso\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 24.
+
 [1
 
 {C:/Users/notso/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/nots
@@ -393,37 +396,39 @@ pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/notso/AppDat
 a/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/notso/AppDat
 a/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/notso/AppDat
 a/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [2] [3] [4]
-[5] (Chapter_12_Solutions.aux)
+(Chapter_12_Additional_Solutions.tex [5] [6] [7] [8]) [9]
+(Chapter_12_Solutions.aux)
  ***********
-LaTeX2e <2026-06-01>
-L3 programming layer <2026-07-20>
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4609 strings out of 467501
- 71729 string characters out of 5408550
- 495758 words of memory out of 5000000
- 33779 multiletter control sequences out of 15000+600000
- 682112 words of font info for 75 fonts, out of 8000000 for 9000
+ 4630 strings out of 467871
+ 72044 string characters out of 5418376
+ 491212 words of memory out of 5000000
+ 33429 multiletter control sequences out of 15000+600000
+ 689127 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,10n,70p,543b,306s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,14n,70p,516b,306s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
-b><C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pf
-b><C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pf
-b><C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb
-><C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
-<C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><
-C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:
-/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:
-/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:
-/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/
-Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb>
-Output written on "C:\Users\notso\Documents\Latex\Multi Chapter 12\Chapter_12_S
-olutions.pdf" (5 pages, 229197 bytes).
+b><C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb
+><C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb
+><C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb
+><C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb>
+<C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><
+C:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C
+:/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:
+/Users/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/U
+sers/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/U
+sers/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/U
+sers/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Us
+ers/notso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb>
+Output written on Chapter_12_Solutions.pdf (9 pages, 277042 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 113 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
