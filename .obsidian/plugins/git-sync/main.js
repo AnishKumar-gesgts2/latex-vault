@@ -2,6 +2,8 @@ const { Plugin, Notice } = require('obsidian');
 const { execFile } = require('child_process');
 
 class GitSyncPlugin extends Plugin {
+  running = false;
+
   async onload() {
     this.addCommand({
       id: 'pull-latest-vault-changes',
@@ -17,7 +19,8 @@ class GitSyncPlugin extends Plugin {
   }
 
   vaultPath() {
-    const basePath = this.app.vault.adapter.basePath;
+    const adapter = this.app.vault.adapter;
+    const basePath = typeof adapter.getBasePath === 'function' ? adapter.getBasePath() : adapter.basePath;
     if (!basePath) {
       throw new Error('Obsidian did not expose the local vault path.');
     }
@@ -29,6 +32,7 @@ class GitSyncPlugin extends Plugin {
       execFile('git', args, {
         cwd: this.vaultPath(),
         windowsHide: true,
+        env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
         maxBuffer: 10 * 1024 * 1024
       }, (error, stdout, stderr) => {
         if (error) {
@@ -42,16 +46,29 @@ class GitSyncPlugin extends Plugin {
   }
 
   async pullLatest() {
+    if (this.running) {
+      new Notice('A Git operation is already running.');
+      return;
+    }
+    this.running = true;
     try {
       new Notice('Pulling the latest vault changes from GitHub...');
-      const output = await this.runGit(['pull', '--ff-only']);
+      const branch = (await this.runGit(['branch', '--show-current'])) || 'main';
+      const output = await this.runGit(['pull', '--ff-only', 'origin', branch]);
       new Notice(output || 'Vault is already up to date.');
     } catch (error) {
-      new Notice(`Git pull failed: ${error.message}`, 10000);
+      new Notice(`Git pull failed: ${error instanceof Error ? error.message : String(error)}`, 10000);
+    } finally {
+      this.running = false;
     }
   }
 
   async commitAndPush() {
+    if (this.running) {
+      new Notice('A Git operation is already running.');
+      return;
+    }
+    this.running = true;
     try {
       const status = await this.runGit(['status', '--porcelain']);
       if (!status) {
@@ -63,10 +80,13 @@ class GitSyncPlugin extends Plugin {
       await this.runGit(['add', '--all']);
       const stamp = new Date().toISOString().replace('T', ' ').replace(/\.\d{3}Z$/, ' UTC');
       await this.runGit(['commit', '-m', `Update vault: ${stamp}`]);
-      const output = await this.runGit(['push']);
+      const branch = (await this.runGit(['branch', '--show-current'])) || 'main';
+      const output = await this.runGit(['push', 'origin', branch]);
       new Notice(output || 'Vault changes pushed to GitHub.');
     } catch (error) {
-      new Notice(`Git push failed: ${error.message}`, 10000);
+      new Notice(`Git push failed: ${error instanceof Error ? error.message : String(error)}`, 10000);
+    } finally {
+      this.running = false;
     }
   }
 }

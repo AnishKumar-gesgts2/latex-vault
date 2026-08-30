@@ -36,8 +36,18 @@ var LatexBuilderPlugin = class extends import_obsidian.Plugin {
   async onload() {
     await this.loadSettings();
     this.addCommand({
-      id: "build-latex-file",
-      name: "Build a LaTeX file",
+      id: "build-current-latex-file",
+      name: "LaTeX: Build current file",
+      checkCallback: (checking) => {
+        const file = this.app.workspace.getActiveFile();
+        const available = (file == null ? void 0 : file.extension.toLowerCase()) === "tex";
+        if (!checking && available) this.build(file);
+        return available;
+      }
+    });
+    this.addCommand({
+      id: "choose-latex-file-to-build",
+      name: "LaTeX: Choose file to build",
       callback: () => new LatexFileModal(this.app, this.settings, (file) => this.build(file)).open()
     });
     this.addSettingTab(new LatexBuilderSettingTab(this.app, this));
@@ -50,13 +60,12 @@ var LatexBuilderPlugin = class extends import_obsidian.Plugin {
   }
   build(file) {
     var _a;
-    const args = this.settings.arguments.replace(/\{file\}/g, file.name).trim().split(/\s+/).filter(Boolean);
+    const args = this.tokenize(this.settings.arguments.replace(/\{file\}/g, file.name));
     const command = `${this.settings.compiler} ${args.join(" ")}`;
     new import_obsidian.Notice(`Building ${file.name}...`);
-    const adapter = this.app.vault.adapter;
-    const basePath = adapter.getBasePath ? adapter.getBasePath() : "";
-    const workingDirectory = ((_a = file.parent) == null ? void 0 : _a.path) ? `${basePath}\\${file.parent.path}` : basePath;
-    (0, import_child_process.execFile)(this.settings.compiler, args, { cwd: workingDirectory }, (error, stdout, stderr) => {
+    const basePath = this.getVaultPath();
+    const workingDirectory = ((_a = file.parent) == null ? void 0 : _a.path) ? `${basePath}\\${file.parent.path.replace(/\//g, "\\")}` : basePath;
+    (0, import_child_process.execFile)(this.settings.compiler, args, { cwd: workingDirectory, timeout: 12e4, windowsHide: true }, (error, stdout, stderr) => {
       if (error) {
         new BuildOutputModal(this.app, `Build failed
 
@@ -73,6 +82,17 @@ ${command}
 ${stdout || "No compiler output."}`).open();
     });
   }
+  tokenize(value) {
+    const tokens = value.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
+    return tokens.map((token) => token.replace(/^"|"$/g, "")).filter(Boolean);
+  }
+  getVaultPath() {
+    var _a;
+    const adapter = this.app.vault.adapter;
+    const basePath = ((_a = adapter.getBasePath) == null ? void 0 : _a.call(adapter)) || adapter.basePath;
+    if (!basePath) throw new Error("Obsidian did not expose the local vault path.");
+    return basePath;
+  }
 };
 var LatexFileModal = class extends import_obsidian.Modal {
   constructor(app, settings, onChoose) {
@@ -83,7 +103,6 @@ var LatexFileModal = class extends import_obsidian.Modal {
   onOpen() {
     this.titleEl.setText("Build a LaTeX file");
     this.contentEl.createEl("p", { text: `Compiler: ${this.settings.compiler}` });
-    const files = this.app.vault.getMarkdownFiles();
     const texFiles = this.app.vault.getFiles().filter((file) => file.extension.toLowerCase() === "tex");
     if (texFiles.length === 0) {
       this.contentEl.createEl("p", { text: "No .tex files were found in this vault." });

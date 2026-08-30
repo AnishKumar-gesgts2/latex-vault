@@ -17,8 +17,18 @@ export default class LatexBuilderPlugin extends Plugin {
 	async onload(): Promise<void> {
 		await this.loadSettings();
 		this.addCommand({
-			id: "build-latex-file",
-			name: "Build a LaTeX file",
+			id: "build-current-latex-file",
+			name: "LaTeX: Build current file",
+			checkCallback: (checking) => {
+				const file = this.app.workspace.getActiveFile();
+				const available = file?.extension.toLowerCase() === "tex";
+				if (!checking && available) this.build(file as TFile);
+				return available;
+			}
+		});
+		this.addCommand({
+			id: "choose-latex-file-to-build",
+			name: "LaTeX: Choose file to build",
 			callback: () => new LatexFileModal(this.app, this.settings, (file) => this.build(file)).open()
 		});
 		this.addSettingTab(new LatexBuilderSettingTab(this.app, this));
@@ -33,17 +43,12 @@ export default class LatexBuilderPlugin extends Plugin {
 	}
 
 	private build(file: TFile): void {
-		const args = this.settings.arguments
-			.replace(/\{file\}/g, file.name)
-			.trim()
-			.split(/\s+/)
-			.filter(Boolean);
+		const args = this.tokenize(this.settings.arguments.replace(/\{file\}/g, file.name));
 		const command = `${this.settings.compiler} ${args.join(" ")}`;
 		new Notice(`Building ${file.name}...`);
-		const adapter = this.app.vault.adapter as { getBasePath?: () => string };
-		const basePath = adapter.getBasePath ? adapter.getBasePath() : "";
-		const workingDirectory = file.parent?.path ? `${basePath}\\${file.parent.path}` : basePath;
-		execFile(this.settings.compiler, args, { cwd: workingDirectory }, (error, stdout, stderr) => {
+		const basePath = this.getVaultPath();
+		const workingDirectory = file.parent?.path ? `${basePath}\\${file.parent.path.replace(/\//g, "\\")}` : basePath;
+		execFile(this.settings.compiler, args, { cwd: workingDirectory, timeout: 120000, windowsHide: true }, (error, stdout, stderr) => {
 			if (error) {
 				new BuildOutputModal(this.app, `Build failed\n\n${command}\n\n${stderr || stdout || error.message}`).open();
 				return;
@@ -51,6 +56,18 @@ export default class LatexBuilderPlugin extends Plugin {
 			new Notice(`Built ${file.basename}.pdf`);
 			new BuildOutputModal(this.app, `Build succeeded\n\n${command}\n\n${stdout || "No compiler output."}`).open();
 		});
+	}
+
+	private tokenize(value: string): string[] {
+		const tokens = value.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
+		return tokens.map((token) => token.replace(/^"|"$/g, "")).filter(Boolean);
+	}
+
+	private getVaultPath(): string {
+		const adapter = this.app.vault.adapter as { getBasePath?: () => string; basePath?: string };
+		const basePath = adapter.getBasePath?.() || adapter.basePath;
+		if (!basePath) throw new Error("Obsidian did not expose the local vault path.");
+		return basePath;
 	}
 }
 
@@ -67,7 +84,6 @@ class LatexFileModal extends Modal {
 	onOpen(): void {
 		this.titleEl.setText("Build a LaTeX file");
 		this.contentEl.createEl("p", { text: `Compiler: ${this.settings.compiler}` });
-		const files = this.app.vault.getMarkdownFiles();
 		const texFiles = this.app.vault.getFiles().filter((file) => file.extension.toLowerCase() === "tex");
 		if (texFiles.length === 0) {
 			this.contentEl.createEl("p", { text: "No .tex files were found in this vault." });
@@ -79,7 +95,6 @@ class LatexFileModal extends Modal {
 				this.onChoose(file);
 			}));
 		}
-		void files;
 	}
 }
 

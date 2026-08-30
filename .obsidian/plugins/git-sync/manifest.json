@@ -1,7 +1,7 @@
 {
   "id": "git-sync",
   "name": "Git Sync",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minAppVersion": "1.5.0",
   "description": "Pull from and push changes to the vault's GitHub repository from the command palette.",
   "author": "Local vault plugin",
