@@ -1,4 +1,5 @@
 [
   "obsidian-shellcommands",
-  "latex-builder"
+  "latex-builder",
+  "git-sync"
 ]
