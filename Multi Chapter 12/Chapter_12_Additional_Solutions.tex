@@ -44,48 +44,180 @@
 \item Solving $\langle1,2,1\rangle\times\langle p,q,r\rangle=\langle3,1,-5\rangle$ gives \[\answer{\vect v=\langle1,-3,0\rangle+t\langle1,2,1\rangle}.\] No vector can give $\langle3,1,5\rangle$, because that vector has dot product $10$ with $\langle1,2,1\rangle$, whereas every cross product with it must be orthogonal to it.
 \end{enumerate}
 
-\subsection*{12.5 Equations of Lines and Planes}
+\subsection*{12.5 Equations of Lines and Planes --- Worked Solutions}
 \begin{enumerate}[label=\textbf{\arabic*.}, start=3]
-\item \[\answer{\vect r=\langle-1,8,7\rangle+t\langle6,4,3\rangle};\quad x=-1+6t,\ y=8+4t,\ z=7+3t.\]
+\item A line is determined by one point and one direction vector.  The given point is
+$P_0=(-1,8,7)$ and the given direction is $\vect v=\langle6,4,3\rangle$.  Therefore
+\[
+\vect r=\vect r_0+t\vect v
+=\langle-1,8,7\rangle+t\langle6,4,3\rangle.
+\]
+Equating components gives
+\[
+\answer{\vect r=\langle-1,8,7\rangle+t\langle6,4,3\rangle},
+\qquad
+\answer{x=-1+6t,\quad y=8+4t,\quad z=7+3t}.
+\]
 \setcounter{enumi}{4}
-\item A normal is $\langle3,-2,2\rangle$, so \[\answer{3x-2y+2z=3}.\]
+\item The vector $\vect n=\langle3,-2,2\rangle$ is normal to the required plane.  Thus its equation has the form
+\[
+3x-2y+2z=d.
+\]
+Substituting the point given in the exercise determines $d=3$.  Hence
+\[
+\answer{3x-2y+2z=3}.
+\]
 \setcounter{enumi}{14}
-\item \[\answer{\frac{x-1}{-1}=\frac{y+5}{2}=\frac{z-6}{-3}}.\] Its intercepts are $(0,-3,3)$, $(-3/2,0,-3/2)$, and $(-1,-1,0)$.
+\item The line passes through $P_0=(1,-5,6)$ and has direction vector
+$\vect v=\langle-1,2,-3\rangle$.  Its parametric equations are
+\[
+x=1-t,\qquad y=-5+2t,\qquad z=6-3t.
+\]
+Eliminating $t$ gives
+\[
+\answer{\frac{x-1}{-1}=\frac{y+5}{2}=\frac{z-6}{-3}}.
+\]
+To find where the line meets each coordinate plane, set the corresponding coordinate equal to zero:
+\[
+\begin{array}{c|c|c}
+\text{coordinate plane}&t&\text{point of intersection}\\ \hline
+yz\text{-plane }(x=0)&1&(0,-3,3)\\
+xz\text{-plane }(y=0)&5/2&(-3/2,0,-3/2)\\
+xy\text{-plane }(z=0)&2&(-1,-1,0)
+\end{array}
+\]
+Thus the intersections are
+\[\answer{(0,-3,3),\quad(-3/2,0,-3/2),\quad(-1,-1,0).}\]
 \setcounter{enumi}{18}
-\item Comparing the first two coordinate equations yields incompatible values for $t-2s$; therefore the lines are \answer{\text{skew}}.
+\item Write both lines in parametric form and equate corresponding coordinates.  The first two coordinate equations require two different values of the same expression $t-2s$, so the system has no solution.  The direction vectors are not scalar multiples, so the lines are not parallel.  Lines in $\mathbb R^3$ that are neither parallel nor intersecting are skew; therefore they are \answer{\text{skew}}.
 \setcounter{enumi}{20}
-\item Writing the symmetric equations parametrically and solving gives $t=2$, $s=1$, hence \answer{\text{the lines intersect at }(4,-1,-5)}.
+\item Convert both symmetric equations to parametric form, then equate their coordinates.  Solving the resulting linear system gives $t=2$ for the first line and $s=1$ for the second.  Substitution into either line gives
+\[
+(x,y,z)=(4,-1,-5).
+\]
+Since this point satisfies both sets of parametric equations,
+\[\answer{\text{the lines intersect at }(4,-1,-5).}\]
 \setcounter{enumi}{24}
-\item \[-(x-5)+2(y+2)+3(z-4)=0,\qquad\answer{-x+2y+3z=3}.\]
+\item A plane through $P_0=(5,-2,4)$ with normal $\vect n=\langle-1,2,3\rangle$ satisfies
+\[
+\vect n\cdot\langle x-5,\,y+2,\,z-4\rangle=0.
+\]
+Therefore
+\[
+-(x-5)+2(y+2)+3(z-4)=0
+\quad\Longrightarrow\quad
+\answer{-x+2y+3z=3}.
+\]
 \setcounter{enumi}{28}
-\item Parallel planes have the same normal. Substitution of $(2.1,1.7,-0.9)$ gives \[\answer{2x-y+3z=-\frac15}.\]
+\item A plane parallel to the given plane must retain its normal vector, so it has form
+\[
+2x-y+3z=d.
+\]
+Because it passes through $(2.1,1.7,-0.9)$,
+\[
+d=2(2.1)-1.7+3(-0.9)=4.2-1.7-2.7=-0.2=-\frac15.
+\]
+Thus \[\answer{2x-y+3z=-\frac15}.\]
 \setcounter{enumi}{32}
-\item Using $\langle1,-9,4\rangle\times\langle-4,-4,-1\rangle=5\langle5,-3,-8\rangle$, \[\answer{5x-3y-8z+9=0}.\]
+\item From the three given points, take two vectors in the plane:
+\[
+\vect u=\langle1,-9,4\rangle,\qquad \vect v=\langle-4,-4,-1\rangle.
+\]
+Their cross product is a normal vector:
+\[
+\begin{aligned}
+\vect u\times\vect v
+&=\left\langle(-9)(-1)-4(-4),\,4(-4)-1(-1),\,1(-4)-(-9)(-4)\right\rangle\\
+&=\langle25,-15,-40\rangle
+=5\langle5,-3,-8\rangle.
+\end{aligned}
+\]
+Using the specified point in point--normal form and simplifying gives
+\[\answer{5x-3y-8z+9=0}.\]
 \setcounter{enumi}{34}
-\item A normal from the line direction and the vector to $(3,5,-1)$ is $\langle8,1,-2\rangle$, so \[\answer{8x+y-2z-31=0}.\]
+\item Let $\vect v$ be the direction vector of the given line and let $\vect w$ be the vector from a point on that line to $(3,5,-1)$.  A normal to the desired plane is $\vect v\times\vect w=\langle8,1,-2\rangle$.  Using $(3,5,-1)$ in point--normal form gives
+\[
+8(x-3)+(y-5)-2(z+1)=0,
+\]
+so \[\answer{8x+y-2z-31=0}.\]
 \setcounter{enumi}{36}
-\item A member of the pencil through the two given planes is $3P_1-4P_2=0$, yielding \[\answer{x-2y-z+3=0}.\]
+\item Any plane through the line of intersection of $P_1=0$ and $P_2=0$ has equation
+\[
+\lambda P_1+\mu P_2=0.
+\]
+Choose the coefficients required by the condition in the exercise: $3P_1-4P_2=0$.  Expanding and collecting like terms gives
+\[\answer{x-2y-z+3=0}.\]
 \setcounter{enumi}{44}
-\item Substitution into $x+2y-z=7$ gives $1+3t=7$, hence \answer{(-2,6,3)}.
+\item Substitute the parametric line into the plane equation $x+2y-z=7$.  After simplifying,
+\[
+1+3t=7\quad\Longrightarrow\quad t=2.
+\]
+Putting $t=2$ into the line gives
+\[\answer{(-2,6,3).}\]
 \setcounter{enumi}{52}
-\item The normal vectors have $|\vect n_1\cdot\vect n_2|=3$, so \[\answer{\theta=\cos^{-1}(1/\sqrt6)\approx65.9^\circ}\quad\text{(neither parallel nor perpendicular).}\]
+\item The angle between two planes is the acute angle between their normal vectors.  For the normals in this exercise,
+\[
+|\vect n_1\cdot\vect n_2|=3,
+\qquad \|\vect n_1\|\,\|\vect n_2\|=3\sqrt6.
+\]
+Thus
+\[
+\cos\theta=\frac{3}{3\sqrt6}=\frac1{\sqrt6},
+\qquad
+\answer{\theta=\cos^{-1}(1/\sqrt6)\approx65.9^\circ}.
+\]
+The normals are neither scalar multiples nor orthogonal, so the planes are neither parallel nor perpendicular.
 \setcounter{enumi}{56}
-\item Subtraction gives $y+z=0$ and $x=1$. Thus \[\answer{\vect r=\langle1,0,0\rangle+t\langle0,1,-1\rangle},\qquad \answer{\theta\approx15.8^\circ}.\]
+\item Subtract the two plane equations to eliminate $x$ and obtain $y+z=0$; substituting back gives $x=1$.  Let $y=t$, so $z=-t$.  Therefore their line of intersection is
+\[
+\answer{\vect r=\langle1,0,0\rangle+t\langle0,1,-1\rangle}.
+\]
+The angle between the planes is the acute angle between their normals.  Using the dot-product formula gives \[\answer{\theta\approx15.8^\circ}.\]
 \setcounter{enumi}{62}
-\item The intercept form is \[\answer{\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1}.\]
+\item A plane with intercepts $(a,0,0)$, $(0,b,0)$, and $(0,0,c)$ can be written as $Ax+By+Cz=1$.  Substituting the three intercepts gives $A=1/a$, $B=1/b$, and $C=1/c$.  Hence
+\[\answer{\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1}.\]
 \setcounter{enumi}{64}
-\item A direction perpendicular to both $\langle1,1,1\rangle$ and $\langle1,-1,2\rangle$ is $\langle3,-1,-2\rangle$. Hence \[\answer{x=3t,\quad y=1-t,\quad z=2-2t}.\]
+\item The desired line is perpendicular to both given directions, so its direction is their cross product:
+\[
+\langle1,1,1\rangle\times\langle1,-1,2\rangle
+=\langle3,-1,-2\rangle.
+\]
+Using the specified point $(0,1,2)$ gives
+\[\answer{x=3t,\qquad y=1-t,\qquad z=2-2t}.\]
 \setcounter{enumi}{70}
-\item \[\answer{d=\frac{|3(1)+2(-2)+6(4)-5|}{\sqrt{3^2+2^2+6^2}}=\frac{18}{7}}.\]
+\item For a point $P_0=(x_0,y_0,z_0)$ and plane $ax+by+cz+d=0$, the distance is
+\[
+d=\frac{|ax_0+by_0+cz_0+d|}{\sqrt{a^2+b^2+c^2}}.
+\]
+Here,
+\[
+d=\frac{|3(1)+2(-2)+6(4)-5|}{\sqrt{3^2+2^2+6^2}}
+=\frac{18}{7}.
+\]
+Thus \[\answer{d=\frac{18}{7}}.\]
 \setcounter{enumi}{74}
-\item Parallel planes with common normal $\langle a,b,c\rangle$ differ only by $d_1,d_2$. Projecting a point on one plane onto the unit normal gives \[\answer{D=\frac{|d_1-d_2|}{\sqrt{a^2+b^2+c^2}}}.\]
+\item Write the parallel planes as $ax+by+cz+d_1=0$ and $ax+by+cz+d_2=0$.  Choose any point $(x_0,y_0,z_0)$ on the first plane.  Its distance from the second plane is
+\[
+\frac{|ax_0+by_0+cz_0+d_2|}{\sqrt{a^2+b^2+c^2}}
+=\frac{|(-d_1)+d_2|}{\sqrt{a^2+b^2+c^2}}.
+\]
+Therefore \[\answer{D=\frac{|d_1-d_2|}{\sqrt{a^2+b^2+c^2}}}.\]
 \end{enumerate}
 
-\subsection*{12.6 Quadric Surfaces}
+\subsection*{12.6 Quadric Surfaces --- Worked Solutions}
 \begin{enumerate}[label=\textbf{\arabic*.}, start=3]
 \item \[x^2+z^2=4\] is a circular cylinder of radius $2$ with \answer{\text{axis the }y\text{-axis}}.
 \setcounter{enumi}{4}
-\item $y=-x^2-1$ is a \answer{\text{parabolic cylinder}} with vertex line $(0,-1,z)$, opening in the negative $y$ direction.
+\item The equation is
+\[
+y^2+9z^2=9
+\quad\Longleftrightarrow\quad
+\frac{y^2}{9}+z^2=1.
+\]
+It does not contain $x$, so the same elliptical cross-section is repeated for every $x$-value.  Its semiaxes are $3$ in the $y$-direction and $1$ in the $z$-direction.  Therefore the surface is
+\[
+\answer{\text{an elliptic cylinder with axis the }x\text{-axis}}.
+\]
 \setcounter{enumi}{10}
 \item For $x^2+y^2-z^2=1$, the $z=k$ traces are $x^2+y^2=1+k^2$ and the other coordinate traces are hyperbolas; it is a \answer{\text{hyperboloid of one sheet about the }z\text{-axis}}. Replacing it by $x^2-y^2+z^2=1$ rotates the axis to the $y$-axis. Completing the square in $x^2+y^2+2y-z^2=0$ gives $x^2+(y+1)^2-z^2=1$: the first surface translated one unit in negative $y$.
 \setcounter{enumi}{12}
@@ -93,11 +225,29 @@
 \setcounter{enumi}{16}
 \item \[\frac{y^2}{4}+\frac{z^2}{9}-\frac{x^2}{36}=1\] is a \answer{\text{hyperboloid of one sheet with axis the }x\text{-axis}}.
 \setcounter{enumi}{20}
-\item $y=z^2-x^2$ is a \answer{\text{hyperbolic paraboloid}} (saddle) with axis variable $y$.
+\item Since one squared term is positive and the other is negative,
+\[
+y=z^2-x^2
+\]
+is a \answer{\text{hyperbolic paraboloid (saddle)}}.  Its vertex is at the origin.  The traces $x=0$ and $z=0$ are the parabolas $y=z^2$ and $y=-x^2$, which open in opposite $y$-directions; a saddle has no single axis.
 \setcounter{enumi}{22}
-\item The matches are identified as follows: $23$ is the ellipsoid with semiaxes $(1,1/2,1/3)$; $24$ is the ellipsoid with semiaxes $(1/3,1/2,1)$; $25$ is the one-sheet hyperboloid about $y$; $26$ is the two-sheet hyperboloid about $y$; $27$ is an elliptic paraboloid opening in $+y$; $28$ is an elliptic cone about $y$; $29$ is an elliptic cylinder parallel to $y$; and $30$ is the saddle $y=x^2-z^2$.
+\item Put each equation in a recognizable standard form.
+\[
+\begin{array}{c|l}
+\text{Exercise}&\text{surface and defining feature}\\ \hline
+23&x^2+4y^2+9z^2=1:\ \text{ellipsoid with semiaxes }(1,\tfrac12,\tfrac13)\\
+24&9x^2+4y^2+z^2=1:\ \text{ellipsoid with semiaxes }(\tfrac13,\tfrac12,1)\\
+25&x^2-y^2+z^2=1:\ \text{one-sheet hyperboloid, axis }y\\
+26&-x^2+y^2-z^2=1:\ \text{two-sheet hyperboloid, axis }y\\
+27&y=2x^2+z^2:\ \text{elliptic paraboloid opening in }+y\\
+28&y^2=x^2+2z^2:\ \text{elliptic cone, axis }y\\
+29&x^2+2z^2=1:\ \text{elliptic cylinder parallel to }y\\
+30&y=x^2-z^2:\ \text{hyperbolic paraboloid (saddle)}
+\end{array}
+\]
 \setcounter{enumi}{32}
 \item \[y^2=x^2+\frac{z^2}{9}\] is an \answer{\text{elliptic cone with axis the }y\text{-axis}}.
 \setcounter{enumi}{44}
-\item In cylindrical coordinates, the bounded region is \[\answer{1\le z\le2,\qquad1\le r\le z,\qquad0\le\theta\le2\pi};\] it lies between the cylinder $r=1$ and the cone $r=z$.
+\item In cylindrical coordinates, $z=\sqrt{x^2+y^2}$ becomes $z=r$, while $x^2+y^2=1$ becomes $r=1$.  The horizontal bounds are $1\le z\le2$.  At any fixed height $z$, the region runs from the cylinder ($r=1$) outward to the cone ($r=z$), and it sweeps all angles.  Hence
+\[\answer{1\le z\le2,\qquad1\le r\le z,\qquad0\le\theta\le2\pi}.\]
 \end{enumerate}
