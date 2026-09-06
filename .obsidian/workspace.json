@@ -13,26 +13,23 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Movement Lab Quiz/movement_lab_version_c.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "movement_lab_version_c"
-            }
-          },
-          {
-            "id": "e2420e000000f598",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
                 "file": "Multi Chapter 12/Chapter_12_Solutions.pdf"
               },
               "icon": "lucide-file-text",
               "title": "Chapter_12_Solutions"
             }
+          },
+          {
+            "id": "d7b88a4bc7b5ffdc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -187,8 +184,8 @@
             "state": {
               "type": "SC-custom-variables-view",
               "state": {},
-              "icon": "code-glyph",
-              "title": "Shell commands: Custom variables"
+              "icon": "lucide-ghost",
+              "title": "SC-custom-variables-view"
             }
           }
         ],
@@ -211,29 +208,32 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
-  "active": "e2420e000000f598",
+  "active": "72c954b2abf2f435",
   "lastOpenFiles": [
-    "Free Fall Post-Lab Quiz/Quizzes/free_fall_post_lab_version_e.pdf",
-    "Free Fall Post-Lab Quiz/Quizzes/free_fall_post_lab_version_d.pdf",
+    "Multi Chapter 12/Chapter_12_Solutions.pdf",
     "Free Fall Post-Lab Quiz/Quizzes/free_fall_post_lab_version_c.pdf",
     "Free Fall Post-Lab Quiz/Quizzes/free_fall_post_lab_version_b.pdf",
     "Free Fall Post-Lab Quiz/Quizzes/free_fall_post_lab_version_a.pdf",
-    "Multi Chapter 12/Chapter_12_Solutions.pdf",
-    "Free Fall Post-Lab Quiz/Quizzes",
+    "Movement Lab Quiz/Quizzes/movement_lab_version_c.pdf",
+    "Movement Lab Quiz/Quizzes/movement_lab_version_b.pdf",
+    "Movement Lab Quiz/Quizzes/movement_lab_version_a.pdf",
     "Movement Lab Quiz/Quizzes",
-    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/weblogo-bcb-cengage-cropped.png",
-    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/powered_by_logo.svg",
-    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img5428-t2.png",
-    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img5427-t2.png",
-    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img5426-t2.png",
-    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img5425-t2.png",
-    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img5424-t2.png",
-    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img5423-t2.png",
-    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img5422-t2.png",
-    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.6_files/ddde_0001_0001_0_img5421-t2.png",
+    "Free Fall Post-Lab Quiz/free_fall_post_lab_version_e.tex",
+    "Free Fall Post-Lab Quiz/free_fall_post_lab_version_e.log",
+    "Free Fall Post-Lab Quiz/free_fall_post_lab_version_e.aux",
+    "tmp/pdfs/chapter12-11.png",
+    "tmp/pdfs/chapter12-10.png",
+    "tmp/pdfs/chapter12-09.png",
+    "tmp/pdfs/chapter12-08.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.5_files/powered_by_logo.svg",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.5_files/ddde_0001_0001_0_img3533-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.5_files/ddde_0001_0001_0_img4553-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.5_files/ddde_0001_0001_0_img4552-t2.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.5_files/weblogo-bcb-cengage-cropped.png",
+    "Multi Chapter 12/Questions/Multivariable Calculus Exercise 12.5_files/thumb.jpg",
     "GIT_SYNC.md",
-    "CHAPTER_12_STATUS.md",
     "README.md",
+    "CHAPTER_12_STATUS.md",
     "Multi Chapter 12/README.md"
   ]
 }
