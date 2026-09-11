@@ -1,13 +1,13 @@
 /* Cyberpunk neon: alternating yellow, green, and white signals on a softer dark base. */
 .theme-dark {
-  --background-primary: #151a14;
-  --background-primary-alt: #1b1d10;
-  --background-secondary: #202318;
-  --background-secondary-alt: #2a2b17;
-  --background-modifier-border: #73631d;
+  --background-primary: #20251d;
+  --background-primary-alt: #282b1c;
+  --background-secondary: #303624;
+  --background-secondary-alt: #3b4028;
+  --background-modifier-border: #938126;
   --background-modifier-border-hover: #fff000;
-  --background-modifier-hover: #3a3b1d;
-  --background-modifier-active-hover: #555023;
+  --background-modifier-hover: #4b502d;
+  --background-modifier-active-hover: #65602e;
   --background-modifier-success: #0e3b1b;
   --background-modifier-error: #4b3210;
   --text-normal: #f7fff6;
@@ -16,8 +16,8 @@
   --text-on-accent: #020502;
   --text-accent: #ffe600;
   --text-accent-hover: #fff7a8;
-  --interactive-normal: #292a17;
-  --interactive-hover: #3c3c20;
+  --interactive-normal: #3b4028;
+  --interactive-hover: #515630;
   --interactive-accent: #ffe600;
   --interactive-accent-hover: #fff000;
   --interactive-success: #39ff14;
@@ -27,15 +27,15 @@
   --link-color-hover: #fff7a8;
   --link-external-color: #fff000;
   --code-normal: #f7fff6;
-  --code-background: #202317;
+  --code-background: #303624;
   --blockquote-border-color: #ffe600;
   --tag-color: #f7fff6;
   --tag-background: #5a4700;
-  --titlebar-background: #151a14;
-  --titlebar-background-focused: #202318;
+  --titlebar-background: #20251d;
+  --titlebar-background-focused: #303624;
   --nav-item-color-hover: #f7fff6;
   --nav-item-color-active: #fff7a8;
-  --nav-item-background-active: #555023;
+  --nav-item-background-active: #65602e;
   --h1-color: #f7fff6;
   --h2-color: #ffe600;
   --h3-color: #70ff55;
@@ -83,7 +83,7 @@
 }
 
 .theme-dark .workspace {
-  background-color: #151a14;
+  background-color: #20251d;
   background-image:
     radial-gradient(ellipse at 12% 8%, rgb(255 230 0 / 21%), transparent 37%),
     radial-gradient(ellipse at 88% 88%, rgb(57 255 20 / 19%), transparent 42%),
@@ -95,9 +95,24 @@
 }
 
 .theme-dark .workspace-ribbon,
+.theme-dark .mod-left-split,
+.theme-dark .mod-right-split,
 .theme-dark .titlebar,
 .theme-dark .workspace-tab-header-container {
-  background-image: linear-gradient(110deg, #2d2b12, #2b351d 50%, #2d3430);
+  background-image: linear-gradient(110deg, #3f3a18, #354526 50%, #3d4540);
+  border-color: #938126;
+}
+
+.theme-dark .workspace-ribbon,
+.theme-dark .mod-left-split,
+.theme-dark .mod-right-split {
+  background-color: #303624;
+  box-shadow: inset 0 0 28px rgb(57 255 20 / 8%);
+}
+
+.theme-dark .workspace-tab-header-container {
+  background-color: #3b4028;
+  box-shadow: inset 0 -1px 0 rgb(255 230 0 / 45%);
 }
 
 .theme-dark .workspace-tab-header.is-active {
