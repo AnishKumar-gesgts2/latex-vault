@@ -1,0 +1,970 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools,enumitem}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\setlist{itemsep=1.15em,topsep=0.6em}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\ihat}{\mathbf{i}}
+\newcommand{\jhat}{\mathbf{j}}
+\newcommand{\khat}{\mathbf{k}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\answer}[1]{\boxed{#1}}
+
+\title{Chapter 13: Vector Functions and Motion in Space\\\large Thorough Worked Solutions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent\textit{Source note.} The exercise numbers below follow the four assignment labels in the supplied image. The prompts were transcribed from the corresponding saved HTML pages in the Obsidian LaTeX vault. The two saved pages labeled 13.3 and 13.4 both contain the same motion-in-space exercise page, so their overlapping exercise numbers legitimately repeat here.
+
+\section*{13.1}
+
+\begin{enumerate}[label=\textbf{\arabic*.},start=1]
+\item The figure gives the position vectors $\vect r(4)$, $\vect r(4.2)$, and $\vect r(4.5)$, whose terminal points lie on the curve $C$.
+
+The difference $\vect r(4.5)-\vect r(4)$ is the displacement from the terminal point of $\vect r(4)$ to the terminal point of $\vect r(4.5)$. Likewise, $\vect r(4.2)-\vect r(4)$ points from the terminal point of $\vect r(4)$ to that of $\vect r(4.2)$. Translating either vector does not change it, so each may also be drawn from the origin.
+
+The corresponding average-velocity vectors are
+\[
+ \frac{\vect r(4.5)-\vect r(4)}{0.5}
+ \quad\text{and}\quad
+ \frac{\vect r(4.2)-\vect r(4)}{0.2}.
+\]
+Both are secant vectors based at the point $\vect r(4)$. The second uses the smaller increment, so its direction is the closer approximation to the tangent direction at $t=4$. Passing to the limit gives
+\[
+ \answer{\vect r'(4)=\lim_{h\to0}
+ \frac{\vect r(4+h)-\vect r(4)}{h}},
+ \qquad
+ \answer{\vect T(4)=\frac{\vect r'(4)}{\norm{\vect r'(4)}}}.
+\]
+Thus $\vect T(4)$ is drawn tangent to $C$ at the terminal point of $\vect r(4)$, pointing in the direction in which the curve is traced as $t$ increases.
+
+\setcounter{enumi}{4}
+\item We have
+\[
+ \vect r(t)=\langle e^{2t},e^t\rangle.
+\]
+Because $y=e^t>0$ and $x=e^{2t}=y^2$, the path is the right-opening parabola $x=y^2$ restricted to its upper half. Componentwise differentiation gives
+\[
+ \answer{\vect r'(t)=\langle 2e^{2t},e^t\rangle}.
+\]
+At $t=0$,
+\[
+ \vect r(0)=\langle1,1\rangle,
+ \qquad
+ \vect r'(0)=\langle2,1\rangle.
+\]
+Therefore the position vector runs from the origin to $(1,1)$, and the tangent vector based at $(1,1)$ points two units right and one unit up. Its slope is $1/2$, which also agrees with implicit differentiation of $x=y^2$: $dy/dx=1/(2y)=1/2$ at $y=1$.
+
+\setcounter{enumi}{10}
+\item Differentiate each component:
+\begin{align*}
+ \frac{d}{dt}(t^2)&=2t,\\
+ \frac{d}{dt}\cos(t^2)&=-\sin(t^2)(2t),\\
+ \frac{d}{dt}\sin^2t&=2\sin t\cos t.
+\end{align*}
+Hence
+\[
+ \answer{\vect r'(t)=
+ \left\langle2t,-2t\sin(t^2),2\sin t\cos t\right\rangle}.
+\]
+
+\setcounter{enumi}{16}
+\item For
+\[
+ \vect r(t)=\left\langle t^2-2t,1+3t,
+ \frac13t^3+\frac12t^2\right\rangle,
+\]
+the velocity is
+\[
+ \vect r'(t)=\langle2t-2,3,t^2+t\rangle.
+\]
+At $t=2$,
+\[
+ \vect r'(2)=\langle2,3,6\rangle,
+ \qquad
+ \norm{\vect r'(2)}=\sqrt{2^2+3^2+6^2}=7.
+\]
+Normalizing yields
+\[
+ \answer{\vect T(2)=\left\langle\frac27,\frac37,\frac67\right\rangle}.
+\]
+
+\setcounter{enumi}{30}
+\item The specified point $(0,1,0)$ occurs at $t=0$. Differentiating the parameterization gives
+\[
+ \vect r'(t)=\langle1,-e^{-t},2-2t\rangle,
+ \qquad
+ \vect r'(0)=\langle1,-1,2\rangle.
+\]
+Using a new line parameter $s$, the tangent line is
+\[
+ \vect L(s)=\langle0,1,0\rangle+s\langle1,-1,2\rangle.
+\]
+Therefore
+\[
+ \answer{x=s,\qquad y=1-s,\qquad z=2s}.
+\]
+
+\setcounter{enumi}{41}
+\item A vector integral is evaluated componentwise:
+\begin{align*}
+ \int t\cos(t^2)\,dt&=\frac12\sin(t^2),\\
+ \int\frac1t\,dt&=\ln|t|,\\
+ \int\sec^2t\,dt&=\tan t.
+\end{align*}
+Thus
+\[
+ \answer{\int\left(t\cos(t^2)\ihat+\frac1t\jhat+\sec^2t\khat\right)dt
+ =\frac12\sin(t^2)\ihat+\ln|t|\jhat+\tan t\khat+\vect C}.
+\]
+
+\setcounter{enumi}{42}
+\item Integrating the derivative gives
+\[
+ \vect r(t)=\left\langle t^2+C_1,t^3+C_2,
+ \frac23t^{3/2}+C_3\right\rangle,
+ \qquad t\ge0.
+\]
+The initial condition $\vect r(1)=\ihat+\jhat=\langle1,1,0\rangle$ implies
+\[
+ 1+C_1=1,\qquad 1+C_2=1,
+ \qquad \frac23+C_3=0.
+\]
+Therefore $C_1=C_2=0$ and $C_3=-2/3$, so
+\[
+ \answer{\vect r(t)=t^2\ihat+t^3\jhat+
+ \left(\frac23t^{3/2}-\frac23\right)\khat}.
+\]
+
+\setcounter{enumi}{44}
+\item Formula 1 of Theorem 3 is the sum rule
+\[
+ \frac{d}{dt}\bigl[\vect u(t)+\vect v(t)\bigr]
+ =\vect u'(t)+\vect v'(t).
+\]
+Write $\vect u=\langle u_1,u_2,u_3\rangle$ and $\vect v=\langle v_1,v_2,v_3\rangle$. By the componentwise definition of a vector derivative,
+\begin{align*}
+ \frac{d}{dt}(\vect u+\vect v)
+ &=\frac{d}{dt}\langle u_1+v_1,u_2+v_2,u_3+v_3\rangle\\
+ &=\langle u_1'+v_1',u_2'+v_2',u_3'+v_3'\rangle\\
+ &=\langle u_1',u_2',u_3'\rangle
+   +\langle v_1',v_2',v_3'\rangle\\
+ &=\answer{\vect u'(t)+\vect v'(t)}.
+\end{align*}
+This proves the vector sum rule directly from the scalar sum rule in each coordinate.
+\end{enumerate}
+
+\newcommand{\SectionThirteenFour}{%
+\section*{13.4}
+
+\begin{enumerate}[label=\textbf{\arabic*.},start=1]
+\setcounter{enumi}{2}
+\item For $\vect r(t)=\langle-\tfrac12t^2,t\rangle$,
+\[
+ \vect v(t)=\vect r'(t)=\langle-t,1\rangle,
+ \qquad
+ \vect a(t)=\vect r''(t)=\langle-1,0\rangle.
+\]
+Therefore
+\[
+ \answer{\norm{\vect v(t)}=\sqrt{t^2+1}}.
+\]
+At $t=2$, the particle is at $(-2,2)$ with
+\[
+ \answer{\vect v(2)=\langle-2,1\rangle,
+ \qquad \vect a(2)=\langle-1,0\rangle}.
+\]
+Eliminating $t$ gives $x=-y^2/2$, a left-opening parabola. The velocity is tangent to that parabola and points up-left, whereas the acceleration points horizontally left.
+
+\setcounter{enumi}{4}
+\item The derivatives of $\vect r(t)=\langle3\cos t,2\sin t\rangle$ are
+\[
+ \answer{\vect v(t)=\langle-3\sin t,2\cos t\rangle},
+ \qquad
+ \answer{\vect a(t)=\langle-3\cos t,-2\sin t\rangle}.
+\]
+Thus
+\[
+ \answer{\norm{\vect v(t)}
+ =\sqrt{9\sin^2t+4\cos^2t}
+ =\sqrt{5\sin^2t+4}}.
+\]
+At $t=\pi/3$,
+\[
+ \vect r=\left\langle\frac32,\sqrt3\right\rangle,
+ \quad
+ \vect v=\left\langle-\frac{3\sqrt3}{2},1\right\rangle,
+ \quad
+ \vect a=\left\langle-\frac32,-\sqrt3\right\rangle,
+ \quad
+ \norm{\vect v}=\frac{\sqrt{31}}2.
+\]
+The path is the ellipse $x^2/9+y^2/4=1$; the velocity is tangent and the acceleration points inward.
+
+\setcounter{enumi}{6}
+\item Differentiation gives
+\[
+ \answer{\vect v(t)=\langle1,2t,0\rangle},
+ \qquad
+ \answer{\vect a(t)=\langle0,2,0\rangle},
+ \qquad
+ \answer{\norm{\vect v(t)}=\sqrt{1+4t^2}}.
+\]
+At $t=1$,
+\[
+ \vect r(1)=\langle1,1,2\rangle,
+ \quad \vect v(1)=\langle1,2,0\rangle,
+ \quad \vect a(1)=\langle0,2,0\rangle.
+\]
+The path lies in the plane $z=2$ and satisfies $y=x^2$. At the specified point the velocity points in the direction of increasing $x$ and $y$, while the acceleration points in the positive $y$-direction.
+
+\setcounter{enumi}{8}
+\item Differentiating each component of
+$\vect r(t)=\langle t^2+t,t^2-t,t^3\rangle$ gives
+\[
+ \answer{\vect v(t)=\langle2t+1,2t-1,3t^2\rangle}
+\]
+and
+\[
+ \answer{\vect a(t)=\langle2,2,6t\rangle}.
+\]
+The speed is
+\begin{align*}
+ \norm{\vect v(t)}
+ &=\sqrt{(2t+1)^2+(2t-1)^2+(3t^2)^2}\\
+ &=\answer{\sqrt{9t^4+8t^2+2}}.
+\end{align*}
+
+\setcounter{enumi}{10}
+\item We find
+\[
+ \answer{\vect v(t)=\sqrt2\ihat+e^t\jhat-e^{-t}\khat},
+ \qquad
+ \answer{\vect a(t)=e^t\jhat+e^{-t}\khat}.
+\]
+The speed simplifies because its radicand is a perfect square:
+\[
+ \norm{\vect v(t)}
+ =\sqrt{2+e^{2t}+e^{-2t}}
+ =\sqrt{(e^t+e^{-t})^2}
+ =\answer{e^t+e^{-t}}.
+\]
+
+\setcounter{enumi}{12}
+\item Apply the product rule to
+$\vect r(t)=e^t\langle\cos t,\sin t,t\rangle$:
+\[
+ \answer{\vect v(t)=e^t\langle
+ \cos t-\sin t,\sin t+\cos t,t+1\rangle}.
+\]
+Differentiating once more,
+\[
+ \answer{\vect a(t)=e^t\langle-2\sin t,2\cos t,t+2\rangle}.
+\]
+Finally,
+\begin{align*}
+ \norm{\vect v(t)}^2
+ &=e^{2t}\left[(\cos t-\sin t)^2
+ +(\sin t+\cos t)^2+(t+1)^2\right]\\
+ &=e^{2t}\left[2+(t+1)^2\right]
+ =e^{2t}(t^2+2t+3).
+\end{align*}
+Therefore
+\[
+ \answer{\norm{\vect v(t)}=e^t\sqrt{t^2+2t+3}}.
+\]
+
+\setcounter{enumi}{14}
+\item Integrate the acceleration and impose the initial velocity:
+\[
+ \vect v(t)=\langle2t+C_1,C_2,t^2+C_3\rangle,
+ \quad
+ \vect v(0)=\langle3,-1,0\rangle,
+\]
+so
+\[
+ \answer{\vect v(t)=\langle2t+3,-1,t^2\rangle}.
+\]
+A second integration gives
+\[
+ \vect r(t)=\left\langle t^2+3t+D_1,-t+D_2,
+ \frac13t^3+D_3\right\rangle.
+\]
+Using $\vect r(0)=\langle0,1,1\rangle$ yields
+\[
+ \answer{\vect r(t)=\left\langle t^2+3t,1-t,1+\frac13t^3\right\rangle}.
+\]
+
+\setcounter{enumi}{18}
+\item The velocity is $\vect v(t)=\langle2t,5,2t-16\rangle$. Complete the square in the squared speed:
+\[
+ \norm{\vect v(t)}^2
+ =4t^2+25+(2t-16)^2
+ =8(t-4)^2+153.
+\]
+This expression is minimized when its squared term vanishes, so
+\[
+ \answer{t=4}.
+\]
+
+\setcounter{enumi}{22}
+\item Resolve the initial velocity into horizontal and vertical components:
+\[
+ v_{0x}=200\cos60^\circ=100\ \mathrm{m/s},
+ \qquad
+ v_{0z}=200\sin60^\circ=100\sqrt3\ \mathrm{m/s}.
+\]
+With $g=9.8\ \mathrm{m/s^2}$, the flight time back to the launch height is
+\[
+ T=\frac{2v_{0z}}g=\frac{200\sqrt3}{9.8}.
+\]
+The range is therefore
+\[
+ R=v_{0x}T
+ =\frac{20000\sqrt3}{9.8}
+ =\answer{\frac{20000\sqrt3}{9.8}\ \mathrm m
+ \approx3535\ \mathrm m}.
+\]
+At the top, vertical velocity is zero, so
+\[
+ H=\frac{v_{0z}^2}{2g}
+ =\frac{(100\sqrt3)^2}{19.6}
+ =\answer{\frac{30000}{19.6}\ \mathrm m
+ \approx1531\ \mathrm m}.
+\]
+At impact, the velocity components are
+\[
+ v_x=100\ \mathrm{m/s},\qquad
+ v_z=-100\sqrt3\ \mathrm{m/s}.
+\]
+Hence
+\[
+ \answer{v_{\mathrm{impact}}
+ =\sqrt{100^2+(100\sqrt3)^2}=200\ \mathrm{m/s}}.
+\]
+The equality with the launch speed is consistent with conservation of mechanical energy when air resistance is neglected and the launch and landing elevations are equal.
+
+\setcounter{enumi}{26}
+\item If $v_0$ is the initial speed, the maximum height is
+\[
+ 1600=\frac{(v_0\sin36^\circ)^2}{2(32)}.
+\]
+Solving,
+\[
+ v_0=\frac{\sqrt{2(32)(1600)}}{\sin36^\circ}
+ =\frac{320}{\sin36^\circ},
+\]
+so
+\[
+ \answer{v_0\approx544.4\ \mathrm{ft/s}}.
+\]
+
+\setcounter{enumi}{36}
+\item With
+\[
+ \vect v=\langle2t,3t^2\rangle,
+ \quad \vect a=\langle2,6t\rangle,
+ \quad \norm{\vect v}=t\sqrt{4+9t^2}\quad(t>0),
+\]
+the tangential component is
+\[
+ \answer{a_T=\frac{\vect v\cdot\vect a}{\norm{\vect v}}
+ =\frac{4+18t^2}{\sqrt{4+9t^2}}}.
+\]
+The magnitude of the planar cross product is $6t^2$, so
+\[
+ \answer{a_N=\frac{|\vect v\times\vect a|}{\norm{\vect v}}
+ =\frac{6t}{\sqrt{4+9t^2}}}.
+\]
+The decomposition is undefined at $t=0$ because the velocity vanishes there.
+
+\setcounter{enumi}{38}
+\item For the circular helix
+$\vect r(t)=\langle\cos t,\sin t,t\rangle$,
+\[
+ \vect v=\langle-\sin t,\cos t,1\rangle,
+ \qquad
+ \vect a=\langle-\cos t,-\sin t,0\rangle.
+\]
+Since $\vect v\cdot\vect a=0$ and $\norm{\vect a}=1$,
+\[
+ \answer{a_T=\frac{\vect v\cdot\vect a}{\norm{\vect v}}=0},
+ \qquad
+ \answer{a_N=\sqrt{\norm{\vect a}^2-a_T^2}=1}.
+\]
+Thus the speed is constant, and all acceleration changes the direction rather than the magnitude of the velocity.
+
+\setcounter{enumi}{40}
+\item The point $(0,4,4)$ corresponds to $t=1$, since $\ln t=0$ gives $t=1$. Differentiate:
+\[
+ \vect v(t)=\left\langle\frac1t,2t+3,\frac2{\sqrt t}\right\rangle,
+ \qquad
+ \vect a(t)=\left\langle-\frac1{t^2},2,-t^{-3/2}\right\rangle.
+\]
+At $t=1$,
+\[
+ \vect v(1)=\langle1,5,2\rangle,
+ \quad \norm{\vect v(1)}=\sqrt{30},
+ \quad \vect a(1)=\langle-1,2,-1\rangle.
+\]
+Therefore
+\[
+ \answer{a_T=\frac{\vect v\cdot\vect a}{\norm{\vect v}}
+ =\frac{-1+10-2}{\sqrt{30}}
+ =\frac7{\sqrt{30}}}.
+\]
+Because $\norm{\vect a}^2=6$,
+\[
+ \answer{a_N=\sqrt{\norm{\vect a}^2-a_T^2}
+ =\sqrt{6-\frac{49}{30}}
+ =\sqrt{\frac{131}{30}}}.
+\]
+\end{enumerate}
+}
+
+\newcommand{\SectionThirteenThree}{%
+\section*{13.3}
+
+\begin{enumerate}[label=\textbf{\arabic*.},start=1]
+\item Write $\vect r(t)=\langle x(t),y(t),z(t)\rangle$. Average velocity over $[a,b]$ is
+\[
+ \vect v_{\mathrm{avg}}=\frac{\vect r(b)-\vect r(a)}{b-a}.
+\]
+Using the tabulated positions,
+\begin{align*}
+ \vect v_{[0,1]}
+ &=\frac{\langle4.5,6.0,3.0\rangle-\langle2.7,9.8,3.7\rangle}{1}
+ =\answer{\langle1.8,-3.8,-0.7\rangle},\\
+ \vect v_{[0.5,1]}
+ &=\frac{\langle4.5,6.0,3.0\rangle-\langle3.5,7.2,3.3\rangle}{0.5}
+ =\answer{\langle2.0,-2.4,-0.6\rangle},\\
+ \vect v_{[1,2]}
+ &=\frac{\langle7.3,7.8,2.7\rangle-\langle4.5,6.0,3.0\rangle}{1}
+ =\answer{\langle2.8,1.8,-0.3\rangle},\\
+ \vect v_{[1,1.5]}
+ &=\frac{\langle5.9,6.4,2.8\rangle-\langle4.5,6.0,3.0\rangle}{0.5}
+ =\answer{\langle2.8,0.8,-0.4\rangle}.
+\end{align*}
+To estimate instantaneous velocity at $t=1$, use the centered interval $[0.5,1.5]$:
+\[
+ \vect v(1)\approx
+ \frac{\langle5.9,6.4,2.8\rangle-\langle3.5,7.2,3.3\rangle}{1}
+ =\langle2.4,-0.8,-0.5\rangle.
+\]
+The corresponding speed is
+\[
+ \answer{\norm{\vect v(1)}\approx
+ \sqrt{2.4^2+(-0.8)^2+(-0.5)^2}
+ =\sqrt{6.65}\approx2.58}.
+\]
+
+\setcounter{enumi}{2}
+\item From $\vect r(t)=\langle-\tfrac12t^2,t\rangle$,
+\[
+ \answer{\vect v(t)=\langle-t,1\rangle},
+ \qquad
+ \answer{\vect a(t)=\langle-1,0\rangle},
+ \qquad
+ \answer{\norm{\vect v(t)}=\sqrt{t^2+1}}.
+\]
+At $t=2$,
+\[
+ \vect r(2)=\langle-2,2\rangle,
+ \quad \vect v(2)=\langle-2,1\rangle,
+ \quad \vect a(2)=\langle-1,0\rangle.
+\]
+Since $y=t$, eliminating the parameter gives $x=-y^2/2$. Thus the path is a left-opening parabola; at $(-2,2)$ the velocity points up and left, while the acceleration points directly left.
+
+\setcounter{enumi}{4}
+\item Differentiate the elliptical parameterization:
+\[
+ \answer{\vect v(t)=\langle-3\sin t,2\cos t\rangle},
+ \qquad
+ \answer{\vect a(t)=\langle-3\cos t,-2\sin t\rangle}.
+\]
+The speed is
+\[
+ \answer{\norm{\vect v(t)}
+ =\sqrt{9\sin^2t+4\cos^2t}
+ =\sqrt{5\sin^2t+4}}.
+\]
+At $t=\pi/3$,
+\[
+ \vect r=\left\langle\frac32,\sqrt3\right\rangle,
+ \quad
+ \vect v=\left\langle-\frac{3\sqrt3}{2},1\right\rangle,
+ \quad
+ \vect a=\left\langle-\frac32,-\sqrt3\right\rangle,
+ \quad
+ \norm{\vect v}=\frac{\sqrt{31}}2.
+\]
+The path is $x^2/9+y^2/4=1$, traversed counterclockwise. The acceleration points inward, while the velocity is tangent to the ellipse.
+
+\setcounter{enumi}{10}
+\item We obtain
+\[
+ \answer{\vect v(t)=\sqrt2\ihat+e^t\jhat-e^{-t}\khat},
+ \qquad
+ \answer{\vect a(t)=e^t\jhat+e^{-t}\khat}.
+\]
+For the speed,
+\begin{align*}
+ \norm{\vect v(t)}
+ &=\sqrt{2+e^{2t}+e^{-2t}}\\
+ &=\sqrt{(e^t+e^{-t})^2}
+ =\answer{e^t+e^{-t}},
+\end{align*}
+because $e^t+e^{-t}>0$.
+
+\setcounter{enumi}{14}
+\item Integrating the acceleration once gives
+\[
+ \vect v(t)=\langle2t+C_1,C_2,t^2+C_3\rangle.
+\]
+The condition $\vect v(0)=\langle3,-1,0\rangle$ gives $(C_1,C_2,C_3)=(3,-1,0)$, so
+\[
+ \answer{\vect v(t)=\langle2t+3,-1,t^2\rangle}.
+\]
+Integrating again,
+\[
+ \vect r(t)=\left\langle t^2+3t+D_1,-t+D_2,
+ \frac13t^3+D_3\right\rangle.
+\]
+Since $\vect r(0)=\langle0,1,1\rangle$, we have $(D_1,D_2,D_3)=(0,1,1)$ and
+\[
+ \answer{\vect r(t)=\left\langle t^2+3t,1-t,1+\frac13t^3\right\rangle}.
+\]
+
+\setcounter{enumi}{16}
+\item Integrating
+$\vect a(t)=\langle2t,\sin t,\cos2t\rangle$ gives
+\[
+ \vect v(t)=\left\langle t^2+C_1,-\cos t+C_2,
+ \frac12\sin2t+C_3\right\rangle.
+\]
+The condition $\vect v(0)=\langle1,0,0\rangle$ yields $C_1=1$, $C_2=1$, and $C_3=0$. A second integration gives
+\[
+ \vect r(t)=\left\langle\frac13t^3+t+D_1,
+ t-\sin t+D_2,-\frac14\cos2t+D_3\right\rangle.
+\]
+Using $\vect r(0)=\langle0,1,0\rangle$ gives $D_1=0$, $D_2=1$, and $D_3=1/4$. Therefore
+\[
+ \answer{\vect r(t)=\left\langle
+ \frac13t^3+t,
+ t-\sin t+1,
+ \frac14-\frac14\cos2t
+ \right\rangle}.
+\]
+Differentiating this result twice recovers the specified initial velocity and acceleration, providing a direct check.
+
+\setcounter{enumi}{18}
+\item The velocity is
+\[
+ \vect v(t)=\langle2t,5,2t-16\rangle,
+\]
+so minimizing speed is equivalent to minimizing its square:
+\begin{align*}
+ \norm{\vect v(t)}^2
+ &=(2t)^2+5^2+(2t-16)^2\\
+ &=8t^2-64t+281
+ =8(t-4)^2+153.
+\end{align*}
+The squared speed, and hence the speed, is smallest when
+\[
+ \answer{t=4}.
+\]
+
+\setcounter{enumi}{20}
+\item Newton's second law gives the constant acceleration
+\[
+ \vect a=\frac{\vect F}{m}=\frac{20\khat}{4}=5\khat.
+\]
+Using $\vect v(0)=\langle1,-1,0\rangle$,
+\[
+ \vect v(t)=\langle1,-1,5t\rangle.
+\]
+Since the object begins at the origin,
+\[
+ \answer{\vect r(t)=\left\langle t,-t,\frac52t^2\right\rangle}.
+\]
+Its speed is
+\[
+ \answer{\norm{\vect v(t)}=\sqrt{1+1+25t^2}=\sqrt{25t^2+2}}.
+\]
+
+\setcounter{enumi}{24}
+\item For a projectile launched and landing at the same height, the range is
+\[
+ R=\frac{v_0^2\sin(2\theta)}{g}.
+\]
+With $R=90\ \mathrm m$, $\theta=45^\circ$, and $g=9.8\ \mathrm{m/s^2}$,
+\[
+ 90=\frac{v_0^2\sin90^\circ}{9.8}
+ \quad\Longrightarrow\quad
+ v_0=\sqrt{90(9.8)}=\sqrt{882}=21\sqrt2.
+\]
+Thus
+\[
+ \answer{v_0\approx29.7\ \mathrm{m/s}\approx30\ \mathrm{m/s}}.
+\]
+
+\setcounter{enumi}{26}
+\item The vertical component of the initial velocity is $v_0\sin36^\circ$. At maximum height, the vertical velocity is zero, so
+\[
+ H=\frac{(v_0\sin36^\circ)^2}{2g}.
+\]
+Using $H=1600\ \mathrm{ft}$ and $g=32\ \mathrm{ft/s^2}$,
+\[
+ v_0=\frac{\sqrt{2(32)(1600)}}{\sin36^\circ}
+ =\frac{320}{\sin36^\circ}.
+\]
+Therefore
+\[
+ \answer{v_0\approx544.4\ \mathrm{ft/s}}.
+\]
+
+\setcounter{enumi}{30}
+\item Integrate the constant acceleration $\vect a=\langle0,-4,-32\rangle$ and use $\vect v(0)=\langle50,0,80\rangle$:
+\[
+ \vect v(t)=\langle50,-4t,80-32t\rangle.
+\]
+Because the ball starts at the origin,
+\[
+ \vect r(t)=\langle50t,-2t^2,80t-16t^2\rangle.
+\]
+The nonzero time at which the ball returns to the ground satisfies
+\[
+ z(t)=16t(5-t)=0,
+ \qquad t=5\ \mathrm s.
+\]
+Hence the landing point is
+\[
+ \answer{\vect r(5)=\langle250,-50,0\rangle\ \mathrm{ft}}.
+\]
+At impact,
+\[
+ \vect v(5)=\langle50,-20,-80\rangle,
+\]
+and therefore
+\[
+ \answer{\norm{\vect v(5)}
+ =\sqrt{50^2+20^2+80^2}
+ =10\sqrt{93}\approx96.4\ \mathrm{ft/s}}.
+\]
+
+\setcounter{enumi}{36}
+\item For $t>0$,
+\[
+ \vect v(t)=\langle2t,3t^2\rangle,
+ \quad
+ \vect a(t)=\langle2,6t\rangle,
+ \quad
+ \norm{\vect v(t)}=t\sqrt{4+9t^2}.
+\]
+The tangential component is
+\[
+ a_T=\frac{\vect v\cdot\vect a}{\norm{\vect v}}
+ =\frac{4t+18t^3}{t\sqrt{4+9t^2}}
+ =\answer{\frac{4+18t^2}{\sqrt{4+9t^2}}}.
+\]
+For a planar curve, $a_N=|\vect v\times\vect a|/\norm{\vect v}$. Thus
+\[
+ a_N=\frac{|12t^2-6t^2|}{t\sqrt{4+9t^2}}
+ =\answer{\frac{6t}{\sqrt{4+9t^2}}}.
+\]
+At $t=0$ the velocity is zero, so the Frenet tangential-normal decomposition is not defined; the displayed formulas apply at regular points $t>0$.
+\end{enumerate}
+}
+
+\section*{13.2}
+
+\begin{enumerate}[label=\textbf{\arabic*.},start=1]
+\setcounter{enumi}{2}
+\item The velocity and speed are
+\[
+ \vect r'(t)=\langle1,-3\sin t,3\cos t\rangle,
+ \qquad
+ \norm{\vect r'(t)}=\sqrt{1+9\sin^2t+9\cos^2t}=\sqrt{10}.
+\]
+Since the parameter runs from $-5$ to $5$, the length is
+\[
+ L=\int_{-5}^{5}\sqrt{10}\,dt
+ =\answer{10\sqrt{10}}.
+\]
+
+\setcounter{enumi}{12}
+\item Let $x=t$. The cylinder gives $y=t^2/2$, and $3z=xy$ gives $z=t^3/6$. Thus
+\[
+ \vect r(t)=\left\langle t,\frac{t^2}{2},\frac{t^3}{6}\right\rangle,
+ \qquad 0\le t\le6.
+\]
+Then
+\[
+ \vect r'(t)=\left\langle1,t,\frac{t^2}{2}\right\rangle,
+ \qquad
+ \norm{\vect r'(t)}
+ =\sqrt{1+t^2+\frac{t^4}{4}}
+ =1+\frac{t^2}{2},
+\]
+where the last equality follows because the radicand is $(1+t^2/2)^2$. Therefore
+\[
+ L=\int_0^6\left(1+\frac{t^2}{2}\right)dt
+ =\left[t+\frac{t^3}{6}\right]_0^6
+ =6+36=\answer{42}.
+\]
+
+\setcounter{enumi}{14}
+\item The point $P=(4,1,3)$ occurs at $t=1$. Since
+\[
+ \vect r'(t)=\langle-1,4,3\rangle,
+ \qquad \norm{\vect r'(t)}=\sqrt{26},
+\]
+the signed arc length measured in the direction of increasing $t$ is
+\[
+ s(t)=\int_1^t\sqrt{26}\,du=\sqrt{26}(t-1).
+\]
+Solving for $t$ gives $t=1+s/\sqrt{26}$. Substitution into $\vect r(t)$ yields the unit-speed reparameterization
+\[
+ \answer{\vect r(s)=\left\langle
+ 4-\frac{s}{\sqrt{26}},
+ 1+\frac{4s}{\sqrt{26}},
+ 3+\frac{3s}{\sqrt{26}}
+ \right\rangle},\qquad s\ge0.
+\]
+Four units along the curve means $s=4$, so the required point is
+\[
+ \answer{\left(4-\frac4{\sqrt{26}},
+ 1+\frac{16}{\sqrt{26}},
+ 3+\frac{12}{\sqrt{26}}\right)}.
+\]
+
+\setcounter{enumi}{16}
+\item The starting point $(0,0,3)$ corresponds to $t=0$. For
+\[
+ \vect r(t)=\langle3\sin t,4t,3\cos t\rangle,
+\]
+we have
+\[
+ \norm{\vect r'(t)}
+ =\norm{\langle3\cos t,4,-3\sin t\rangle}
+ =\sqrt{9\cos^2t+16+9\sin^2t}=5.
+\]
+Consequently $s=5t$. Moving five units in the positive direction gives $t=1$, and hence
+\[
+ \answer{\vect r(1)=\langle3\sin1,4,3\cos1\rangle}.
+\]
+
+\setcounter{enumi}{18}
+\item Differentiate:
+\[
+ \vect r'(t)=\langle2t,t\sin t,t\cos t\rangle
+ =t\langle2,\sin t,\cos t\rangle.
+\]
+Because $t>0$, the speed is $t\sqrt5$, so
+\[
+ \answer{\vect T(t)=\frac1{\sqrt5}\langle2,\sin t,\cos t\rangle}.
+\]
+Next,
+\[
+ \vect T'(t)=\frac1{\sqrt5}\langle0,\cos t,-\sin t\rangle,
+ \qquad \norm{\vect T'(t)}=\frac1{\sqrt5}.
+\]
+Therefore
+\[
+ \answer{\vect N(t)=\langle0,\cos t,-\sin t\rangle},
+ \qquad
+ \answer{\kappa(t)=\frac{\norm{\vect T'(t)}}{\norm{\vect r'(t)}}=\frac1{5t}}.
+\]
+
+\setcounter{enumi}{20}
+\item Here
+\[
+ \vect r'(t)=\langle1,2t,0\rangle,
+ \qquad v=\sqrt{1+4t^2},
+\]
+so
+\[
+ \answer{\vect T(t)=\frac{\langle1,2t,0\rangle}{\sqrt{1+4t^2}}}.
+\]
+Differentiating and normalizing gives
+\[
+ \vect T'(t)=\frac{\langle-4t,2,0\rangle}{(1+4t^2)^{3/2}},
+ \qquad
+ \norm{\vect T'(t)}=\frac2{1+4t^2},
+\]
+\[
+ \answer{\vect N(t)=\frac{\langle-2t,1,0\rangle}{\sqrt{1+4t^2}}}.
+\]
+Finally,
+\[
+ \answer{\kappa(t)=\frac{\norm{\vect T'(t)}}{v}
+ =\frac2{(1+4t^2)^{3/2}}}.
+\]
+
+\setcounter{enumi}{24}
+\item For $\vect r(t)=\langle0,t^3,t^2\rangle$,
+\[
+ \vect r'(t)=\langle0,3t^2,2t\rangle,
+ \qquad
+ \vect r''(t)=\langle0,6t,2\rangle.
+\]
+Their cross product is
+\[
+ \vect r'(t)\times\vect r''(t)=\langle-6t^2,0,0\rangle,
+\]
+and therefore, at regular points $t\ne0$,
+\[
+ \answer{\kappa(t)=
+ \frac{\norm{\vect r'\times\vect r''}}{\norm{\vect r'}^3}
+ =\frac{6t^2}{(9t^4+4t^2)^{3/2}}}.
+\]
+At $t=0$, $\vect r'(0)=\vect0$, so the usual parameter formula is not defined there.
+
+\setcounter{enumi}{26}
+\item We calculate
+\[
+ \vect r'(t)=\langle2\sqrt6t,2,6t^2\rangle,
+ \qquad
+ \vect r''(t)=\langle2\sqrt6,0,12t\rangle.
+\]
+Then
+\[
+ \vect r'\times\vect r''
+ =\langle24t,-12\sqrt6t^2,-4\sqrt6\rangle,
+\]
+so
+\[
+ \norm{\vect r'\times\vect r''}=4\sqrt6(3t^2+1).
+\]
+Also,
+\[
+ \norm{\vect r'}
+ =\sqrt{24t^2+4+36t^4}=2(3t^2+1).
+\]
+Thus
+\[
+ \answer{\kappa(t)=\frac{\sqrt6}{2(3t^2+1)^2}}.
+\]
+
+\setcounter{enumi}{34}
+\item For $y=e^x$,
+\[
+ \kappa(x)=\frac{|y''|}{[1+(y')^2]^{3/2}}
+ =\frac{e^x}{(1+e^{2x})^{3/2}}.
+\]
+Let $u=e^x>0$. Then
+\[
+ \frac{d}{du}\left[u(1+u^2)^{-3/2}\right]
+ =\frac{1-2u^2}{(1+u^2)^{5/2}}.
+\]
+The derivative changes from positive to negative at $u=1/\sqrt2$, so the maximum occurs when
+\[
+ x=-\frac12\ln2,
+ \qquad y=e^x=\frac1{\sqrt2}.
+\]
+Therefore
+\[
+ \answer{\text{maximum-curvature point }\left(-\frac12\ln2,\frac1{\sqrt2}\right)},
+ \qquad \kappa_{\max}=\frac{2}{3\sqrt3}.
+\]
+As $x\to\infty$, the denominator grows like $e^{3x}$ while the numerator grows like $e^x$, so
+\[
+ \answer{\lim_{x\to\infty}\kappa(x)=0}.
+\]
+
+\setcounter{enumi}{36}
+\item Curvature is larger where the curve turns more sharply, or equivalently where its osculating circle has smaller radius. The bend at $P$ is visibly tighter than the broad turn at $Q$, so
+\[
+ \answer{\kappa(P)>\kappa(Q)}.
+\]
+Fitting circles tangent to the curve and matching its local bending gives approximate radii
+\[
+ R_P\approx\frac1{1.3}\approx0.77,
+ \qquad
+ R_Q\approx\frac1{0.7}\approx1.43.
+\]
+Hence the graphical estimates are
+\[
+ \answer{\kappa(P)\approx1.3,qquad \kappa(Q)\approx0.7}.
+\]
+
+\setcounter{enumi}{38}
+\item For $y=x^{-2}$, $x\ne0$,
+\[
+ y'=-2x^{-3},\qquad y''=6x^{-4},
+\]
+and therefore
+\[
+ \answer{\kappa(x)=\frac{6x^{-4}}{(1+4x^{-6})^{3/2}}
+ =\frac{6|x|^5}{(x^6+4)^{3/2}}}.
+\]
+The curvature graph is even and nonnegative. It approaches $0$ both as $x\to0$ and as $|x|\to\infty$. For $x>0$, logarithmic differentiation gives
+\[
+ \frac{\kappa'(x)}{\kappa(x)}
+ =\frac5x-\frac{9x^5}{x^6+4},
+\]
+so the nonzero maxima occur when $x^6=5$, that is, at $x=\pm5^{1/6}$. This matches the curve: each branch is nearly vertical close to $x=0$, nearly horizontal far away, and bends most strongly between those regimes.
+
+\setcounter{enumi}{40}
+\item Differentiate twice:
+\[
+ \vect r'(t)=\langle e^t(t+1),-e^{-t},\sqrt2\rangle,
+ \qquad
+ \vect r''(t)=\langle e^t(t+2),e^{-t},0\rangle.
+\]
+The cross product is
+\[
+ \vect r'\times\vect r''
+ =\langle-\sqrt2e^{-t},\sqrt2e^t(t+2),2t+3\rangle.
+\]
+Consequently
+\[
+ \answer{\kappa(t)=
+ \frac{\sqrt{2e^{-2t}+2e^{2t}(t+2)^2+(2t+3)^2}}
+ {\left[e^{2t}(t+1)^2+e^{-2t}+2\right]^{3/2}}},
+ \qquad -5\le t\le5.
+\]
+Numerically, $\kappa$ is very small near both ends of the interval and reaches its largest value of about $0.545$ near $t\approx0.02$. Thus the space curve bends most sharply near $t=0$ and becomes progressively straighter in both parameter directions, which is precisely what the curvature graph records.
+
+\setcounter{enumi}{50}
+\item The curve is
+\[
+ \vect r(t)=\left\langle t^2,\frac23t^3,t\right\rangle,
+\]
+and the point $(1,2/3,1)$ corresponds to $t=1$. We have
+\[
+ \vect r'(t)=\langle2t,2t^2,1\rangle,
+ \qquad
+ \vect r''(t)=\langle2,4t,0\rangle.
+\]
+At $t=1$, $\vect r'(1)=\langle2,2,1\rangle$ and $\norm{\vect r'(1)}=3$, so
+\[
+ \answer{\vect T(1)=\left\langle\frac23,\frac23,\frac13\right\rangle}.
+\]
+Moreover,
+\[
+ \vect r'(1)\times\vect r''(1)
+ =\langle-4,2,4\rangle,
+ \qquad \norm{\vect r'(1)\times\vect r''(1)}=6,
+\]
+which gives
+\[
+ \answer{\vect B(1)=\left\langle-\frac23,\frac13,\frac23\right\rangle}.
+\]
+Using the right-handed Frenet relation $\vect N=\vect B\times\vect T$,
+\[
+ \answer{\vect N(1)=\left\langle-\frac13,\frac23,-\frac23\right\rangle}.
+\]
+Each vector has unit length, and the three pairwise dot products are zero, confirming that the result is an orthonormal Frenet frame.
+\end{enumerate}
+
+\SectionThirteenThree
+\SectionThirteenFour
+
+\end{document}
