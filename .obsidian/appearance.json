@@ -1,8 +1,4 @@
 {
-  "theme": "obsidian",
-  "cssTheme": "",
-  "accentColor": "#ffe600",
-  "enabledCssSnippets": [
-    "cyberpunk-neon"
-  ]
+  "cssTheme": "Wasp",
+  "theme": "obsidian"
 }
