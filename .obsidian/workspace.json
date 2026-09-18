@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "72c954b2abf2f435",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Multi Chapter 13/Chapter_13_Solutions.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Chapter_13_Solutions"
-            }
-          },
-          {
             "id": "d7b88a4bc7b5ffdc",
             "type": "leaf",
             "state": {
@@ -184,8 +172,8 @@
             "state": {
               "type": "SC-custom-variables-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "SC-custom-variables-view"
+              "icon": "code-glyph",
+              "title": "Shell commands: Custom variables"
             }
           }
         ],
@@ -208,29 +196,29 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
-  "active": "72c954b2abf2f435",
+  "active": "d7b88a4bc7b5ffdc",
   "lastOpenFiles": [
-    "Multi Chapter 12/Chapter_12_Solutions.pdf",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/weblogo-bcb-cengage-cropped.png",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/webReader.js.download",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/webp.min.js.download",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/tex-mml-chtml.js.download",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/saved_resource.html",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/thumb.jpg",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/scripts-JC73NXYM.js.download",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/styles-FFXAT7KP.css",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/ReadSpeaker.Core.js.download",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/rangy.js.download",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/ReadSpeaker.Styles.css",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/powered_by_logo.svg",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/pdf.min.js.download",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/ddan_0001_0001_0_img0637-t2.png",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/ddan_0001_0001_0_img0636-t2.png",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/ddde_0001_0001_0_img0075-t2.png",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/ddan_0001_0001_0_img0635-t2.png",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/ddan_0001_0001_0_img0634-t2.png",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/ddan_0001_0001_0_img0633-t2.png",
-    "Multi Chapter 13/Questions/Multivariable Calculus Exercise 13/ddan_0001_0001_0_img0631-t2.png",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/GtPdfJS.min.js.download",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ddan_0001_0001_0_img0015-t2.png",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ddan_0001_0001_0_img0016-t2.png",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/bd_ch_14_sect_04_05.html",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/GtRangy.min.js.download",
+    "Multi Chapter 13/Questions/Exercise 13.4.html",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/rangy.js.download",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ddan_0001_0001_0_img0010-t2.png",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ddan_0001_0001_0_img0017-t2.png",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/saved_resource.html",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ddde_0001_0001_0_img0075-t2.png",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ddan_0001_0001_0_img0014-t2.png",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ddan_0001_0001_0_img0013-t2.png",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ddan_0001_0001_0_img0012-t2.png",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ddan_0001_0001_0_img0009-t2.png",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ReadSpeaker.Core.js.download",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/ReadSpeaker.Styles.css",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/webReader.js.download",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/pdf.viewer.min.js.download",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/chtml.js.download",
+    "Multi Chapter 13/Questions/Exercise 13.4_files/powered_by_logo.svg",
     "GIT_SYNC.md",
     "README.md",
     "CHAPTER_12_STATUS.md",
