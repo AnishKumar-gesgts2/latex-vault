@@ -1,346 +1,348 @@
 \documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amssymb,amsthm,enumitem,booktabs,mathtools}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{amsmath,amssymb,mathtools,enumitem,booktabs}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\setlist{nosep}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\vect}[1]{\mathbf{#1}}
-\newcommand{\ihat}{\mathbf i}
-\newcommand{\jhat}{\mathbf j}
-\newcommand{\khat}{\mathbf k}
-\newcommand{\answer}[1]{\boxed{#1}}
-\title{Chapter 12: Vectors and the Geometry of Space\\\large Worked Solutions}
-\author{}
-\date{}
-
-\begin{document}
-\maketitle
-\noindent\textit{Note.} The supplied assignment for 12.1--12.2 is a scan of incomplete handwritten work, so some textbook prompts are not visible. The 12.3 prompts have been matched against the supplied HTML exercise page. The earlier scanned items are reconstructed from their visible data; any remaining ambiguity is identified inline.
-
-\section*{12.1 Three-Dimensional Coordinate Systems}
-
-\begin{enumerate}[label=\textbf{\arabic*.}, start=3]
-\item The distance from $(x,y,z)$ to the $yz$-plane is $|x|$, while the distance to the $xz$-plane is $|y|$. Thus the point with the smallest $|x|$ is closest to the $yz$-plane, and a point on the $xz$-plane has $y=0$. From the diagram/data in the scan, \answer{\text{$C$ is closest to the $yz$-plane and $A$ lies on the $xz$-plane.}}
-
-\setcounter{enumi}{4}
-\item In $\R^2$, the equation $x=4$ fixes one coordinate and leaves $y$ free, so it is a vertical line. In $\R^3$, $x=4$ leaves both $y$ and $z$ free; therefore it is a plane parallel to the $yz$-plane:
-\[
-\answer{x=4\text{ is a plane parallel to the }yz\text{-plane in }\R^3.}
-\]
-
-\setcounter{enumi}{10}
-\item Using the distance formula, the three side lengths shown by the coordinates are
-\[
-PQ=\sqrt{4^2+2^2+4^2}=\sqrt{36}=6,
-\]
-\[
-PR=\sqrt{2^2+4^2+4^2}=\sqrt{36}=6,
-\qquad
-QR=\sqrt{6^2+2^2+0^2}=\sqrt{40}=2\sqrt{10}.
-\]
-Since $PQ=PR$, \answer{\text{$\triangle PQR$ is isosceles.}}
-
-\setcounter{enumi}{14}
-\item The sphere and its intersection with the horizontal plane are
-\[
-(x+3)^2+(y-2)^2+(z-5)^2=16,
-\]
-\[
-z=5\implies (x+3)^2+(y-2)^2=16-0=16.
-\]
-Hence the sphere has center $(-3,2,5)$ and radius $4$, and its trace in the plane $z=5$ is a circle of radius $4$ centered at $(-3,2,5)$.
-
-\setcounter{enumi}{16}
-\item The radius is the distance from $(3,8,1)$ to the point whose coordinate differences are $(1,5,2)$:
-\[
-r=\sqrt{1^2+5^2+2^2}=\sqrt{30}.
-\]
-Therefore
-\[
-\answer{(x-3)^2+(y-8)^2+(z-1)^2=30.}
-\]
-
-\setcounter{enumi}{18}
-\item Completing the distance calculation gives
-\[
-(x+4)^2+y^2+(z-1)^2=8+17=25.
-\]
-Thus the center and radius are
-\[
-\answer{C=(-4,0,1),\qquad R=\sqrt{25}=5.}
-\]
-
-\setcounter{enumi}{24}
-\item The three concentric spheres have center $(-1,4,5)$ and radii $5$, $1$, and $4$, respectively:
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\newcommand{\ex}[1]{\subsection{Exercise #1}}
+\newcommand{\ans}[1]{\boxed{#1}}
+\newcommand{\vv}[1]{\left\langle #1\right\rangle}
+\newcommand{\ii}{\mathbf i}\newcommand{\jj}{\mathbf j}\newcommand{\kk}{\mathbf k}
+\newcommand{\cp}[6]{\begin{vmatrix}\ii&\jj&\kk\\#1&#2&#3\\#4&#5&#6\end{vmatrix}}
+\pgfplotsset{every axis/.append style={width=.70\linewidth,height=6cm,xlabel={$x$},ylabel={$y$},zlabel={$z$},view={125}{25},grid=major}}
+\newcommand{\surf}[4]{\begin{center}\begin{tikzpicture}\begin{axis}[#1]\addplot3[surf,shader=interp,samples=19,samples y=19,opacity=.78] ({#2},{#3},{#4});\end{axis}\end{tikzpicture}\end{center}}
+\title{Chapter 12: Vectors and the Geometry of Space\\Worked solutions to the assigned exercises}
+\author{}\date{}
+\begin{document}\maketitle
+\noindent Source: Stewart, Clegg, and Watson, \emph{Multivariable Calculus}, ninth edition, Sections 12.1--12.6. Exercise selection follows the supplied assignment screenshot. All graphs below are editable PGFPlots figures; finite plot windows illustrate surfaces that may extend indefinitely.
+\tableofcontents
+\section{12.1 Three-Dimensional Coordinate Systems}
+\ex{12.1.3}
+For $A=(-4,0,-1)$, $B=(3,1,-5)$, and $C=(2,4,6)$, the distances to the $yz$-plane are respectively $|-4|=4$, $|3|=3$, and $|2|=2$. Thus $\ans{C}$ is closest. The $xz$-plane has equation $y=0$, so $\ans{A}$ lies in it.
+\ex{12.1.5}
+In $\mathbb R^2$, $x=4$ means $(4,y)$ for arbitrary $y$: a vertical line. In $\mathbb R^3$ the points are $(4,y,z)$ for arbitrary $y,z$: a plane parallel to the $yz$-plane.
+\begin{center}\begin{tikzpicture}\begin{axis}[view={0}{90},width=.4\linewidth,height=5cm,xmin=0,xmax=6,ymin=-3,ymax=3]\addplot[blue,thick] coordinates {(4,-3)(4,3)};\end{axis}\end{tikzpicture}\end{center}
+\surf{domain=-3:3,y domain=-3:3}{4}{x}{y}
+\ex{12.1.11}
+$P=(3,-2,-3)$, $Q=(7,0,1)$, $R=(1,2,1)$. Subtract coordinates before taking lengths:
 \begin{align*}
-\text{(a)}\quad &(x+1)^2+(y-4)^2+(z-5)^2=25,\\
-\text{(b)}\quad &(x+1)^2+(y-4)^2+(z-5)^2=1,\\
-\text{(c)}\quad &(x+1)^2+(y-4)^2+(z-5)^2=16.
+\overrightarrow{PQ}&=\vv{7-3,0-(-2),1-(-3)}=\vv{4,2,4},& |PQ|&=\sqrt{16+4+16}=6,\\
+\overrightarrow{PR}&=\vv{1-3,2-(-2),1-(-3)}=\vv{-2,4,4},& |PR|&=\sqrt{4+16+16}=6,\\
+\overrightarrow{QR}&=\vv{1-7,2-0,1-1}=\vv{-6,2,0},& |QR|&=\sqrt{36+4}=2\sqrt{10}.
 \end{align*}
-
-\setcounter{enumi}{26}
-\item A plane parallel to the $xy$-plane has constant $z$-coordinate. Therefore
-\[
-\answer{z=-2.}
-\]
-
-\setcounter{enumi}{28}
-\item The region on the indicated side of the plane $y=1$ is described by
-\[
-\answer{y\ge 1}
-\]
-if ``past'' means the side with larger $y$-values. This plane is parallel to the $xz$-plane because its equation fixes $y$.
-
-\setcounter{enumi}{30}
-\item The slab between the parallel planes $x=-1$ and $x=2$ is
-\[
-\answer{-1\le x\le 2.}
-\]
-Both boundary planes are parallel to the $yz$-plane.
-
-\setcounter{enumi}{32}
-\item A circle in the plane $z=-1$, centered at $(0,0,-1)$ with radius $2$, satisfies
-\[
-\answer{x^2+y^2=4,\qquad z=-1.}
-\]
-
-\setcounter{enumi}{34}
-\item A circular cylinder centered on the $x$-axis, with radius $5$ and extending in the $x$-direction, has no $x$ restriction. Its cross-section in the $yz$-plane is
-\[
-\answer{y^2+z^2=25.}
-\]
-
-\setcounter{enumi}{36}
-\item A sphere centered at the origin with radius $2$ has equation
-\[
-\answer{x^2+y^2+z^2=4.}
-\]
-
-\setcounter{enumi}{38}
-\item The region between the concentric spheres of radii $1$ and $\sqrt5$ is the spherical shell
-\[
-\answer{1\le x^2+y^2+z^2\le 5.}
-\]
-
-\setcounter{enumi}{40}
-\item A cube with opposite vertices $(0,0,0)$ and $(3,3,3)$ is the box
-\[
-\answer{0\le x\le3,\qquad 0\le y\le3,\qquad 0\le z\le3.}
-\]
-
-\setcounter{enumi}{44}
-\item The spherical shell between radii $r$ and $R$ centered at the origin is
-\[
-\answer{r^2\le x^2+y^2+z^2\le R^2.}
-\]
-\end{enumerate}
-
-\section*{12.2 Vectors}
-\begin{enumerate}[label=\textbf{\arabic*.}, start=9]
-\item The vector shown has components $(3,1)$, so in standard unit-vector notation
-\[
-\answer{\vect v=3\ihat+\jhat=\langle3,1\rangle.}
-\]
-
-\setcounter{enumi}{16}
-\item In three dimensions, the component form is
-\[
-\answer{\vect v=3\ihat+8\jhat+\khat=\langle3,8,1\rangle.}
-\]
-
-\setcounter{enumi}{18}
-\item For the two planar vectors shown, the magnitudes are
-\[
-\|\langle6,3\rangle\|=\sqrt{6^2+3^2}=3\sqrt5,
-\qquad
-\|\langle6,14\rangle\|=\sqrt{6^2+14^2}=2\sqrt{58}.
-\]
-\textit{(The scan's handwritten ``5'' and ``13'' appear to be side calculations for different component data; the formula above uses the visible vectors.)}
-
-\setcounter{enumi}{20}
-\item Suppose $\vect a+\vect b=6\ihat-3\jhat-2\khat$ and $4\vect a+2\vect b=20\ihat-12\jhat$. From the first equation, $\vect b=\vect s-\vect a$, where $\vect s=\langle6,-3,-2\rangle$. Substitute:
-\[
-4\vect a+2(\vect s-\vect a)=\langle20,-12,0\rangle
-\implies 2\vect a=\langle8,-6,4\rangle,
-\]
-\[
-\vect a=\langle4,-3,2\rangle,
-\qquad
-\vect b=\langle2,0,-4\rangle.
-\]
-Therefore
-\[
-\|\vect a\|=\sqrt{4^2+(-3)^2+2^2}=\sqrt{29},
-\]
-\[
-\vect a-\vect b=\langle2,-3,6\rangle,
-\qquad
-\answer{\|\vect a-\vect b\|=\sqrt{2^2+(-3)^2+6^2}=7.}
-\]
-
-\setcounter{enumi}{22}
-\item Normalize the vector:
-\[
-\|\langle6,-2\rangle\|=\sqrt{36+4}=\sqrt{40}=2\sqrt{10},
-\]
-\[
-\answer{\frac{\langle6,-2\rangle}{\sqrt{40}}=\left\langle\frac3{\sqrt{10}},-\frac1{\sqrt{10}}\right\rangle.}
-\]
-
-\setcounter{enumi}{24}
-\item If $\vect v=8\ihat-\jhat+4\khat$, then $\|\vect v\|=\sqrt{64+1+16}=9$. The unit vector in its direction is
-\[
-\answer{\frac{\vect v}{\|\vect v\|}=\left\langle\frac89,-\frac19,\frac49\right\rangle.}
-\]
-
-\setcounter{enumi}{25}
-\item For $\vect v=\langle6,2,-3\rangle$,
-\[
-\|\vect v\|=\sqrt{36+4+9}=7,
-\qquad
-4\frac{\vect v}{\|\vect v\|}=4\left\langle\frac67,\frac27,-\frac37\right\rangle.
-\]
-Thus
-\[
-\answer{4\frac{\vect v}{\|\vect v\|}=\left\langle\frac{24}{7},\frac87,-\frac{12}{7}\right\rangle.}
-\]
-
-\setcounter{enumi}{26}
-\item With $\vect u=\langle1,\sqrt3\rangle$ and $\vect v=\langle1,0\rangle$,
-\[
-\cos\theta=\frac{\vect u\cdot\vect v}{\|\vect u\|\|\vect v\|}
- =\frac{1}{2\cdot1}=\frac12.
-\]
-Hence \answer{\theta=\pi/3} (that is, $60^\circ$).
-
-\setcounter{enumi}{30}
-\item A vector of magnitude $60$ making an angle of $40^\circ$ with the positive $x$-axis has components
-\[
-\answer{\vect v=\langle60\cos40^\circ,\,60\sin40^\circ\rangle.}
-\]
-
-\setcounter{enumi}{40}
-\item For $y=x^2$, the tangent direction is $\langle1,y'\rangle$. Since $y'=2x$,
-\[
-y'(2)=4,
-\qquad
-\vect t=\langle1,4\rangle.
-\]
-Normalizing gives
-\[
-\answer{\widehat{\vect t}=\frac{\langle1,4\rangle}{\sqrt{17}}.}
-\]
-
-\setcounter{enumi}{46}
-\item The locus of points one unit from $P_0=(x_0,y_0,z_0)$ is given by
-\[
-\|\vect r-\vect r_0\|=1
-\implies
-\sqrt{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2}=1.
-\]
-Squaring,
-\[
-\answer{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2=1,}
-\]
-which is the sphere centered at $(x_0,y_0,z_0)$ with radius $1$.
-\end{enumerate}
-
-\section*{12.3 The Dot Product}
-\begin{enumerate}[label=\textbf{\arabic*.}, start=1]
-\item Which of the following expressions are meaningful? Which are meaningless? Explain.
+Two sides are equal, so the triangle is isosceles. The largest squared side is $40$, but the sum of the other squared sides is $36+36=72\ne40$; it is not a right triangle.
+\ex{12.1.15}
+The center is $(-3,2,5)$ and radius $4$, so
+\[\ans{(x+3)^2+(y-2)^2+(z-5)^2=16}.\]
+In the $yz$-plane, $x=0$. Substitution gives $9+(y-2)^2+(z-5)^2=16$, hence\[\ans{x=0,\ (y-2)^2+(z-5)^2=7}.\] This is a circle centered at $(0,2,5)$ with radius $\sqrt7$.
+\ex{12.1.17}
+The center is $(3,8,1)$ and the sphere passes through $(4,3,-1)$. Thus
+\[r^2=(4-3)^2+(3-8)^2+(-1-1)^2=1+25+4=30.\]
+Therefore $\ans{(x-3)^2+(y-8)^2+(z-1)^2=30}$.
+\ex{12.1.19}
+Complete squares in $x^2+y^2+z^2+8x-2z=8$:
+\begin{align*}(x^2+8x+16)+y^2+(z^2-2z+1)&=8+16+1,\\(x+4)^2+y^2+(z-1)^2&=25.
+\end{align*}
+The center is $\ans{(-4,0,1)}$ and radius $\ans5$.
+\ex{12.1.25}
+A sphere just touching a plane has radius equal to its center's perpendicular distance to that plane. With center $(-1,4,5)$:
 \begin{enumerate}[label=(\alph*)]
-\item $(\vect a\cdot\vect b)\cdot\vect c$ is meaningless: $\vect a\cdot\vect b$ is a scalar, and a dot product requires two vectors.
-\item $(\vect a\cdot\vect b)\vect c$ is meaningful as scalar multiplication, so it produces a vector.
-\item $|\vect a|(\vect b\cdot\vect c)$ is meaningful: it is scalar multiplication and produces a scalar.
-\item $\vect a\cdot(\vect b+\vect c)$ is meaningful and produces a scalar.
-\item $\vect a\cdot\vect b+\vect c$ is meaningless: a scalar cannot be added to a vector.
-\item $|\vect a|\cdot(\vect b+\vect c)$ is meaningless: the dot product is not defined between a scalar and a vector.
+\item The $xy$-plane is $z=0$, so $r=|5|=5$: $(x+1)^2+(y-4)^2+(z-5)^2=25$.
+\item The $yz$-plane is $x=0$, so $r=|-1|=1$: $(x+1)^2+(y-4)^2+(z-5)^2=1$.
+\item The $xz$-plane is $y=0$, so $r=|4|=4$: $(x+1)^2+(y-4)^2+(z-5)^2=16$.
 \end{enumerate}
-
-\setcounter{enumi}{4}
-\item Compute componentwise:
-\[
-\langle4,1,\tfrac14\rangle\cdot\langle6,-3,-8\rangle
- =4(6)+1(-3)+\tfrac14(-8)
- =24-3-2
- =\answer{19}.
-\]
-
-\setcounter{enumi}{8}
-\item Using $\vect a\cdot\vect b=\|\vect a\|\|\vect b\|\cos\theta$ with magnitudes $4$ and $7$ and angle $30^\circ$,
-\[
-\vect a\cdot\vect b=4(7)\cos30^\circ
- =28\left(\frac{\sqrt3}{2}\right)
- =\answer{14\sqrt3}.
-\]
-
-\setcounter{enumi}{14}
-\item For $\vect u=\langle5,1\rangle$ and $\vect v=\langle3,2\rangle$,
-\[
-\vect u\cdot\vect v=5(3)+1(2)=17,
-\qquad
-\|\vect u\|=\sqrt{26},\quad \|\vect v\|=\sqrt{13}.
-\]
-Thus
-\[
-\cos\theta=\frac{17}{\sqrt{26}\sqrt{13}}=\frac{17}{13\sqrt2},
-\qquad
-\answer{\theta=\cos^{-1}\left(\frac{17}{13\sqrt2}\right)\approx22^\circ.}
-\]
-
-\setcounter{enumi}{18}
-\item For $\vect u=\ihat-4\jhat+\khat=\langle1,-4,1\rangle$ and $\vect v=-3\ihat+\jhat+5\khat=\langle-3,1,5\rangle$,
-\[
-\vect u\cdot\vect v=1(-3)+(-4)(1)+1(5)=-2,
-\]
-\[
-\|\vect u\|=\sqrt{1+16+1}=\sqrt{18},
-\qquad
-\|\vect v\|=\sqrt{9+1+25}=\sqrt{35}.
-\]
-Therefore
-\[
-\cos\theta=\frac{-2}{\sqrt{18}\sqrt{35}}=\frac{-2}{3\sqrt{70}},
-\]
-so
-\[
-\answer{\theta=\cos^{-1}\left(\frac{-2}{3\sqrt{70}}\right)\approx95^\circ.}
-\]
-
-\setcounter{enumi}{22}
-\item Determine whether the pairs are perpendicular, parallel, or neither by computing the dot product.
+\ex{12.1.27}
+$z=-2$ fixes height but allows all $x,y$. It is the plane parallel to the $xy$-plane two units below it.
+\ex{12.1.29}
+$y\ge1$ is the closed half-space on the positive-$y$ side of the plane $y=1$, including the plane itself. Neither $x$ nor $z$ is restricted.
+\ex{12.1.31}
+$-1\le x\le2$ is the closed slab between the planes $x=-1$ and $x=2$, including both boundaries and extending indefinitely in $y,z$.
+\ex{12.1.33}
+$x^2+y^2=4$ together with $z=-1$ is a circle, not an entire cylinder: its radius is $2$, center $(0,0,-1)$, and plane $z=-1$.
+\ex{12.1.35}
+$y^2+z^2\le25$ says that the distance $\sqrt{y^2+z^2}$ to the $x$-axis is at most $5$. This is the infinite \emph{solid} circular cylinder of radius $5$ about the $x$-axis, including its interior and boundary.
+\ex{12.1.37}
+$x^2+y^2+z^2=4$ fixes distance $2$ from the origin. It is the spherical \emph{surface} of radius $2$, excluding its interior.
+\ex{12.1.39}
+Taking square roots of the nonnegative quantities in $1\le x^2+y^2+z^2\le5$ gives $1\le\sqrt{x^2+y^2+z^2}\le\sqrt5$. The region is the closed spherical shell between radii $1$ and $\sqrt5$.
+\ex{12.1.41}
+$0\le x,y,z\le3$ describes the solid cube $[0,3]^3$, with side length $3$, opposite vertices $(0,0,0)$ and $(3,3,3)$, and all faces included.
+\ex{12.1.45}
+Distance from the origin is $\rho=\sqrt{x^2+y^2+z^2}$. The question explicitly excludes points on either sphere, so $r<\rho<R$. Squaring gives $\ans{r^2<x^2+y^2+z^2<R^2}$. Both bounding spherical surfaces are excluded.
+\section{12.2 Vectors}
+\ex{12.2.9}
+From $A=(-2,1)$ to $B=(1,2)$,
+\[\overrightarrow{AB}=\vv{1-(-2),2-1}=\ans{\vv{3,1}}.\]
+The equivalent arrow from the origin ends at $(3,1)$; translating an arrow preserves its components.
+\begin{center}\begin{tikzpicture}\begin{axis}[view={0}{90},xmin=-3,xmax=4,ymin=-1,ymax=3,height=5cm]\addplot[blue,thick,->] coordinates {(-2,1)(1,2)};\addplot[red,thick,->] coordinates {(0,0)(3,1)};\node at (axis cs:-2,1)[above]{$A$};\node at (axis cs:1,2)[above]{$B$};\end{axis}\end{tikzpicture}\end{center}
+\ex{12.2.17}
+Add corresponding components: $\vv{3,0,1}+\vv{0,8,0}=\ans{\vv{3,8,1}}$. Place the second arrow at the tip of the first; the resultant runs from the origin to $(3,8,1)$.
+\begin{center}\begin{tikzpicture}\begin{axis}[height=5cm]\addplot3[blue,thick,->] coordinates {(0,0,0)(3,0,1)};\addplot3[red,thick,->] coordinates {(3,0,1)(3,8,1)};\addplot3[black,thick,->] coordinates {(0,0,0)(3,8,1)};\end{axis}\end{tikzpicture}\end{center}
+\ex{12.2.19}
+Let $a=\vv{-3,4}$, $b=\vv{9,-1}$.
+\begin{align*}a+b&=\vv{-3+9,4-1}=\ans{\vv{6,3}},\\4a+2b&=\vv{-12,16}+\vv{18,-2}=\ans{\vv{6,14}},\\|a|&=\sqrt{(-3)^2+4^2}=\ans5,\\a-b&=\vv{-12,5},\quad |a-b|=\sqrt{144+25}=\ans{13}.
+\end{align*}
+\ex{12.2.21}
+$a=\vv{4,-3,2}$, $b=\vv{2,0,-4}$.
+\begin{align*}a+b&=\vv{4+2,-3+0,2-4}=\ans{\vv{6,-3,-2}},\\4a+2b&=\vv{16,-12,8}+\vv{4,0,-8}=\ans{\vv{20,-12,0}},\\|a|&=\sqrt{16+9+4}=\ans{\sqrt{29}},\\a-b&=\vv{2,-3,6},\quad |a-b|=\sqrt{4+9+36}=\ans7.
+\end{align*}
+\ex{12.2.23}
+$|v|=\sqrt{6^2+(-2)^2}=2\sqrt{10}$. Dividing each component by this length produces a vector of length one:
+\[\ans{\widehat v=\vv{3/\sqrt{10},-1/\sqrt{10}}}.\]
+\ex{12.2.25}
+$|v|=\sqrt{8^2+(-1)^2+4^2}=\sqrt{81}=9$, so $\ans{\widehat v=\vv{8/9,-1/9,4/9}}$.
+\ex{12.2.26}
+First normalize $\vv{6,2,-3}$, whose length is $\sqrt{36+4+9}=7$, then multiply by $4$:
+\[\ans{v=\frac47\vv{6,2,-3}=\vv{24/7,8/7,-12/7}}.\]
+Its length is $(4/7)7=4$, and the positive multiplier preserves direction.
+\ex{12.2.27}
+$v=\vv{1,\sqrt3}$ has length $2$. With the positive $x$ direction $e_x=\vv{1,0}$, $\cos\theta=(v\cdot e_x)/(|v||e_x|)=1/2$. Thus $\ans{\theta=\pi/3=60^\circ}$.
+\ex{12.2.31}
+Resolve the $60$ ft/s velocity along horizontal and vertical axes:
+\[\ans{v_x=60\cos40^\circ\approx45.96\ \text{ft/s}},\qquad \ans{v_y=60\sin40^\circ\approx38.57\ \text{ft/s}}.\]
+The right triangle has hypotenuse $60$, horizontal adjacent side $v_x$, and vertical opposite side $v_y$.
+\ex{12.2.41}
+Differentiate $y=x^2$: $y'=2x$, so the tangent slope at $(2,4)$ is $4$. A direction vector is $\vv{1,4}$, with length $\sqrt{17}$. Both possible unit directions are $\ans{\pm\vv{1,4}/\sqrt{17}}$.
+\ex{12.2.47}
+$|r-r_0|=1$ means
+\[\sqrt{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2}=1.\]
+Squaring yields $\ans{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2=1}$: the sphere centered at $(x_0,y_0,z_0)$ with radius $1$.
+\section{12.3 The Dot Product}
+\ex{12.3.1}
+A dot product accepts two vectors and returns a scalar; multiplication of a scalar and vector returns a vector.
 \begin{enumerate}[label=(\alph*)]
-\item
-\[
-\langle9,3\rangle\cdot\langle-2,6\rangle=-18+18=0.
-\]
-Thus \answer{\text{the vectors are perpendicular}.}
-\item
-\[
-\langle4,5,-2\rangle\cdot\langle3,-1,5\rangle
- =12-5-10=-3\ne0.
-\]
-The vectors are not scalar multiples, so \answer{\text{neither}}.
-\item
-\[
-\langle-8,12,4\rangle\cdot\langle6,-9,-3\rangle
- =-48-108-12=-168\ne0.
-\]
-Because
-\[
-\langle-8,12,4\rangle=-\frac43\langle6,-9,-3\rangle,
-\]
-the vectors are scalar multiples, so \answer{\text{parallel}}.
-\item
-\[
-\langle3,-1,3\rangle\cdot\langle5,9,-2\rangle
- =15-9-6=0.
-\]
-Thus \answer{\text{the vectors are perpendicular}}.
+\item $(a\cdot b)\cdot c$ is meaningless: its first dot-product input is a scalar.
+\item $(a\cdot b)c$ is meaningful scalar multiplication, returning a vector.
+\item $|a|(b\cdot c)$ is meaningful multiplication of two scalars, returning a scalar.
+\item $a\cdot(b+c)$ is meaningful, returning a scalar.
+\item $a\cdot b+c$ attempts to add a scalar to a vector and is meaningless.
+\item $|a|\cdot(b+c)$ is meaningless as a dot product: $|a|$ is scalar.
 \end{enumerate}
+\ex{12.3.5}
+$\vv{4,1,1/4}\cdot\vv{6,-3,-8}=4(6)+1(-3)+(1/4)(-8)=24-3-2=\ans{19}$.
+\ex{12.3.9}
+$a\cdot b=|a||b|\cos\theta=7(4)\cos30^\circ=28(\sqrt3/2)=\ans{14\sqrt3}$.
+\ex{12.3.15}
+For $u=\vv{5,1}$ and $v=\vv{3,2}$, $u\cdot v=15+2=17$, $|u|=\sqrt{25+1}=\sqrt{26}$, and $|v|=\sqrt{9+4}=\sqrt{13}$. Thus
+\[\ans{\theta=\cos^{-1}\!\left(\frac{17}{\sqrt{26}\sqrt{13}}\right)\approx22^\circ}.\]
+\ex{12.3.19}
+$u=\vv{1,-4,1}$, $v=\vv{-3,1,5}$. Then $u\cdot v=-3-4+5=-2$, $|u|=\sqrt{18}$, $|v|=\sqrt{35}$. Therefore $\ans{\theta=\cos^{-1}(-2/\sqrt{630})\approx95^\circ}$.
+\ex{12.3.23}
+Orthogonality means dot product zero; parallel nonzero vectors must be scalar multiples.
+\begin{enumerate}[label=(\alph*)]
+\item $9(-2)+3(6)=-18+18=0$: orthogonal.
+\item $4(3)+5(-1)+(-2)(5)=12-5-10=-3$. Component ratios $3/4,-1/5,5/(-2)$ differ: neither.
+\item $\vv{-8,12,4}=(-4/3)\vv{6,-9,-3}$: parallel. The dot product $-48-108-12=-168$ is nonzero.
+\item $3(5)+(-1)(9)+3(-2)=15-9-6=0$: orthogonal.
 \end{enumerate}
-
-\input{Chapter_12_Additional_Solutions}
-
+\ex{12.3.27}
+Seek $w=\vv{p,q,r}$ perpendicular to $\vv{1,1,0}$ and $\vv{1,0,1}$. The two dot-product equations are $p+q=0$ and $p+r=0$. Choose $p=1$, giving $w=\vv{1,-1,-1}$ and $|w|=\sqrt3$. Hence one answer is $\ans{\vv{1,-1,-1}/\sqrt3}$; its negative also works.
+\ex{12.3.33}
+$|v|=\sqrt{4^2+1^2+8^2}=9$. Therefore
+\[\ans{\cos\alpha=4/9,\quad\cos\beta=1/9,\quad\cos\gamma=8/9},\]
+\[\ans{\alpha\approx63.6^\circ,\quad\beta\approx83.6^\circ,\quad\gamma\approx27.3^\circ}.\]
+These satisfy $(4/9)^2+(1/9)^2+(8/9)^2=1$.
+\ex{12.3.41}
+$a=\vv{4,7,-4}$, $b=\vv{3,-1,1}$. Compute $a\cdot b=12-7-4=1$ and $|a|^2=16+49+16=81$. Then
+\[\ans{\operatorname{comp}_a b=\frac{a\cdot b}{|a|}=\frac19},\qquad
+\ans{\operatorname{proj}_a b=\frac{a\cdot b}{|a|^2}a=\frac1{81}\vv{4,7,-4}}.\]
+\ex{12.3.47}
+$|a|=\sqrt{3^2+0^2+(-1)^2}=\sqrt{10}$. The requirement $(a\cdot b)/|a|=2$ becomes $3b_x-b_z=2\sqrt{10}$. Choosing $b_y=b_z=0$ gives $\ans{b=\vv{2\sqrt{10}/3,0,0}}$. Substitution gives $(3\cdot2\sqrt{10}/3)/\sqrt{10}=2$.
+\ex{12.3.53}
+Let $Q=(x_Q,y_Q)$ be any point on the line, so $ax_Q+by_Q+c=0$, and let $n=\vv{a,b}\ne0$. The perpendicular distance is the absolute scalar projection of $\overrightarrow{QP_1}$ onto $n$:
+\begin{align*}d&=\frac{|n\cdot\overrightarrow{QP_1}|}{|n|}
+=\frac{|a(x_1-x_Q)+b(y_1-y_Q)|}{\sqrt{a^2+b^2}}\\
+&=\frac{|ax_1+by_1-(ax_Q+by_Q)|}{\sqrt{a^2+b^2}}
+=\ans{\frac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}}.
+\end{align*}
+For $P_1=(-2,3)$ and $3x-4y+5=0$, $d=|-6-12+5|/\sqrt{9+16}=\ans{13/5}$.
+\section{12.4 The Cross Product}
+Expand along the first row with signs $+,-,+$. In particular, the coefficient of $\jj$ carries a minus sign. Each determinant below is expanded explicitly.
+\ex{12.4.1}
+\begin{align*}a\times b&=\cp{2}{3}{0}{1}{0}{5}
+=\ii(3\cdot5-0\cdot0)-\jj(2\cdot5-0\cdot1)+\kk(2\cdot0-3\cdot1)\\&=\ans{\vv{15,-10,-3}}.
+\end{align*}
+Check: $a\cdot(a\times b)=2(15)+3(-10)=0$ and $b\cdot(a\times b)=15+5(-3)=0$.
+\ex{12.4.5}
+\begin{align*}a\times b&=\cp{1/2}{1/3}{1/4}{1}{2}{-3}\\
+&=\ii[(1/3)(-3)-(1/4)2]-\jj[(1/2)(-3)-(1/4)1]+\kk[(1/2)2-(1/3)1]\\
+&=\ans{\vv{-3/2,7/4,2/3}}.
+\end{align*}
+Checks: $(-3/2)(1/2)+(7/4)(1/3)+(2/3)(1/4)=-9/12+7/12+2/12=0$;
+$(-3/2)1+(7/4)2+(2/3)(-3)=-3/2+7/2-2=0$.
+\ex{12.4.7}
+\begin{align*}a\times b&=\cp{t^3}{t^2}{t}{t}{2t}{3t}\\&=\ii(t^2\cdot3t-t\cdot2t)-\jj(t^3\cdot3t-t\cdot t)+\kk(t^3\cdot2t-t^2\cdot t)\\&=\ans{\vv{3t^3-2t^2,t^2-3t^4,2t^4-t^3}}.
+\end{align*}
+Dotting with $a$ gives $3t^6-2t^5+t^4-3t^6+2t^5-t^4=0$. Dotting with $b$ gives $3t^4-2t^3+2t^3-6t^5+6t^5-3t^4=0$. This also holds at $t=0$.
+\ex{12.4.9}
+Using $\ii\times\jj=\kk$, $(\ii\times\jj)\times\kk=\kk\times\kk=\ans0$. A vector crossed with itself is zero.
+\ex{12.4.11}
+Use distributivity and the unit-vector cross products as requested in the textbook:
+\begin{align*}(\jj-\kk)\times(\kk-\ii)&=\jj\times\kk-\jj\times\ii-\kk\times\kk+\kk\times\ii\\&=\ii-(-\kk)-0+\jj=\ans{\ii+\jj+\kk}.
+\end{align*}
+\ex{12.4.15}
+The displayed $150^\circ$ is between the reverse of the horizontal arrow and $v$, so the angle between $u,v$ is $30^\circ$; either sine gives the same magnitude:
+\[|u\times v|=|u||v|\sin30^\circ=4(3)(1/2)=\ans6.\]
+From a rightward $u$ toward downward-right $v$, the rotation is clockwise, so $\ans{u\times v\text{ points into the page}}$.
+\ex{12.4.17}
+\begin{align*}a\times b&=\cp{2}{-1}{3}{4}{2}{1}\\&=\ii[(-1)1-3(2)]-\jj[2(1)-3(4)]+\kk[2(2)-(-1)4]\\&=\ans{\vv{-7,10,8}}.
+\end{align*}
+Anticommutativity yields $\ans{b\times a=\vv{7,-10,-8}}$.
+\ex{12.4.19}
+\begin{align*}u\times v&=\cp{3}{2}{1}{-1}{1}{0}\\&=\ii(2\cdot0-1\cdot1)-\jj(3\cdot0-1(-1))+\kk(3\cdot1-2(-1))\\&=\vv{-1,-1,5}.
+\end{align*}
+Its length is $\sqrt{1+1+25}=3\sqrt3$. The two perpendicular unit vectors are $\ans{\pm\vv{-1,-1,5}/(3\sqrt3)}$.
+\ex{12.4.29}
+$P=(3,1,1)$, $Q=(5,2,4)$, $R=(8,5,3)$.
+\[\overrightarrow{PQ}=\vv{2,1,3},\quad\overrightarrow{PR}=\vv{5,4,2}.\]
+\begin{align*}\overrightarrow{PQ}\times\overrightarrow{PR}&=\cp{2}{1}{3}{5}{4}{2}\\&=\ii(1\cdot2-3\cdot4)-\jj(2\cdot2-3\cdot5)+\kk(2\cdot4-1\cdot5)\\&=\ans{\vv{-10,11,3}}.
+\end{align*}
+\textbf{(a)} This nonzero vector is orthogonal to the plane. \textbf{(b)} The parallelogram area is its length, so the triangle area is half:
+\[\ans{A=\frac12\sqrt{(-10)^2+11^2+3^2}=\frac{\sqrt{230}}2}.\]
+\ex{12.4.33}
+\begin{align*}b\times c&=\cp{-1}{1}{2}{2}{1}{4}\\&=\ii(4-2)-\jj(-4-4)+\kk(-1-2)=\vv{2,8,-3},\\V&=|a\cdot(b\times c)|=|1(2)+2(8)+3(-3)|=|2+16-9|=\ans9.
+\end{align*}
+\ex{12.4.37}
+$u=\vv{1,5,-2}$, $v=\vv{3,-1,0}$, $w=\vv{5,9,-4}$.
+\begin{align*}v\times w&=\cp{3}{-1}{0}{5}{9}{-4}\\&=\ii[(-1)(-4)-0(9)]-\jj[3(-4)-0(5)]+\kk[3(9)-(-1)5]\\&=\vv{4,12,32},\\u\cdot(v\times w)&=1(4)+5(12)+(-2)32=4+60-64=\ans0.
+\end{align*}
+The parallelepiped has zero volume, so the three vectors are coplanar.
+\ex{12.4.43}
+$|a\times b|=\sqrt{1^2+2^2+2^2}=3$ and $a\cdot b=\sqrt3>0$, so the angle is acute. Dividing the sine and cosine formulas gives $\tan\theta=3/\sqrt3=\sqrt3$, hence $\ans{\theta=60^\circ}$.
+\ex{12.4.44}
+\textbf{(a)} Put $v=\vv{p,q,r}$. Then
+\[\cp{1}{2}{1}{p}{q}{r}=\ii(2r-q)-\jj(r-p)+\kk(q-2p)=\vv{3,1,-5}.\]
+Thus $2r-q=3$, $p-r=1$, $q-2p=-5$. Set $r=t$; the first two equations give $q=2t-3$, $p=t+1$, and the third is satisfied because $(2t-3)-2(t+1)=-5$. Therefore
+\[\ans{v=\vv{1,-3,0}+t\vv{1,2,1},\quad t\in\mathbb R}.\]
+\textbf{(b)} Any cross product with $\vv{1,2,1}$ is perpendicular to that vector. But $\vv{1,2,1}\cdot\vv{3,1,5}=3+2+5=10\ne0$. No such $v$ exists.
+\ex{12.4.47}
+For nonzero $a,b$ with angle $\theta$,
+\begin{align*}|a\times b|^2&=|a|^2|b|^2\sin^2\theta\\&=|a|^2|b|^2(1-\cos^2\theta)\\&=\ans{|a|^2|b|^2-(a\cdot b)^2}.
+\end{align*}
+If either vector is zero, both sides are zero, so the identity still holds.
+\section{12.5 Equations of Lines and Planes}
+A line through $r_0$ with direction $v\ne0$ has equation $r=r_0+tv$. A plane through $P_0$ with normal $n\ne0$ has equation $n\cdot(r-r_0)=0$.
+\ex{12.5.3}
+The point is $(-1,8,7)$ and direction $\vv{1/2,1/3,1/4}$. Multiply the direction by $12$ to obtain $\vv{6,4,3}$, without changing the line:
+\[\ans{r=\vv{-1,8,7}+t\vv{6,4,3}},\qquad\ans{x=-1+6t,\ y=8+4t,\ z=7+3t}.\]
+\ex{12.5.5}
+The plane $3x-2y+2z=8$ has normal $\vv{3,-2,2}$. The required perpendicular line through $(5,7,1)$ is
+\[\ans{r=\vv{5,7,1}+t\vv{3,-2,2}},\qquad\ans{x=5+3t,\ y=7-2t,\ z=1+2t}.\]
+\ex{12.5.9}
+Subtract endpoints: $(-7,9,11)-(12,9,-13)=\vv{-19,0,24}$. Thus
+\[\ans{x=12-19t,\quad y=9,\quad z=-13+24t}.\]
+Since the $y$ direction component is zero, it cannot be a denominator. The symmetric form is\[\ans{(x-12)/(-19)=(z+13)/24,\ y=9}.\]
+\ex{12.5.15}
+\textbf{(a)} Through $(1,-5,6)$ with direction $\vv{-1,2,-3}$:
+\[\ans{\frac{x-1}{-1}=\frac{y+5}{2}=\frac{z-6}{-3}},\quad x=1-t,\ y=-5+2t,\ z=6-3t.\]
+\textbf{(b)} In the $xy$-plane, $6-3t=0$ gives $t=2$ and $(-1,-1,0)$. In the $yz$-plane, $1-t=0$ gives $t=1$ and $(0,-3,3)$. In the $xz$-plane, $-5+2t=0$ gives $t=5/2$ and $(-3/2,0,-3/2)$.
+\ex{12.5.19}
+$L_1=(3+2t,4-t,1+3t)$, $L_2=(1+4s,3-2s,4+5s)$. Directions $\vv{2,-1,3}$ and $\vv{4,-2,5}$ are not proportional: the first two component ratios are $2$, but the third is $5/3$. Intersection requires
+\[3+2t=1+4s\implies t-2s=-1,\qquad4-t=3-2s\implies t-2s=1.\]
+This is contradictory, so the nonparallel, nonintersecting lines are $\ans{\text{skew}}$.
+\ex{12.5.21}
+The symmetric equations give
+\[L_1=(2+t,3-2t,1-3t),\qquad L_2=(3+s,-4+3s,2-7s).\]
+From $x$, $t-s=1$, hence $t=s+1$. From $y$, $3-2(s+1)=-4+3s$, hence $5=5s$, $s=1$, $t=2$. The $z$ values agree: $1-3(2)=-5=2-7(1)$. Thus $\ans{\text{intersection }(4,-1,-5)}$.
+\ex{12.5.25}
+The normal is $\vv{-1,2,3}$, point $(5,-2,4)$:
+\[-(x-5)+2(y+2)+3(z-4)=0\implies -x+2y+3z+5+4-12=0.\]
+Therefore $\ans{-x+2y+3z=3}$.
+\ex{12.5.29}
+Parallel planes share normal $\vv{2,-1,3}$, so write $2x-y+3z=d$. Substitution gives $d=2(2.1)-1.7+3(-0.9)=4.2-1.7-2.7=-0.2$. Thus $\ans{2x-y+3z=-1/5}$.
+\ex{12.5.33}
+From $P=(2,1,2)$, $Q=(3,-8,6)$, $R=(-2,-3,1)$ get $u=Q-P=\vv{1,-9,4}$ and $v=R-P=\vv{-4,-4,-1}$.
+\begin{align*}u\times v&=\cp{1}{-9}{4}{-4}{-4}{-1}\\&=\ii[(-9)(-1)-4(-4)]-\jj[1(-1)-4(-4)]+\kk[1(-4)-(-9)(-4)]\\&=\vv{25,-15,-40}=5\vv{5,-3,-8}.\end{align*}
+Thus $5(x-2)-3(y-1)-8(z-2)=0$, or $\ans{5x-3y-8z+9=0}$.
+\ex{12.5.35}
+The line contains $Q=(4,-1,0)$ and has direction $v=\vv{-1,2,-3}$. To the required point $P=(3,5,-1)$, $w=P-Q=\vv{-1,6,-1}$.
+\begin{align*}v\times w&=\cp{-1}{2}{-3}{-1}{6}{-1}\\&=\ii[2(-1)-(-3)6]-\jj[(-1)(-1)-(-3)(-1)]+\kk[(-1)6-2(-1)]\\&=\vv{16,2,-4}=2\vv{8,1,-2}.\end{align*}
+Use this normal at $P$: $8(x-3)+(y-5)-2(z+1)=0$, hence $\ans{8x+y-2z-31=0}$. Check the entire line: $8(4-t)+(2t-1)-2(-3t)-31=0$.
+\ex{12.5.37}
+Let $F_1=x+2y+3z-1$, $F_2=2x-y+z+3$. Every plane $\lambda F_1+\mu F_2=0$ contains the intersection. At $(3,1,4)$, $F_1=16$, $F_2=12$. Choose $\lambda=3$, $\mu=-4$ because $3(16)-4(12)=0$. Then
+\[3F_1-4F_2=-5x+10y+5z-15=0\implies\ans{x-2y-z+3=0}.\]
+\ex{12.5.45}
+Substitute the line into the plane:
+\[(2-2t)+2(3t)-(1+t)=7\implies1+3t=7\implies t=2.\]
+The point is $\ans{(-2,6,3)}$. Check: $-2+2(6)-3=7$.
+\ex{12.5.53}
+$n_1=\vv{1,2,-1}$, $n_2=\vv{2,-2,1}$ are not proportional. Their dot product $2-4-1=-3$ is nonzero, so the planes are neither parallel nor perpendicular. The acute angle has
+\[\cos\theta=\frac{|-3|}{\sqrt{1+4+1}\sqrt{4+4+1}}=\frac1{\sqrt6},\quad\ans{\theta\approx65.9^\circ}.\]
+\ex{12.5.57}
+\textbf{(a)} Subtract $x+y+z=1$ from $x+2y+2z=1$ to obtain $y+z=0$. Substituting back gives $x=1$. Let $y=t$, so $\ans{x=1,\ y=t,\ z=-t}$.
+\textbf{(b)} Normals $\vv{1,1,1}$ and $\vv{1,2,2}$ have dot product $5$ and lengths $\sqrt3$, $3$. Thus $\ans{\theta=\cos^{-1}(5/(3\sqrt3))\approx15.8^\circ}$.
+\ex{12.5.63}
+Write $Ax+By+Cz=D$. Substituting the intercepts $(a,0,0)$, $(0,b,0)$, $(0,0,c)$ gives $Aa=D$, $Bb=D$, $Cc=D$. For finite nonzero intercepts this plane does not pass through the origin, so $D\ne0$. Divide by $D$ to obtain
+\[\ans{\frac xa+\frac yb+\frac zc=1}.\]
+\ex{12.5.65}
+A direction must be perpendicular to the plane normal $n=\vv{1,1,1}$ and the line direction $d=\vv{1,-1,2}$. Choose
+\begin{align*}n\times d&=\cp{1}{1}{1}{1}{-1}{2}\\&=\ii(2+1)-\jj(2-1)+\kk(-1-1)=\vv{3,-1,-2}.\end{align*}
+Through $(0,1,2)$, $\ans{x=3t,\ y=1-t,\ z=2-2t}$. The two dot-product checks are $3-1-2=0$ and $3+1-4=0$.
+\ex{12.5.71}
+For $P=(1,-2,4)$ and $3x+2y+6z=5$:
+\[d=\frac{|3(1)+2(-2)+6(4)-5|}{\sqrt{3^2+2^2+6^2}}=\frac{|3-4+24-5|}{7}=\ans{18/7}.\]
+\ex{12.5.75}
+Choose any point $(x_0,y_0,z_0)$ on $ax+by+cz+d_1=0$, so $ax_0+by_0+cz_0=-d_1$. Its distance to the parallel plane $ax+by+cz+d_2=0$ is
+\[D=\frac{|ax_0+by_0+cz_0+d_2|}{\sqrt{a^2+b^2+c^2}}=\ans{\frac{|d_2-d_1|}{\sqrt{a^2+b^2+c^2}}}.\]
+This does not depend on the point chosen. At least one normal component must be nonzero.
+\section{12.6 Cylinders and Quadric Surfaces}
+\ex{12.6.3}
+$x^2+z^2=4$ is independent of $y$. Every trace $y=k$ is a circle of radius $2$ in the $xz$ directions: a circular cylinder about $y$. Parametrize it as $(2\cos u,v,2\sin u)$.
+\surf{domain=0:360,y domain=-3:3}{2*cos(x)}{y}{2*sin(x)}
+\ex{12.6.5}
+$x^2+y+1=0$ becomes $y=-x^2-1$, with $z$ free. Each trace $z=k$ is a downward-opening parabola with vertex $(0,-1,k)$. This is a parabolic cylinder with rulings parallel to $z$ and vertex line $x=0,y=-1$.
+\surf{domain=-2:2,y domain=-3:3}{x}{-x^2-1}{y}
+\ex{12.6.11}
+\begin{enumerate}[label=(\alph*)]
+\item $x^2+y^2-z^2=1$: at $z=k$, $x^2+y^2=1+k^2$ is a circle of radius $\sqrt{1+k^2}$. At $x=k$, $y^2-z^2=1-k^2$; at $y=k$, $x^2-z^2=1-k^2$. The last two are hyperbolas for $|k|\ne1$ and pairs of lines at $|k|=1$. The connected surface has a circular waist of radius $1$ at $z=0$ and expands with $|z|$: a one-sheet hyperboloid about $z$.
+\item $x^2-y^2+z^2=1$ changes the negative squared variable to $y$, rotating the axis to $y$. Traces $y=k$ are circles $x^2+z^2=1+k^2$.
+\item Complete the square: $x^2+y^2+2y-z^2=0$ becomes $x^2+(y+1)^2-z^2=1$. Translate the original surface one unit in negative $y$; its center is $(0,-1,0)$ and axis is $x=0,y=-1$.
+\end{enumerate}
+\surf{domain=0:360,y domain=-2:2}{sqrt(1+y^2)*cos(x)}{sqrt(1+y^2)*sin(x)}{y}
+\surf{domain=0:360,y domain=-2:2}{sqrt(1+y^2)*cos(x)}{y}{sqrt(1+y^2)*sin(x)}
+\surf{domain=0:360,y domain=-2:2}{sqrt(1+y^2)*cos(x)}{-1+sqrt(1+y^2)*sin(x)}{y}
+\ex{12.6.13}
+$x=y^2+4z^2$. At $x=k>0$, $y^2/k+z^2/(k/4)=1$ is an ellipse with semiaxes $\sqrt{k}$ and $\sqrt{k}/2$. At $k=0$ there is only the origin, and at $k<0$ there are no points. Traces $y=0$ and $z=0$ are $x=4z^2$ and $x=y^2$. This is an elliptic paraboloid opening in $+x$, vertex $(0,0,0)$.
+\surf{domain=-2:2,y domain=-1:1}{x^2+4*y^2}{x}{y}
+\ex{12.6.17}
+Divide $9y^2+4z^2=x^2+36$ by $36$:
+\[y^2/4+z^2/9-x^2/36=1.\]
+At $x=k$, $y^2/4+z^2/9=1+k^2/36$ is an ellipse, with minimum semiaxes $2,3$ at $x=0$, increasing with $|x|$. Traces $y=0$ and $z=0$ are hyperbolas $z^2/9-x^2/36=1$ and $y^2/4-x^2/36=1$. It is a one-sheet hyperboloid about $x$.
+\surf{domain=0:360,y domain=-8:8}{y}{2*sqrt(1+y^2/36)*cos(x)}{3*sqrt(1+y^2/36)*sin(x)}
+\ex{12.6.21}
+$y=z^2-x^2$. At $x=0$, $y=z^2$ opens in $+y$; at $z=0$, $y=-x^2$ opens in $-y$. At $y=k$, $z^2-x^2=k$ is a hyperbola for $k\ne0$, and the two lines $z=\pm x$ when $k=0$. It is a hyperbolic paraboloid (saddle).
+\surf{domain=-2:2,y domain=-2:2}{x}{y^2-x^2}{y}
+\ex{12.6.22}
+$x=y^2-z^2$. At $z=0$, $x=y^2$; at $y=0$, $x=-z^2$. These parabolas open in opposite $x$ directions. At $x=k$, $y^2-z^2=k$ is a hyperbola, or two lines at $k=0$. It is a hyperbolic paraboloid.
+\surf{domain=-2:2,y domain=-2:2}{x^2-y^2}{x}{y}
+\ex{12.6.23}
+$x^2+4y^2+9z^2=1$ has standard form $x^2/1+y^2/(1/4)+z^2/(1/9)=1$. All terms are positive: an ellipsoid with semiaxes $(1,1/2,1/3)$, longest along $x$, shortest along $z$. Hence $\ans{\text{graph VII}}$.
+\ex{12.6.24}
+$9x^2+4y^2+z^2=1$ has semiaxes $(1/3,1/2,1)$, so it is an ellipsoid tallest along $z$: $\ans{\text{graph IV}}$.
+\ex{12.6.25}
+$x^2-y^2+z^2=1$ has two positive terms and one negative. Traces $y=k$ are circles with radius $\sqrt{1+k^2}$, leaving a nonzero waist at $y=0$. It is the one-sheet hyperboloid about $y$: $\ans{\text{graph II}}$.
+\ex{12.6.26}
+$-x^2+y^2-z^2=1$ gives $y^2=1+x^2+z^2$, so $|y|\ge1$. Two disconnected sheets have vertices $(0,\pm1,0)$ and open in $\pm y$: $\ans{\text{graph III}}$.
+\ex{12.6.27}
+$y=2x^2+z^2\ge0$ has vertex the origin and elliptical traces $2x^2+z^2=k$ at $y=k>0$. This elliptic paraboloid opens in $+y$: $\ans{\text{graph VI}}$.
+\ex{12.6.28}
+$y^2=x^2+2z^2$ has a vertex at the origin and two conical halves in $y>0$ and $y<0$. At $y=k\ne0$ its traces are ellipses; at $k=0$ the cross-section collapses to a point. This is the elliptic cone $\ans{\text{graph I}}$.
+\ex{12.6.29}
+$x^2+2z^2=1$ is independent of $y$. It is an elliptic cylinder parallel to $y$, with semiaxes $1$ along $x$ and $1/\sqrt2$ along $z$: $\ans{\text{graph VIII}}$.
+\ex{12.6.30}
+$y=x^2-z^2$ has traces $y=x^2$ at $z=0$ and $y=-z^2$ at $x=0$. These opposite openings identify the saddle, a hyperbolic paraboloid: $\ans{\text{graph V}}$.
+\ex{12.6.33}
+$y^2=x^2+z^2/9$ becomes $x^2+z^2/9-y^2=0$. At $y=k\ne0$, $x^2/k^2+z^2/(9k^2)=1$ is an ellipse with semiaxes $|k|,3|k|$. At $y=0$ only the origin remains. At $z=0$, $y=\pm x$; at $x=0$, $z=\pm3y$. It is an elliptic double cone about $y$.
+\surf{domain=0:360,y domain=-2:2}{y*cos(x)}{y}{3*y*sin(x)}
+\ex{12.6.45}
+Set $r=\sqrt{x^2+y^2}$. The cone is $z=r$ and cylinder $r=1$. For $1\le z\le2$, the cone is outside the cylinder, so
+\[\ans{1\le z\le2,\quad1\le r\le z,\quad0\le\theta\le2\pi}.\]
+Equivalently, $1\le z\le2$ and $1\le x^2+y^2\le z^2$. At height $z$, the cross-section is an annulus with inner radius $1$, outer radius $z$; it collapses to a circle at $z=1$.
+\begin{center}\begin{tikzpicture}\begin{axis}[domain=0:360,y domain=1:2,samples=25,samples y=14]
+\addplot3[surf,opacity=.4] ({y*cos(x)},{y*sin(x)},{y});
+\addplot3[surf,opacity=.4] ({cos(x)},{sin(x)},{y});
+\addplot3[surf,opacity=.5] ({y*cos(x)},{y*sin(x)},{2});
+\end{axis}\end{tikzpicture}\end{center}
 \end{document}

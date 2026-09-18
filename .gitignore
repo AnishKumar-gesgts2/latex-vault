@@ -1,0 +1,8 @@
+# Reproducible LaTeX build intermediates (PDF outputs remain tracked).
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk

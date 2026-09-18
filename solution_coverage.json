@@ -1,0 +1,44 @@
+{
+  "assigned": 441,
+  "included": 436,
+  "chapters": {
+    "12": {
+      "assigned": 87,
+      "included": 87,
+      "missing": []
+    },
+    "13": {
+      "assigned": 46,
+      "included": 46,
+      "missing": []
+    },
+    "14": {
+      "assigned": 108,
+      "included": 103,
+      "missing": [
+        "14.3.103",
+        "14.3.104",
+        "14.8.17",
+        "14.8.19",
+        "14.8.21"
+      ]
+    },
+    "15": {
+      "assigned": 111,
+      "included": 111,
+      "missing": []
+    },
+    "16": {
+      "assigned": 89,
+      "included": 89,
+      "missing": []
+    }
+  },
+  "missing_prompts": [
+    "14.3.103",
+    "14.3.104",
+    "14.8.17",
+    "14.8.19",
+    "14.8.21"
+  ]
+}
