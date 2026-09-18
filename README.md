@@ -26,18 +26,18 @@ Each chapter has one self-contained LaTeX source and a compiled PDF. Exercise an
 |---|---|---|---|
 | 12 | [LaTeX](Multi%20Chapter%2012/Chapter_12_Solutions.tex) | [PDF](Multi%20Chapter%2012/Chapter_12_Solutions.pdf) | 87/87 |
 | 13 | [LaTeX](Multi%20Chapter%2013/Chapter_13_Solutions.tex) | [PDF](Multi%20Chapter%2013/Chapter_13_Solutions.pdf) | 46/46 |
-| 14 | [LaTeX](Multi%20Chapter%2014/Chapter_14_Solutions.tex) | [PDF](Multi%20Chapter%2014/Chapter_14_Solutions.pdf) | 103/108; missing source prompts below |
+| 14 | [LaTeX](Multi%20Chapter%2014/Chapter_14_Solutions.tex) | [PDF](Multi%20Chapter%2014/Chapter_14_Solutions.pdf) | 106/107; Question 104 needs its prompt |
 | 15 | [LaTeX](Multi%20Chapter%2015/Chapter_15_Solutions.tex) | [PDF](Multi%20Chapter%2015/Chapter_15_Solutions.pdf) | 111/111 |
 | 16 | [LaTeX](Multi%20Chapter%2016/Chapter_16_Solutions.tex) | [PDF](Multi%20Chapter%2016/Chapter_16_Solutions.pdf) | 89/89 |
 
-The exact selection is recorded in `assignment_manifest.json`. There are no duplicate or extra exercise labels. Total available coverage is 436 of 441 assignments.
+The exact selection is recorded in `assignment_manifest.json`. There are no duplicate or extra exercise labels. Total available coverage is 439 of 440 assignments.
 
 ### Missing source prompts
 
-- Section 14.3, Exercises 103 and 104: the uploaded ninth-edition section ends at Exercise 101.
-- Section 14.8, Exercises 17, 19, and 21: these refer to Section 4.7, Exercises 3, 7, and 25, respectively. Chapter 4 is not included in this multivariable volume.
+- Section 14.3, Question 104: the uploaded ninth-edition section ends at Question 101. Question 103 has been removed at the user's request.
+- Section 14.8, Questions 17, 19, and 21 now solve Section 14.7, Questions 3, 7, and 25 as requested. The printed textbook says Section 4.7. The substituted problems are unconstrained, so the solutions explain why Lagrange multipliers do not apply and use full critical-point classification instead.
 
-These five are explicitly listed at the end of the Chapter 14 PDF. They have not been replaced with guessed questions. Diagram-based estimates are identified as approximate within the solutions.
+Each lesson starts on a new page with a bold lesson heading; questions use their simple numbers within that lesson. Diagram-based estimates remain identified as approximate.
 
 ### Textbook and Git LFS
 
