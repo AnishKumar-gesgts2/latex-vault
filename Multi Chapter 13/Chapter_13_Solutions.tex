@@ -16,10 +16,18 @@
 \newcommand{\surf}[4]{\begin{center}\begin{tikzpicture}\begin{axis}[#1]\addplot3[surf,shader=interp,samples=19,samples y=19,opacity=.78] ({#2},{#3},{#4});\end{axis}\end{tikzpicture}\end{center}}
 \newcommand{\curve}[4]{\begin{center}\begin{tikzpicture}\begin{axis}[#1]\addplot3[blue,thick,samples=180,samples y=0,variable=t] ({#2},{#3},{#4});\end{axis}\end{tikzpicture}\end{center}}
 \newcommand{\handgraph}[2]{\begin{center}\includegraphics[page=1,clip,trim={#1},width=#2]{../Multi Textbook/Multi chapter 13 graphs.pdf}\end{center}}
-\title{Chapter 13: Vector Functions\\Anish Kumar, 2024-06-05, MW 6:00-8:35PM}
-\author{}\date{}\begin{document}\maketitle
-\tableofcontents
-\clearpage\section*{13.1 Vector Functions and Space Curves}\addcontentsline{toc}{section}{13.1 Vector Functions and Space Curves}
+\begin{document}
+\begin{titlepage}
+\centering
+\vspace*{\fill}
+{\fontsize{37}{44}\selectfont\bfseries Chapter 13: Vector Functions\par}
+\vspace{1.2em}
+{\fontsize{26}{32}\selectfont Anish Kumar\par}
+\vspace{0.45em}
+{\fontsize{22}{28}\selectfont MW 6:00--8:35 PM\par}
+\vspace*{\fill}
+\end{titlepage}
+\section*{13.1 Vector Functions and Space Curves}
 \ex{1}
 $r(t)=\vv{\ln(t+1),t/\sqrt{9-t^2},2^t}$. Logarithm needs $t+1>0$, or $t>-1$. Square root denomiator needs $9-t^2>0$, so $-3<t<3$. The exponential takes any real $t$. $\ans{(-1,3)}$.
 \ex{5}
