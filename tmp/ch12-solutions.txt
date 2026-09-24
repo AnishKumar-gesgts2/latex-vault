@@ -1,0 +1,966 @@
+                Chapter 12: Vectors and the Geometry of Space
+                  Worked solutions to the assigned exercises
+
+
+
+Source: Stewart, Clegg, and Watson, Multivariable Calculus, ninth edition, Sections 12.1–12.6. Exercise
+selection follows the supplied assignment screenshot. All graphs below are editable PGFPlots figures;
+finite plot windows illustrate surfaces that may extend indefinitely.
+
+
+Contents
+12.1 Three-Dimensional Coordinate Systems                                                            4
+
+12.2 Vectors                                                                                         7
+
+12.3 The Dot Product                                                                                 9
+
+12.4 The Cross Product                                                                              11
+
+12.5 Equations of Lines and Planes                                                                  14
+
+12.6 Cylinders and Quadric Surfaces                                                                 17
+
+
+
+
+                                                  1
+12.1 Three-Dimensional Coordinate Systems
+3.
+For A = (−4, 0, −1), B = (3, 1, −5), and C = (2, 4, 6), the distances to the yz-plane are respectively
+| − 4| = 4, |3| = 3, and |2| = 2. Thus C is closest. The xz-plane has equation y = 0, so A lies in it.
+
+5.
+In R2 , x = 4 means (4, y) for arbitrary y: a vertical line. In R3 the points are (4, y, z) for arbitrary y, z:
+a plane parallel to the yz-plane.
+
+                                         2
+
+                                         0
+                                  y
+
+
+
+
+                                       −2
+
+                                             0           2               4         6
+                                                                     x
+
+
+
+
+                       2
+                       0
+                  z
+
+
+
+
+                      −2
+
+                      −3                                                                         3.5
+                             −2    −1                                                   4
+                                                 0   1           2       3   4.5
+                                         y                                                  x
+
+
+11.
+P = (3, −2, −3), Q = (7, 0, 1), R = (1, 2, 1). Subtract coordinates before taking lengths:
+           −−→                                                                          √
+           P Q = ⟨7 − 3, 0 − (−2), 1 − (−3)⟩ = ⟨4, 2, 4⟩ ,                    |P Q| =       16 + 4 + 16 = 6,
+           −→                                                                           √
+           P R = ⟨1 − 3, 2 − (−2), 1 − (−3)⟩ = ⟨−2, 4, 4⟩ ,                   |P R| =       4 + 16 + 16 = 6,
+           −−→                                                                          √             √
+           QR = ⟨1 − 7, 2 − 0, 1 − 1⟩ = ⟨−6, 2, 0⟩ ,                          |QR| =        36 + 4 = 2 10.
+
+Two sides are equal, so the triangle is isosceles. The largest squared side is 40, but the sum of the other
+squared sides is 36 + 36 = 72 ̸= 40; it is not a right triangle.
+
+15.
+The center is (−3, 2, 5) and radius 4, so
+
+                                      (x + 3)2 + (y − 2)2 + (z − 5)2 = 16 .
+
+
+                                                             2
+In the yz-plane, x = 0. Substitution gives 9 + (y − 2)2 + (z − 5)2 = 16, hence
+
+                                      x = 0, (y − 2)2 + (z − 5)2 = 7 .
+                                                     √
+This is a circle centered at (0, 2, 5) with radius    7.
+
+17.
+The center is (3, 8, 1) and the sphere passes through (4, 3, −1). Thus
+
+                         r2 = (4 − 3)2 + (3 − 8)2 + (−1 − 1)2 = 1 + 25 + 4 = 30.
+
+Therefore (x − 3)2 + (y − 8)2 + (z − 1)2 = 30 .
+
+19.
+Complete squares in x2 + y 2 + z 2 + 8x − 2z = 8:
+
+                            (x2 + 8x + 16) + y 2 + (z 2 − 2z + 1) = 8 + 16 + 1,
+                                         (x + 4)2 + y 2 + (z − 1)2 = 25.
+
+The center is (−4, 0, 1) and radius 5 .
+
+25.
+A sphere just touching a plane has radius equal to its center’s perpendicular distance to that plane.
+With center (−1, 4, 5):
+
+ (a) The xy-plane is z = 0, so r = |5| = 5: (x + 1)2 + (y − 4)2 + (z − 5)2 = 25.
+
+ (b) The yz-plane is x = 0, so r = | − 1| = 1: (x + 1)2 + (y − 4)2 + (z − 5)2 = 1.
+
+ (c) The xz-plane is y = 0, so r = |4| = 4: (x + 1)2 + (y − 4)2 + (z − 5)2 = 16.
+
+27.
+z = −2 fixes height but allows all x, y. It is the plane parallel to the xy-plane two units below it.
+
+29.
+y ≥ 1 is the closed half-space on the positive-y side of the plane y = 1, including the plane itself. Neither
+x nor z is restricted.
+
+31.
+−1 ≤ x ≤ 2 is the closed slab between the planes x = −1 and x = 2, including both boundaries and
+extending indefinitely in y, z.
+
+33.
+x2 + y 2 = 4 together with z = −1 is a circle, not an entire cylinder: its radius is 2, center (0, 0, −1),
+and plane z = −1.
+
+
+                                                       3
+35.
+                                       p
+y 2 + z 2 ≤ 25 says that the distance y 2 + z 2 to the x-axis is at most 5. This is the infinite solid circular
+cylinder of radius 5 about the x-axis, including its interior and boundary.
+
+37.
+x2 + y 2 + z 2 = 4 fixes distance 2 from the origin. It is the spherical surface of radius 2, excluding its
+interior.
+
+39.
+                                                                                         p                      √
+Taking square roots of the nonnegative quantities in 1 ≤ x2 +y 2 2
+                                                             √ +z ≤ 5 gives 1 ≤              x2 + y 2 + z 2 ≤       5.
+The region is the closed spherical shell between radii 1 and 5.
+
+41.
+0 ≤ x, y, z ≤ 3 describes the solid cube [0, 3]3 , with side length 3, opposite vertices (0, 0, 0) and (3, 3, 3),
+and all faces included.
+
+45.
+                                  p
+Distance from the origin is ρ =       x2 + y 2 + z 2 . The question explicitly excludes points on either sphere,
+so r < ρ < R. Squaring gives r2 < x2 + y 2 + z 2 < R2 . Both bounding spherical surfaces are excluded.
+
+
+
+
+                                                        4
+12.2 Vectors
+9.
+From A = (−2, 1) to B = (1, 2),
+                                        −−→
+                                        AB = ⟨1 − (−2), 2 − 1⟩ = ⟨3, 1⟩ .
+
+The equivalent arrow from the origin ends at (3, 1); translating an arrow preserves its components.
+
+                      3
+                                                                        B
+                      2
+                                    A
+                      1
+                y
+
+
+
+
+                      0
+
+                    −1
+                     −3          −2             −1          0           1         2           3   4
+                                                                    x
+
+
+17.
+Add corresponding components: ⟨3, 0, 1⟩ + ⟨0, 8, 0⟩ = ⟨3, 8, 1⟩ . Place the second arrow at the tip of the
+first; the resultant runs from the origin to (3, 8, 1).
+
+
+
+                     1
+
+                    0.5
+               z
+
+
+
+
+                     0                                                                            0
+                     0          2                                                             1
+                                             4          6                             2
+                                         y                              8 3               x
+
+
+19.
+Let a = ⟨−3, 4⟩, b = ⟨9, −1⟩.
+
+                                a + b = ⟨−3 + 9, 4 − 1⟩ = ⟨6, 3⟩ ,
+                           4a + 2b = ⟨−12, 16⟩ + ⟨18, −2⟩ = ⟨6, 14⟩ ,
+                                            q
+                                    |a| =       (−3)2 + 42 = 5 ,
+                                                                        √
+                                a − b = ⟨−12, 5⟩ ,       |a − b| =          144 + 25 = 13 .
+
+
+
+
+                                                                5
+21.
+a = ⟨4, −3, 2⟩, b = ⟨2, 0, −4⟩.
+
+                                    a + b = ⟨4 + 2, −3 + 0, 2 − 4⟩ = ⟨6, −3, −2⟩ ,
+                                4a + 2b = ⟨16, −12, 8⟩ + ⟨4, 0, −8⟩ = ⟨20, −12, 0⟩ ,
+                                          √                √
+                                    |a| = 16 + 9 + 4 = 29 ,
+                                                                  √
+                                  a − b = ⟨2, −3, 6⟩ , |a − b| = 4 + 9 + 36 = 7 .
+
+23.
+        p                 √
+|v| =       62 + (−2)2 = 2 10. Dividing each component by this length produces a vector of length one:
+                                              D √        √ E
+                                          vb = 3/ 10, −1/ 10 .
+
+
+25.
+        p                       √
+|v| =       82 + (−1)2 + 42 =       81 = 9, so vb = ⟨8/9, −1/9, 4/9⟩ .
+
+26.
+                                                    √
+First normalize ⟨6, 2, −3⟩, whose length is             36 + 4 + 9 = 7, then multiply by 4:
+                                              4
+                                        v=      ⟨6, 2, −3⟩ = ⟨24/7, 8/7, −12/7⟩ .
+                                              7
+Its length is (4/7)7 = 4, and the positive multiplier preserves direction.
+
+27.
+   D √ E
+v = 1, 3 has length 2. With the positive x direction ex = ⟨1, 0⟩, cos θ = (v · ex )/(|v||ex |) = 1/2.
+Thus θ = π/3 = 60◦ .
+
+31.
+Resolve the 60 ft/s velocity along horizontal and vertical axes:
+
+                        vx = 60 cos 40◦ ≈ 45.96 ft/s ,            vy = 60 sin 40◦ ≈ 38.57 ft/s .
+
+The right triangle has hypotenuse 60, horizontal adjacent side vx , and vertical opposite side vy .
+
+41.
+Differentiate y = x2 : y ′ = 2x, so the tangent slope at (2, 4) is 4. A direction vector is ⟨1, 4⟩, with length
+√                                                   √
+  17. Both possible unit directions are ± ⟨1, 4⟩ / 17 .
+
+47.
+|r − r0 | = 1 means                    q
+                                           (x − x0 )2 + (y − y0 )2 + (z − z0 )2 = 1.
+
+Squaring yields (x − x0 )2 + (y − y0 )2 + (z − z0 )2 = 1 : the sphere centered at (x0 , y0 , z0 ) with radius 1.
+
+                                                              6
+12.3 The Dot Product
+1.
+A dot product accepts two vectors and returns a scalar; multiplication of a scalar and vector returns a
+vector.
+ (a) (a · b) · c is meaningless: its first dot-product input is a scalar.
+ (b) (a · b)c is meaningful scalar multiplication, returning a vector.
+ (c) |a|(b · c) is meaningful multiplication of two scalars, returning a scalar.
+ (d) a · (b + c) is meaningful, returning a scalar.
+ (e) a · b + c attempts to add a scalar to a vector and is meaningless.
+  (f) |a| · (b + c) is meaningless as a dot product: |a| is scalar.
+
+5.
+⟨4, 1, 1/4⟩ · ⟨6, −3, −8⟩ = 4(6) + 1(−3) + (1/4)(−8) = 24 − 3 − 2 = 19 .
+
+9.
+                                         √         √
+a · b = |a||b| cos θ = 7(4) cos 30◦ = 28( 3/2) = 14 3 .
+
+15.
+                                                            √              √                   √           √
+For u = ⟨5, 1⟩ and v = ⟨3, 2⟩, u · v = 15 + 2 = 17, |u| =       25 + 1 =       26, and |v| =       9+4=        13. Thus
+
+                                                       17
+                                                               
+                                       θ = cos−1 √      √           ≈ 22◦ .
+                                                      26 13
+
+19.
+                                                                                    √               √
+u = ⟨1, −4, 1⟩, v = ⟨−3, 1, 5⟩. Then u · v = −3 − 4 + 5 = −2, |u| =                     18, |v| =       35. Therefore
+               √
+ θ = cos−1 (−2/ 630) ≈ 95◦ .
+
+23.
+Orthogonality means dot product zero; parallel nonzero vectors must be scalar multiples.
+ (a) 9(−2) + 3(6) = −18 + 18 = 0: orthogonal.
+ (b) 4(3) + 5(−1) + (−2)(5) = 12 − 5 − 10 = −3. Component ratios 3/4, −1/5, 5/(−2) differ: neither.
+ (c) ⟨−8, 12, 4⟩ = (−4/3) ⟨6, −9, −3⟩: parallel. The dot product −48 − 108 − 12 = −168 is nonzero.
+ (d) 3(5) + (−1)(9) + 3(−2) = 15 − 9 − 6 = 0: orthogonal.
+
+27.
+Seek w = ⟨p, q, r⟩ perpendicular to ⟨1, 1, 0⟩ and ⟨1, 0, 1⟩. The two dot-product equations are p+q = 0 and
+                                                                 √                                    √
+p + r = 0. Choose p = 1, giving w = ⟨1, −1, −1⟩ and |w| = 3. Hence one answer is ⟨1, −1, −1⟩ / 3 ;
+its negative also works.
+
+                                                      7
+33.
+        √
+|v| =       42 + 12 + 82 = 9. Therefore
+
+                                    cos α = 4/9,    cos β = 1/9,    cos γ = 8/9 ,
+
+                                      α ≈ 63.6◦ ,   β ≈ 83.6◦ ,    γ ≈ 27.3◦ .
+
+These satisfy (4/9)2 + (1/9)2 + (8/9)2 = 1.
+
+41.
+a = ⟨4, 7, −4⟩, b = ⟨3, −1, 1⟩. Compute a · b = 12 − 7 − 4 = 1 and |a|2 = 16 + 49 + 16 = 81. Then
+
+                                      a·b  1                       a·b     1
+                          compa b =       = ,          proja b =      2
+                                                                        a=    ⟨4, 7, −4⟩ .
+                                      |a|  9                       |a|     81
+
+47.
+        p                 √                                                       √
+|a| =   32 + 02 + (−1)2 = 10. The requirement (a · b)/|a| = 2 becomes 3bx − bz = 2 10. Choosing
+                      D √         E                           √      √
+by = bz = 0 gives b = 2 10/3, 0, 0 . Substitution gives (3 · 2 10/3)/ 10 = 2.
+
+
+53.
+Let Q = (xQ , yQ ) be any point on the line, so axQ + byQ + c = 0, and let n = ⟨a, b⟩ ̸= 0. The
+                                                            −−→
+perpendicular distance is the absolute scalar projection of QP1 onto n:
+                                      −−→
+                                 |n · QP1 |   |a(x1 − xQ ) + b(y1 − yQ )|
+                              d=            =         √
+                                     |n|                a2 + b2
+                                    |ax1 + by1 − (axQ + byQ )|   |ax1 + by1 + c|
+                                =           √                  =    √            .
+                                                2
+                                               a +b 2                 a2 + b2
+                                                          √
+For P1 = (−2, 3) and 3x − 4y + 5 = 0, d = | − 6 − 12 + 5|/ 9 + 16 = 13/5 .
+
+
+
+
+                                                         8
+12.4 The Cross Product
+Expand along the first row with signs +, −, +. In particular, the coefficient of j carries a minus sign.
+Each determinant below is expanded explicitly.
+
+1.
+
+                          i j k
+                  a × b = 2 3 0 = i(3 · 5 − 0 · 0) − j(2 · 5 − 0 · 1) + k(2 · 0 − 3 · 1)
+                          1 0 5
+                        = ⟨15, −10, −3⟩ .
+
+Check: a · (a × b) = 2(15) + 3(−10) = 0 and b · (a × b) = 15 + 5(−3) = 0.
+
+5.
+
+                       i   j   k
+              a × b = 1/2 1/3 1/4
+                       1   2  −3
+                    = i[(1/3)(−3) − (1/4)2] − j[(1/2)(−3) − (1/4)1] + k[(1/2)2 − (1/3)1]
+                    = ⟨−3/2, 7/4, 2/3⟩ .
+
+Checks: (−3/2)(1/2) + (7/4)(1/3) + (2/3)(1/4) = −9/12 + 7/12 + 2/12 = 0; (−3/2)1 + (7/4)2 +
+(2/3)(−3) = −3/2 + 7/2 − 2 = 0.
+
+7.
+
+                               i j k
+                      a × b = t3 t2 t
+                               t 2t 3t
+                            = i(t2 · 3t − t · 2t) − j(t3 · 3t − t · t) + k(t3 · 2t − t2 · t)
+                                D                                E
+                            =       3t3 − 2t2 , t2 − 3t4 , 2t4 − t3 .
+
+Dotting with a gives 3t6 −2t5 +t4 −3t6 +2t5 −t4 = 0. Dotting with b gives 3t4 −2t3 +2t3 −6t5 +6t5 −3t4 = 0.
+This also holds at t = 0.
+
+9.
+Using i × j = k, (i × j) × k = k × k = 0 . A vector crossed with itself is zero.
+
+11.
+Use distributivity and the unit-vector cross products as requested in the textbook:
+
+                           (j − k) × (k − i) = j × k − j × i − k × k + k × i
+                                                 = i − (−k) − 0 + j = i + j + k .
+
+
+                                                         9
+15.
+The displayed 150◦ is between the reverse of the horizontal arrow and v, so the angle between u, v is
+30◦ ; either sine gives the same magnitude:
+
+                                    |u × v| = |u||v| sin 30◦ = 4(3)(1/2) = 6 .
+
+From a rightward u toward downward-right v, the rotation is clockwise, so u × v points into the page .
+
+17.
+
+                                    i j k
+                            a × b = 2 −1 3
+                                    4 2 1
+                                 = i[(−1)1 − 3(2)] − j[2(1) − 3(4)] + k[2(2) − (−1)4]
+                                 = ⟨−7, 10, 8⟩ .
+
+Anticommutativity yields b × a = ⟨7, −10, −8⟩ .
+
+19.
+
+                                  i j k
+                           u×v = 3 2 1
+                                 −1 1 0
+                                 = i(2 · 0 − 1 · 1) − j(3 · 0 − 1(−1)) + k(3 · 1 − 2(−1))
+                                 = ⟨−1, −1, 5⟩ .
+                √                 √                                                           √
+Its length is       1 + 1 + 25 = 3 3. The two perpendicular unit vectors are ± ⟨−1, −1, 5⟩ /(3 3) .
+
+29.
+P = (3, 1, 1), Q = (5, 2, 4), R = (8, 5, 3).
+                                        −−→                      −→
+                                        P Q = ⟨2, 1, 3⟩ ,        P R = ⟨5, 4, 2⟩ .
+
+
+                                     i j k
+                           −−→ −→
+                           PQ × PR = 2 1 3
+                                     5 4 2
+                                     = i(1 · 2 − 3 · 4) − j(2 · 2 − 3 · 5) + k(2 · 4 − 1 · 5)
+                                     = ⟨−10, 11, 3⟩ .
+
+(a) This nonzero vector is orthogonal to the plane. (b) The parallelogram area is its length, so the
+triangle area is half:
+                                                            √
+                                     1q                       230
+                                A=      (−10)2 + 112 + 32 =       .
+                                     2                        2
+
+
+
+                                                            10
+33.
+
+                              i j k
+                     b × c = −1 1 2
+                             2 1 4
+                           = i(4 − 2) − j(−4 − 4) + k(−1 − 2) = ⟨2, 8, −3⟩ ,
+                        V = |a · (b × c)| = |1(2) + 2(8) + 3(−3)| = |2 + 16 − 9| = 9 .
+
+37.
+u = ⟨1, 5, −2⟩, v = ⟨3, −1, 0⟩, w = ⟨5, 9, −4⟩.
+
+                                i j  k
+                        v × w = 3 −1 0
+                                5 9 −4
+                               = i[(−1)(−4) − 0(9)] − j[3(−4) − 0(5)] + k[3(9) − (−1)5]
+                               = ⟨4, 12, 32⟩ ,
+                   u · (v × w) = 1(4) + 5(12) + (−2)32 = 4 + 60 − 64 = 0 .
+
+The parallelepiped has zero volume, so the three vectors are coplanar.
+
+43.
+          √                           √
+|a × b| = 12 + 22 + 22 = 3 and a · b = 3 > 0, so the angle is acute. Dividing the sine and cosine
+                         √   √
+formulas gives tan θ = 3/ 3 = 3, hence θ = 60◦ .
+
+44.
+(a) Put v = ⟨p, q, r⟩. Then
+
+                         i j k
+                         1 2 1 = i(2r − q) − j(r − p) + k(q − 2p) = ⟨3, 1, −5⟩ .
+                         p q r
+
+Thus 2r − q = 3, p − r = 1, q − 2p = −5. Set r = t; the first two equations give q = 2t − 3, p = t + 1,
+and the third is satisfied because (2t − 3) − 2(t + 1) = −5. Therefore
+
+                                     v = ⟨1, −3, 0⟩ + t ⟨1, 2, 1⟩ ,   t∈R.
+
+(b) Any cross product with ⟨1, 2, 1⟩ is perpendicular to that vector. But ⟨1, 2, 1⟩ · ⟨3, 1, 5⟩ = 3 + 2 + 5 =
+10 ̸= 0. No such v exists.
+
+47.
+For nonzero a, b with angle θ,
+
+                                        |a × b|2 = |a|2 |b|2 sin2 θ
+                                                  = |a|2 |b|2 (1 − cos2 θ)
+                                                  = |a|2 |b|2 − (a · b)2 .
+
+If either vector is zero, both sides are zero, so the identity still holds.
+
+                                                        11
+12.5 Equations of Lines and Planes
+A line through r0 with direction v ̸= 0 has equation r = r0 + tv. A plane through P0 with normal n ̸= 0
+has equation n · (r − r0 ) = 0.
+
+3.
+The point is (−1, 8, 7) and direction ⟨1/2, 1/3, 1/4⟩. Multiply the direction by 12 to obtain ⟨6, 4, 3⟩,
+without changing the line:
+
+                 r = ⟨−1, 8, 7⟩ + t ⟨6, 4, 3⟩ ,      x = −1 + 6t, y = 8 + 4t, z = 7 + 3t .
+
+5.
+The plane 3x − 2y + 2z = 8 has normal ⟨3, −2, 2⟩. The required perpendicular line through (5, 7, 1) is
+
+                  r = ⟨5, 7, 1⟩ + t ⟨3, −2, 2⟩ ,     x = 5 + 3t, y = 7 − 2t, z = 1 + 2t .
+
+9.
+Subtract endpoints: (−7, 9, 11) − (12, 9, −13) = ⟨−19, 0, 24⟩. Thus
+
+                                 x = 12 − 19t,     y = 9,     z = −13 + 24t .
+
+Since the y direction component is zero, it cannot be a denominator. The symmetric form is
+
+                                  (x − 12)/(−19) = (z + 13)/24, y = 9 .
+
+15.
+(a) Through (1, −5, 6) with direction ⟨−1, 2, −3⟩:
+
+                     x−1   y+5   z−6
+                         =     =     ,             x = 1 − t, y = −5 + 2t, z = 6 − 3t.
+                      −1    2     −3
+
+(b) In the xy-plane, 6 − 3t = 0 gives t = 2 and (−1, −1, 0). In the yz-plane, 1 − t = 0 gives t = 1 and
+(0, −3, 3). In the xz-plane, −5 + 2t = 0 gives t = 5/2 and (−3/2, 0, −3/2).
+
+19.
+L1 = (3 + 2t, 4 − t, 1 + 3t), L2 = (1 + 4s, 3 − 2s, 4 + 5s). Directions ⟨2, −1, 3⟩ and ⟨4, −2, 5⟩ are not
+proportional: the first two component ratios are 2, but the third is 5/3. Intersection requires
+
+                3 + 2t = 1 + 4s =⇒ t − 2s = −1,              4 − t = 3 − 2s =⇒ t − 2s = 1.
+
+This is contradictory, so the nonparallel, nonintersecting lines are skew .
+
+21.
+The symmetric equations give
+
+                     L1 = (2 + t, 3 − 2t, 1 − 3t),         L2 = (3 + s, −4 + 3s, 2 − 7s).
+
+From x, t − s = 1, hence t = s + 1. From y, 3 − 2(s + 1) = −4 + 3s, hence 5 = 5s, s = 1, t = 2. The z
+values agree: 1 − 3(2) = −5 = 2 − 7(1). Thus intersection (4, −1, −5) .
+
+                                                      12
+25.
+The normal is ⟨−1, 2, 3⟩, point (5, −2, 4):
+                −(x − 5) + 2(y + 2) + 3(z − 4) = 0 =⇒ −x + 2y + 3z + 5 + 4 − 12 = 0.
+Therefore −x + 2y + 3z = 3 .
+
+29.
+Parallel planes share normal ⟨2, −1, 3⟩, so write 2x − y + 3z = d. Substitution gives d = 2(2.1) − 1.7 +
+3(−0.9) = 4.2 − 1.7 − 2.7 = −0.2. Thus 2x − y + 3z = −1/5 .
+
+33.
+From P = (2, 1, 2), Q = (3, −8, 6), R = (−2, −3, 1) get u = Q − P = ⟨1, −9, 4⟩ and v = R − P =
+⟨−4, −4, −1⟩.
+                         i  j k
+                u × v = 1 −9 4
+                        −4 −4 −1
+                      = i[(−9)(−1) − 4(−4)] − j[1(−1) − 4(−4)] + k[1(−4) − (−9)(−4)]
+                      = ⟨25, −15, −40⟩ = 5 ⟨5, −3, −8⟩ .
+
+Thus 5(x − 2) − 3(y − 1) − 8(z − 2) = 0, or 5x − 3y − 8z + 9 = 0 .
+
+35.
+The line contains Q = (4, −1, 0) and has direction v = ⟨−1, 2, −3⟩. To the required point P = (3, 5, −1),
+w = P − Q = ⟨−1, 6, −1⟩.
+                         i j k
+                v × w = −1 2 −3
+                        −1 6 −1
+                      = i[2(−1) − (−3)6] − j[(−1)(−1) − (−3)(−1)] + k[(−1)6 − 2(−1)]
+                      = ⟨16, 2, −4⟩ = 2 ⟨8, 1, −2⟩ .
+
+Use this normal at P : 8(x − 3) + (y − 5) − 2(z + 1) = 0, hence 8x + y − 2z − 31 = 0 . Check the entire
+line: 8(4 − t) + (2t − 1) − 2(−3t) − 31 = 0.
+
+37.
+Let F1 = x + 2y + 3z − 1, F2 = 2x − y + z + 3. Every plane λF1 + µF2 = 0 contains the intersection.
+At (3, 1, 4), F1 = 16, F2 = 12. Choose λ = 3, µ = −4 because 3(16) − 4(12) = 0. Then
+                   3F1 − 4F2 = −5x + 10y + 5z − 15 = 0 =⇒ x − 2y − z + 3 = 0 .
+
+45.
+Substitute the line into the plane:
+                       (2 − 2t) + 2(3t) − (1 + t) = 7 =⇒ 1 + 3t = 7 =⇒ t = 2.
+
+The point is (−2, 6, 3) . Check: −2 + 2(6) − 3 = 7.
+
+                                                       13
+53.
+n1 = ⟨1, 2, −1⟩, n2 = ⟨2, −2, 1⟩ are not proportional. Their dot product 2 − 4 − 1 = −3 is nonzero, so
+the planes are neither parallel nor perpendicular. The acute angle has
+
+                                         | − 3|    1
+                          cos θ = √         √     =√ ,               θ ≈ 65.9◦ .
+                                      1+4+1 4+4+1   6
+
+57.
+(a) Subtract x + y + z = 1 from x + 2y + 2z = 1 to obtain y + z = 0. Substituting back gives x = 1.
+Let y = t, so x = 1, y = t, z = −t . (b) Normals ⟨1, 1, 1⟩ and ⟨1, 2, 2⟩ have dot product 5 and lengths
+√                           √
+  3, 3. Thus θ = cos−1 (5/(3 3)) ≈ 15.8◦ .
+
+63.
+Write Ax + By + Cz = D. Substituting the intercepts (a, 0, 0), (0, b, 0), (0, 0, c) gives Aa = D, Bb = D,
+Cc = D. For finite nonzero intercepts this plane does not pass through the origin, so D ̸= 0. Divide by
+D to obtain
+                                            x y z
+                                              + + =1.
+                                            a    b   c
+
+65.
+A direction must be perpendicular to the plane normal n = ⟨1, 1, 1⟩ and the line direction d = ⟨1, −1, 2⟩.
+Choose
+
+                              i j k
+                         n×d= 1 1 1
+                              1 −1 2
+                               = i(2 + 1) − j(2 − 1) + k(−1 − 1) = ⟨3, −1, −2⟩ .
+
+Through (0, 1, 2), x = 3t, y = 1 − t, z = 2 − 2t . The two dot-product checks are 3 − 1 − 2 = 0 and
+3 + 1 − 4 = 0.
+
+71.
+For P = (1, −2, 4) and 3x + 2y + 6z = 5:
+
+                           |3(1) + 2(−2) + 6(4) − 5|   |3 − 4 + 24 − 5|
+                      d=         √                   =                  = 18/7 .
+                                    2   2
+                                   3 +2 +6   2                7
+
+75.
+Choose any point (x0 , y0 , z0 ) on ax + by + cz + d1 = 0, so ax0 + by0 + cz0 = −d1 . Its distance to the
+parallel plane ax + by + cz + d2 = 0 is
+
+                                  |ax0 + by0 + cz0 + d2 |      |d2 − d1 |
+                             D=       √                   = √                .
+                                        a2 + b2 + c2          a2 + b 2 + c 2
+
+This does not depend on the point chosen. At least one normal component must be nonzero.
+
+
+
+                                                   14
+12.6 Cylinders and Quadric Surfaces
+3.
+x2 + z 2 = 4 is independent of y. Every trace y = k is a circle of radius 2 in the xz directions: a circular
+cylinder about y. Parametrize it as (2 cos u, v, 2 sin u).
+
+
+
+                    2
+
+                    0
+               z
+
+
+
+
+                   −2                                                                    −2
+                    −3    −2                                                        −1
+                                    −1       0                              0
+                                                  1        2           1
+                                                                3 2             x
+                                         y
+
+
+5.
+x2 + y + 1 = 0 becomes y = −x2 − 1, with z free. Each trace z = k is a downward-opening parabola with
+vertex (0, −1, k). This is a parabolic cylinder with rulings parallel to z and vertex line x = 0, y = −1.
+
+
+
+
+                    2
+                    0
+               z
+
+
+
+
+                   −2
+                                                                                         −2
+                   −5                                                               −1
+                               −4            −3                             0
+                                                      −2               1
+                                         y                      −1 2            x
+
+
+11.
+                                                                      √
+ (a) x2 +y 2 −z 2 = 1: at z = k, x2 +y 2 = 1+k 2 is a circle of radius 1 + k 2 . At x = k, y 2 −z 2 = 1−k 2 ;
+     at y = k, x2 − z 2 = 1 − k 2 . The last two are hyperbolas for |k| ̸= 1 and pairs of lines at |k| = 1.
+     The connected surface has a circular waist of radius 1 at z = 0 and expands with |z|: a one-sheet
+     hyperboloid about z.
+
+ (b) x2 − y 2 + z 2 = 1 changes the negative squared variable to y, rotating the axis to y. Traces y = k
+     are circles x2 + z 2 = 1 + k 2 .
+
+ (c) Complete the square: x2 + y 2 + 2y − z 2 = 0 becomes x2 + (y + 1)2 − z 2 = 1. Translate the original
+     surface one unit in negative y; its center is (0, −1, 0) and axis is x = 0, y = −1.
+
+
+
+
+                                                           15
+                    2
+
+                    0
+               z
+                   −2
+                                                                                     −2
+                     −2                                                         −1
+                             −1        0                                0
+                                               1                    1
+                                                        2       2           x
+                                   y
+
+
+
+
+                    2
+
+                    0
+               z
+
+
+
+
+                   −2
+                                                                                     −2
+                   −2                                                           −1
+                            −1         0                                0
+                                               1                    1
+                                                            2   2           x
+                                   y
+
+
+
+
+                    2
+
+                    0
+               z
+
+
+
+
+                   −2
+                                                                                     −2
+                     −3                                                         −1
+                             −2        −1                               0
+                                               0                    1
+                                                        1       2           x
+                                   y
+
+
+13.
+                                                                                  √     √
+x = y 2 + 4z 2 . At x = k > 0, y 2 /k + z 2 /(k/4) = 1 is an ellipse with semiaxes k and k/2. At k = 0
+there is only the origin, and at k < 0 there are no points. Traces y = 0 and z = 0 are x = 4z 2 and
+x = y 2 . This is an elliptic paraboloid opening in +x, vertex (0, 0, 0).
+
+
+
+
+                                                   16
+                     1
+
+                     0
+               z
+                   −1                                                                                      0
+                    −2                                                                            2
+                             −1               0                                   4
+                                                          1                   6       x
+                                                                   2 8
+                                      y
+
+
+17.
+Divide 9y 2 + 4z 2 = x2 + 36 by 36:
+                                              y 2 /4 + z 2 /9 − x2 /36 = 1.
+At x = k, y 2 /4 + z 2 /9 = 1 + k 2 /36 is an ellipse, with minimum semiaxes 2, 3 at x = 0, increasing with
+|x|. Traces y = 0 and z = 0 are hyperbolas z 2 /9 − x2 /36 = 1 and y 2 /4 − x2 /36 = 1. It is a one-sheet
+hyperboloid about x.
+
+
+
+                         5
+
+                         0
+                 z
+
+
+
+
+                     −5
+                       −3                                                                             −5
+                             −2    −1                                                 0
+                                                  0   1                       5
+                                                              2    3
+                                          y                                                   x
+
+
+21.
+y = z 2 − x2 . At x = 0, y = z 2 opens in +y; at z = 0, y = −x2 opens in −y. At y = k, z 2 − x2 = k is a
+hyperbola for k ̸= 0, and the two lines z = ±x when k = 0. It is a hyperbolic paraboloid (saddle).
+
+
+
+                     2
+
+                     0
+               z
+
+
+
+
+                   −2
+                                                                                                           −2
+                    −4                                                                        −1
+                             −2               0                                   0
+                                                          2                   1
+                                                                   4 2                    x
+                                      y
+
+
+
+
+                                                              17
+22.
+x = y 2 − z 2 . At z = 0, x = y 2 ; at y = 0, x = −z 2 . These parabolas open in opposite x directions. At
+x = k, y 2 − z 2 = k is a hyperbola, or two lines at k = 0. It is a hyperbolic paraboloid.
+
+
+
+                    2
+
+                    0
+               z
+
+
+
+
+                   −2
+                                                                                         −4
+                    −2                                                              −2
+                             −1          0                                  0
+                                                  1                  2
+                                                           2 4                  x
+                                     y
+
+
+23.
+x2 +4y 2 +9z 2 = 1 has standard form x2 /1+y 2 /(1/4)+z 2 /(1/9) = 1. All terms are positive: an ellipsoid
+with semiaxes (1, 1/2, 1/3), longest along x, shortest along z. Hence graph VII .
+
+24.
+9x2 + 4y 2 + z 2 = 1 has semiaxes (1/3, 1/2, 1), so it is an ellipsoid tallest along z: graph IV .
+
+25.
+                                                                                                     √
+x2 − y 2 + z 2 = 1 has two positive terms and one negative. Traces y = k are circles with radius         1 + k2 ,
+leaving a nonzero waist at y = 0. It is the one-sheet hyperboloid about y: graph II .
+
+26.
+−x2 + y 2 − z 2 = 1 gives y 2 = 1 + x2 + z 2 , so |y| ≥ 1. Two disconnected sheets have vertices (0, ±1, 0)
+and open in ±y: graph III .
+
+27.
+y = 2x2 + z 2 ≥ 0 has vertex the origin and elliptical traces 2x2 + z 2 = k at y = k > 0. This elliptic
+paraboloid opens in +y: graph VI .
+
+28.
+y 2 = x2 + 2z 2 has a vertex at the origin and two conical halves in y > 0 and y < 0. At y = k ̸= 0 its
+traces are ellipses; at k = 0 the cross-section collapses to a point. This is the elliptic cone graph I .
+
+29.
+   + 2z 2 = 1 is independent of y. It is an elliptic cylinder parallel to y, with semiaxes 1 along x and
+x2 √
+1/ 2 along z: graph VIII .
+
+
+
+
+                                                      18
+30.
+y = x2 − z 2 has traces y = x2 at z = 0 and y = −z 2 at x = 0. These opposite openings identify the
+saddle, a hyperbolic paraboloid: graph V .
+
+33.
+y 2 = x2 + z 2 /9 becomes x2 + z 2 /9 − y 2 = 0. At y = k ̸= 0, x2 /k 2 + z 2 /(9k 2 ) = 1 is an ellipse with
+semiaxes |k|, 3|k|. At y = 0 only the origin remains. At z = 0, y = ±x; at x = 0, z = ±3y. It is an
+elliptic double cone about y.
+
+
+
+
+                        5
+
+                        0
+                  z
+
+
+
+
+                      −5
+                                                                                             −2
+                       −2                                                               −1
+                                −1          0                                   0
+                                                     1                  1
+                                                                2 2                 x
+                                        y
+
+
+45.
+          p
+Set r =       x2 + y 2 . The cone is z = r and cylinder r = 1. For 1 ≤ z ≤ 2, the cone is outside the cylinder,
+so
+                                     1 ≤ z ≤ 2,    1 ≤ r ≤ z,    0 ≤ θ ≤ 2π .
+
+Equivalently, 1 ≤ z ≤ 2 and 1 ≤ x2 + y 2 ≤ z 2 . At height z, the cross-section is an annulus with inner
+radius 1, outer radius z; it collapses to a circle at z = 1.
+
+
+
+                        2
+
+                      1.5
+                  z
+
+
+
+
+                       1                                                                     −2
+                       −2                                                               −1
+                                −1          0                                   0
+                                                     1                  1
+                                                                2 2                 x
+                                        y
+
+
+
+
+                                                         19
+

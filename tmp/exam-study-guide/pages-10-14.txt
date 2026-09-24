@@ -1,0 +1,269 @@
+Part 3. Complete Answer Key with Explanations
+Problem 1 Solution
+Given
+                               A(0, 1, 2),      B(2, −1, 3),         C(1, 3, 5).
+
+(a) Find the vectors from point differences:
+                           →
+                           −
+                           AB = B − A = ⟨2 − 0, −1 − 1, 3 − 2⟩ = ⟨2, −2, 1⟩.
+                            →
+                            −
+                            AC = C − A = ⟨1 − 0, 3 − 1, 5 − 2⟩ = ⟨1, 2, 3⟩.
+
+(b) Use the projection formula:
+                                                  −→ −→
+                                               → AB · AC −
+                                               −         →
+                                            → AB = −
+                                        proj−       → 2 AC.
+                                            AC
+                                                   ∥AC∥
+Compute the dot product:
+                             → −
+                             −    →
+                             AB · AC = ⟨2, −2, 1⟩ · ⟨1, 2, 3⟩ = 2 − 4 + 3 = 1.
+
+Compute the squared magnitude:
+                                       →
+                                       −
+                                      ∥AC∥2 = 12 + 22 + 32 = 14.
+
+Therefore                                                                 
+                                      →
+                                      −    1                       1 1 3
+                                   → AB =
+                               proj−
+                                   AC
+                                             ⟨1, 2, 3⟩ =             , ,     .
+                                          14                       14 7 14
+                                                                             →
+                                                                             −      →
+                                                                                    −
+(c) The area of triangle ABC is half the area of the parallelogram formed by AB and AC:
+
+                                                     → −
+                                                   1 −    →
+                                             Area = ∥AB × AC∥.
+                                                   2
+Now
+                                            i j k
+                                  → −
+                                  −    →
+                                  AB × AC = 2 −2 1 = ⟨−8, −5, 6⟩.
+                                            1 2 3
+Thus
+                 −
+                 → −  →
+                              q                          √              √       √
+                ∥AB × AC∥ =       (−8)2 + (−5)2 + 62 =    64 + 25 + 36 = 125 = 5 5.
+So                                                           √
+                                                            5 5
+                                     Area of triangle ABC =     .
+                                                             2
+
+Common mistakes to avoid.
+
+ • Do not use A, B, and C directly in the cross product. First form two side vectors.
+
+Prof. M. Youssef                                                                          10
+ • Do not forget the factor 21 for the area of a triangle.
+                                          →
+                                          −           →
+                                                      −
+ • In the projection, the denominator is ∥AC∥2 , not ∥AC∥.
+
+Problem 2 Solution
+The planes are
+                                    x − 2y + z = 3,        2x + y − z = 4.
+Their normal vectors are
+                                   n1 = ⟨1, −2, 1⟩,        n2 = ⟨2, 1, −1⟩.
+The direction vector of the line of intersection is
+
+                                                 v = n1 × n2 .
+
+Compute:
+                                             i j  k
+                                   n1 × n2 = 1 −2 1 = ⟨1, 3, 5⟩.
+                                             2 1 −1
+Now find one point on both planes. Let z = 0. Then
+
+                                        x − 2y = 3,        2x + y = 4.
+
+From the first equation, x = 3 + 2y. Substitute into the second:
+
+                                               2(3 + 2y) + y = 4
+
+                                                    6 + 5y = 4
+                                                    2
+                                                y=− .
+                                                    5
+Then                                              
+                                                    2  11
+                                          x = 3+2 −   = .
+                                                    5   5
+A point on the line is                                     
+                                                    11 2
+                                                       ,− ,0 .
+                                                     5   5
+Therefore the parametric equations are
+
+                                     11                  2
+                                x=      + t,        y = − + 3t,          z = 5t.
+                                     5                   5
+
+The symmetric form is
+                                              11 y + 52  z
+                                           x−    =      = .
+                                               5   3     5
+
+
+Prof. M. Youssef                                                                   11
+Common mistakes to avoid.
+
+ • The direction vector of the intersection line is not one of the plane normal vectors. It is n1 × n2 .
+
+ • When finding a point, choose a simple value for one variable and solve the remaining two equations
+   carefully.
+
+Problem 3 Solution
+The plane is
+                                             3x − y + 2z = 6.
+Rewrite it as
+                                           3x − y + 2z − 6 = 0.
+Here
+                             A = 3,       B = −1,        C = 2,      D = −6.
+The point is P(−1, 2, 4). Substitute into the plane expression:
+
+                            3(−1) − (2) + 2(4) − 6 = −3 − 2 + 8 − 6 = −3.
+
+The distance is
+                                            | − 3|        3
+                                       p                =√ .
+                                        32 + (−1)2 + 22   14
+So
+                                                         3
+                                             distance = √ .
+                                                         14
+
+To find the closest point, use the normal line method. The normal vector to the plane is
+
+                                              n = ⟨3, −1, 2⟩.
+
+The closest point must lie on the line through P(−1, 2, 4) in the normal direction:
+
+                                      r(t) = ⟨−1, 2, 4⟩ + t⟨3, −1, 2⟩.
+
+Therefore
+                              x = −1 + 3t,         y = 2 − t,     z = 4 + 2t.
+Substitute these into the plane 3x − y + 2z = 6:
+
+                                  3(−1 + 3t) − (2 − t) + 2(4 + 2t) = 6.
+
+Simplify:
+                                      −3 + 9t − 2 + t + 8 + 4t = 6.
+                                               3 + 14t = 6.
+
+
+Prof. M. Youssef                                                                                           12
+                                                       3
+                                                  t=      .
+                                                       14
+                3
+Now plug t =      back into the normal line:
+               14
+                                                               
+                                    3       3       3     5 25 31
+                          −1 + 3 · , 2 − , 4 + 2 ·     = − , ,      .
+                                   14      14      14     14 14 7
+
+Thus                                                          
+                                                       5 25 31
+                                     closest point = − , ,       .
+                                                      14 14 7
+
+Common mistakes to avoid.
+
+ • The distance is always nonnegative, so use absolute value in the distance formula.
+
+ • For the closest point, do not use the distance as the value of t. Write the normal line first, then solve
+   for t by substituting into the plane.
+
+ • The normal line must use the normal vector of the plane, not a random direction vector in the plane.
+
+Problem 4 Solution
+The two lines are
+                                      L1 : r = ⟨1, 2, 0⟩ + t⟨2, −1, 1⟩,
+                                      L2 : r = ⟨3, 0, 4⟩ + s⟨1, 1, −2⟩.
+The direction vectors are
+                                   v1 = ⟨2, −1, 1⟩,      v2 = ⟨1, 1, −2⟩.
+They are not scalar multiples, so the lines are not parallel.
+Now test whether they intersect. Set the components equal:
+
+                                              1 + 2t = 3 + s,
+
+                                                 2 − t = s,
+                                                t = 4 − 2s.
+From the first equation,
+                                                s = 2t − 2.
+From the second equation,
+                                                 s = 2 − t.
+Set them equal:
+                                               2t − 2 = 2 − t
+                                                   3t = 4
+
+Prof. M. Youssef                                                                                         13
+                                                     4
+                                                   t= .
+                                                     3
+Then
+                                                        4 2
+                                               s = 2−    = .
+                                                        3 3
+Check the third equation:
+                                                            
+                                4                           2      4 8
+                              t= ,          4 − 2s = 4 − 2     = 4− = .
+                                3                           3      3 3
+
+Because
+                                                4 8
+                                                   ̸= ,
+                                                3 3
+the third equation does not work. Therefore the lines do not intersect.
+Since the lines are not parallel and do not intersect, they are
+
+                                                skew lines.
+
+Common mistakes to avoid.
+
+ • Do not stop after checking only two coordinates. All three component equations must be satisfied.
+
+ • Lines in 3D can be skew. This does not happen for lines in the same plane, but it happens often in
+   space.
+
+Problem 5 Solution
+The correct matching is
+
+                            (a) D,   (b) F,    (c) A,   (d) C,    (e) E,   ( f ) B.
+
+ • (a) is a saddle surface, so it matches D : z = x2 − y2 .
+                                                           p
+ • (b) is a cone opening upward, so it matches F : z = x2 + y2 .
+
+ • (c) is a cylinder with circular cross sections, so it matches A : x2 + y2 = 9.
+
+ • (d) is a downward-opening paraboloid, so it matches C : z = 1 − x2 − y2 .
+
+ • (e) is a hyperboloid of one sheet, so it matches E : x2 + y2 − z2 = 1.
+                                            x2 y2
+ • (f) is an ellipsoid, so it matches B :     + + z2 = 1.
+                                            4  9
+
+Common mistakes to avoid.
+
+ • A cylinder is missing one variable in its equation. For example, x2 + y2 = 9 has no z, so it extends
+   vertically.
+
+Prof. M. Youssef                                                                                    14
+

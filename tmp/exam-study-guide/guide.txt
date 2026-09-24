@@ -1,0 +1,1063 @@
+                            Math 4A Exam 1 Study Guide
+      Chapters 12 and 13: Vectors, Lines, Planes, Surfaces, and Vector Functions
+                     Review Sheet, Practice Questions, and Detailed Answer Key
+
+
+
+  How to use this guide. First review the formulas and learning objectives. Then work the practice
+  exam without looking at the answer key. Finally, compare your work with the detailed solutions
+  and read the common mistakes carefully. The practice questions are written to match the structure
+  and style of the actual exam.
+
+
+
+Part 1. Review Sheet
+Core Learning Objectives
+By the time you take this exam, you should be able to:
+
+ • form vectors from points and use dot products, cross products, projections, and magnitudes correctly;
+
+ • find areas using cross products, especially the area of a triangle determined by three points;
+
+ • write equations of lines and planes in 3D;
+
+ • find the line of intersection of two planes;
+
+ • compute the distance from a point to a plane and find the closest point on the plane;
+
+ • determine whether two lines are parallel, intersecting, or skew;
+
+ • identify basic quadric surfaces from their equations and graphs;
+
+ • differentiate vector functions and find velocity, acceleration, and tangent lines;
+
+ • compute arc length and the arc-length function;
+
+ • find T, N, B, and curvature for a space curve;
+
+ • compute tangential and normal components of acceleration.
+
+Essential Formulas
+
+ Vectors from points
+
+
+                               →
+                               −
+                               AB = B − A = ⟨xB − xA , yB − yA , zB − zA ⟩
+
+
+
+Prof. M. Youssef                                                                                      1
+  Dot product, magnitude, and angle
+
+                                                                       q
+                           a · b = a1 b1 + a2 b2 + a3 b3 ,     ∥a∥ =    a21 + a22 + a23
+                                              a · b = ∥a∥∥b∥ cos θ
+
+
+  Projection and scalar component
+
+The notation projb a means the projection of a onto b. The answer is a vector pointing in the direction
+of b:
+                                                    a·b
+                                          projb a =      b.
+                                                    ∥b∥2
+The notation compb a means the scalar component of a in the direction of b. The answer is a number:
+
+                                                             a·b
+                                                compb a =        .
+                                                             ∥b∥
+
+A common way to remember the difference: projection gives a vector; scalar component gives a num-
+ber.
+
+
+  Cross product and areas
+
+
+                                                      i j k
+                                             a × b = a1 a2 a3
+                                                     b1 b2 b3
+                           Area of parallelogram formed by a and b = ∥a × b∥.
+                                                                     1
+                             Area of triangle formed by a and b = ∥a × b∥.
+                                                                     2
+For a triangle with vertices A, B, and C, first form two side vectors from the same starting point, usually
+→
+−        →
+         −
+AB and AC, then use
+                                                         1 −→ −   →
+                                     Area of △ABC = ∥AB × AC∥.
+                                                         2
+
+
+  Lines in 3D
+
+Vector form of a line through point P0 (x0 , y0 , z0 ) with direction vector v = ⟨a, b, c⟩:
+
+                                                   r = r0 + tv.
+
+
+
+
+Prof. M. Youssef                                                                                         2
+Symmetric form, when none of a, b, or c is zero:
+                                             x − x0 y − y0 z − z0
+                                                   =      =       .
+                                               a      b      c
+
+
+  Planes in 3D
+
+If n = ⟨A, B,C⟩ is normal to the plane and P0 (x0 , y0 , z0 ) is on the plane, then
+
+                                   A(x − x0 ) + B(y − y0 ) +C(z − z0 ) = 0.
+
+Standard form:
+                                               Ax + By +Cz = D.
+
+
+  Line of intersection of two planes
+
+If the planes have normal vectors n1 and n2 , then the direction vector of their line of intersection is
+
+                                                  v = n1 × n2 .
+
+Then find one point satisfying both plane equations and use r = r0 + tv.
+
+
+  Distance from a point to a plane
+
+For the plane Ax + By +Cz + D = 0 and point P(x0 , y0 , z0 ),
+
+                                                              |Ax0 + By0 +Cz0 + D|
+                          distance from P to the plane =         √                 .
+                                                                   A2 + B2 +C2
+To find the closest point on the plane, you do not need to memorize a separate formula. Use this method
+instead:
+
+  1. The normal vector to the plane is n = ⟨A, B,C⟩.
+  2. Write the normal line through P: r(t) = P + tn.
+  3. Substitute the line into the plane equation and solve for t.
+  4. Plug that value of t back into the line to get the closest point.
+
+
+  Vector functions, velocity, acceleration, and tangent line
+
+
+                            v(t) = r′ (t),      a(t) = r′′ (t),    speed = ∥v(t)∥.
+
+
+Prof. M. Youssef                                                                                           3
+At t = t0 , the tangent line is
+                                                   L(s) = r(t0 ) + sr′ (t0 ).
+
+
+  Arc length and arc-length function
+
+                                       Z b                                Z t
+                                               ′
+                                  L=         ∥r (t)∥ dt,         s(t) =         ∥r′ (u)∥ du.
+                                        a                                  a
+
+
+
+  Unit tangent, principal normal, binormal, and curvature
+
+
+                              r′ (t)                      T′ (t)
+                       T(t) = ′      ,             N(t) = ′      ,              B(t) = T(t) × N(t).
+                             ∥r (t)∥                     ∥T (t)∥
+                                                               ∥T′ (t)∥
+                                                      κ(t) =
+                                                               ∥r′ (t)∥
+A very useful computational formula is
+
+                                                           ∥r′ (t) × r′′ (t)∥
+                                               κ(t) =                         .
+                                                               ∥r′ (t)∥3
+
+
+  Tangential and normal components of acceleration
+
+Here v(t) = r′ (t) is velocity and a(t) = r′′ (t) is acceleration. The tangential component aT measures
+how acceleration changes the speed, while the normal component aN measures how acceleration turns
+the path:
+                                           v·a                ∥v × a∥
+                                     aT =        ,      aN =          .
+                                           ∥v∥                  ∥v∥
+Equivalent check:
+                                                      ∥a∥2 = a2T + a2N .
+
+
+  Quadric surface recognition
+
+
+ • x2 + y2 = r2 : circular cylinder.
+     x2 y2 z2
+ •     + + = 1: ellipsoid.
+     a2 b2 c2
+ • z = x2 + y2 : elliptic paraboloid opening upward.
+
+ • z = x2 − y2 : hyperbolic paraboloid, or saddle.
+
+
+Prof. M. Youssef                                                                                      4
+ • x2 + y2 − z2 = 1: hyperboloid of one sheet.
+       p                  p
+ • z = x2 + y2 or z = − x2 + y2 : cone.
+
+
+
+
+Prof. M. Youssef                                 5
+Part 2. Practice Questions
+1. Given the points
+                                A(0, 1, 2),      B(2, −1, 3),         C(1, 3, 5),
+calculate each of the following.
+     →
+     −       →
+             −
+ (a) AB and AC
+            →
+            −
+ (b) proj−
+         → AB
+         AC
+
+ (c) The area of triangle ABC
+
+
+2. Find the line of intersection of the planes
+
+                                x − 2y + z = 3         and       2x + y − z = 4.
+
+Give your answer in both parametric form and symmetric form.
+
+3. Find the distance from the point P(−1, 2, 4) to the plane
+
+                                              3x − y + 2z = 6.
+
+Then find the coordinates of the point on the plane that is closest to P.
+
+4. Consider the lines
+
+                   L1 : r = ⟨1, 2, 0⟩ + t⟨2, −1, 1⟩,         L2 : r = ⟨3, 0, 4⟩ + s⟨1, 1, −2⟩.
+
+Determine whether the lines are parallel, intersecting, or skew. If they intersect, find the point of inter-
+section.
+
+5. Match each 3-D graph with the equation that best describes it. Write the correct letter in each blank.
+Each letter will be used exactly once.
+
+                           x2 y2
+ A. x2 + y2 = 9         B.    + + z2 = 1               C. z = 1 − x2 − y2
+                            4    9                           p
+ D. z = x2 − y2         E. x2 + y2 − z2 = 1            F. z = x2 + y2
+
+
+
+
+Prof. M. Youssef                                                                                          6
+          (a)                                  (b)                              (c)
+
+
+
+
+          (d)                                   (e)                             (f)
+
+6. A particle moves according to
+
+                                      r(t) = ⟨t 2 + 1, 3t − 2, t 3 + 2t⟩.
+
+ (a) Find the velocity vector v(t) and the acceleration vector a(t).
+
+ (b) Find an equation of the tangent line to the curve at t = −1.
+
+
+7. Let
+                                                                        π
+                               r(t) = ⟨5t, 12 cost, 12 sint⟩,           0≤t ≤
+                                                                          .
+                                                                        3
+Find the arc length of the curve on the interval. Then find the arc length function s(t) measured from
+t = 0.
+
+8. For the curve
+                                             r(t) = ⟨2t, t 2 , t 3 ⟩,
+find the following at t = 0:
+
+ (a) the unit tangent vector T(0)
+
+ (b) the principal unit normal vector N(0)
+
+ (c) the binormal vector B(0)
+
+ (d) the curvature κ(0)
+
+Prof. M. Youssef                                                                                    7
+9. Find the tangential and normal components of the acceleration vector at the given point:
+
+                                         2    1     3
+                                   r(t) = i + 2 j + 3 k,        (2, 1, 3).
+                                         t   t     t
+Be sure to identify the value of t corresponding to the point first.
+
+
+
+
+Prof. M. Youssef                                                                              8
+Additional Practice Set: Lines and Planes
+10. Find a set of parametric equations and a set of symmetric equations, when possible, for each line.
+
+ (a) The line passes through the point (1, 2, 3) and is perpendicular to the xz-plane.
+
+ (b) The line passes through (1, 2, 3) and is parallel to the line x = y = z.
+
+ (c) The line is the intersection of the planes
+
+                                3x − 3y − 7z = −4          and       x − y + 2z = 3.
+
+ (d) The line passes through (0, 1, 4) and is perpendicular to both
+
+                                  u = ⟨2, −5, 1⟩       and         v = ⟨−3, 1, 4⟩.
+
+11. Find the equation of the plane.
+
+ (a) The plane contains the lines
+
+                             x−1                                 x+1
+                                 = y = z+1           and             = y − 1 = z − 2.
+                              −2                                  −2
+
+ (b) The plane passes through the points
+
+                                  (−3, −4, 2),       (−3, 4, 1),       (1, 1, −2).
+
+ (c) The plane passes through (1, −2, 3) and contains the line
+
+                                      x = 2t,      y = 3 − t,       z = 1 + 3t.
+
+
+
+
+Prof. M. Youssef                                                                                         9
+Part 3. Complete Answer Key with Explanations
+Problem 1 Solution
+Given
+                               A(0, 1, 2),      B(2, −1, 3),         C(1, 3, 5).
+
+(a) Find the vectors from point differences:
+                           →
+                           −
+                           AB = B − A = ⟨2 − 0, −1 − 1, 3 − 2⟩ = ⟨2, −2, 1⟩.
+                            →
+                            −
+                            AC = C − A = ⟨1 − 0, 3 − 1, 5 − 2⟩ = ⟨1, 2, 3⟩.
+
+(b) Use the projection formula:
+                                                  −→ −→
+                                               → AB · AC −
+                                               −         →
+                                            → AB = −
+                                        proj−       → 2 AC.
+                                            AC
+                                                   ∥AC∥
+Compute the dot product:
+                             → −
+                             −    →
+                             AB · AC = ⟨2, −2, 1⟩ · ⟨1, 2, 3⟩ = 2 − 4 + 3 = 1.
+
+Compute the squared magnitude:
+                                       →
+                                       −
+                                      ∥AC∥2 = 12 + 22 + 32 = 14.
+
+Therefore                                                                 
+                                      →
+                                      −    1                       1 1 3
+                                   → AB =
+                               proj−
+                                   AC
+                                             ⟨1, 2, 3⟩ =             , ,     .
+                                          14                       14 7 14
+                                                                             →
+                                                                             −      →
+                                                                                    −
+(c) The area of triangle ABC is half the area of the parallelogram formed by AB and AC:
+
+                                                     → −
+                                                   1 −    →
+                                             Area = ∥AB × AC∥.
+                                                   2
+Now
+                                            i j k
+                                  → −
+                                  −    →
+                                  AB × AC = 2 −2 1 = ⟨−8, −5, 6⟩.
+                                            1 2 3
+Thus
+                 −
+                 → −  →
+                              q                          √              √       √
+                ∥AB × AC∥ =       (−8)2 + (−5)2 + 62 =    64 + 25 + 36 = 125 = 5 5.
+So                                                           √
+                                                            5 5
+                                     Area of triangle ABC =     .
+                                                             2
+
+Common mistakes to avoid.
+
+ • Do not use A, B, and C directly in the cross product. First form two side vectors.
+
+Prof. M. Youssef                                                                          10
+ • Do not forget the factor 21 for the area of a triangle.
+                                          →
+                                          −           →
+                                                      −
+ • In the projection, the denominator is ∥AC∥2 , not ∥AC∥.
+
+Problem 2 Solution
+The planes are
+                                    x − 2y + z = 3,        2x + y − z = 4.
+Their normal vectors are
+                                   n1 = ⟨1, −2, 1⟩,        n2 = ⟨2, 1, −1⟩.
+The direction vector of the line of intersection is
+
+                                                 v = n1 × n2 .
+
+Compute:
+                                             i j  k
+                                   n1 × n2 = 1 −2 1 = ⟨1, 3, 5⟩.
+                                             2 1 −1
+Now find one point on both planes. Let z = 0. Then
+
+                                        x − 2y = 3,        2x + y = 4.
+
+From the first equation, x = 3 + 2y. Substitute into the second:
+
+                                               2(3 + 2y) + y = 4
+
+                                                    6 + 5y = 4
+                                                    2
+                                                y=− .
+                                                    5
+Then                                              
+                                                    2  11
+                                          x = 3+2 −   = .
+                                                    5   5
+A point on the line is                                     
+                                                    11 2
+                                                       ,− ,0 .
+                                                     5   5
+Therefore the parametric equations are
+
+                                     11                  2
+                                x=      + t,        y = − + 3t,          z = 5t.
+                                     5                   5
+
+The symmetric form is
+                                              11 y + 52  z
+                                           x−    =      = .
+                                               5   3     5
+
+
+Prof. M. Youssef                                                                   11
+Common mistakes to avoid.
+
+ • The direction vector of the intersection line is not one of the plane normal vectors. It is n1 × n2 .
+
+ • When finding a point, choose a simple value for one variable and solve the remaining two equations
+   carefully.
+
+Problem 3 Solution
+The plane is
+                                             3x − y + 2z = 6.
+Rewrite it as
+                                           3x − y + 2z − 6 = 0.
+Here
+                             A = 3,       B = −1,        C = 2,      D = −6.
+The point is P(−1, 2, 4). Substitute into the plane expression:
+
+                            3(−1) − (2) + 2(4) − 6 = −3 − 2 + 8 − 6 = −3.
+
+The distance is
+                                            | − 3|        3
+                                       p                =√ .
+                                        32 + (−1)2 + 22   14
+So
+                                                         3
+                                             distance = √ .
+                                                         14
+
+To find the closest point, use the normal line method. The normal vector to the plane is
+
+                                              n = ⟨3, −1, 2⟩.
+
+The closest point must lie on the line through P(−1, 2, 4) in the normal direction:
+
+                                      r(t) = ⟨−1, 2, 4⟩ + t⟨3, −1, 2⟩.
+
+Therefore
+                              x = −1 + 3t,         y = 2 − t,     z = 4 + 2t.
+Substitute these into the plane 3x − y + 2z = 6:
+
+                                  3(−1 + 3t) − (2 − t) + 2(4 + 2t) = 6.
+
+Simplify:
+                                      −3 + 9t − 2 + t + 8 + 4t = 6.
+                                               3 + 14t = 6.
+
+
+Prof. M. Youssef                                                                                           12
+                                                       3
+                                                  t=      .
+                                                       14
+                3
+Now plug t =      back into the normal line:
+               14
+                                                               
+                                    3       3       3     5 25 31
+                          −1 + 3 · , 2 − , 4 + 2 ·     = − , ,      .
+                                   14      14      14     14 14 7
+
+Thus                                                          
+                                                       5 25 31
+                                     closest point = − , ,       .
+                                                      14 14 7
+
+Common mistakes to avoid.
+
+ • The distance is always nonnegative, so use absolute value in the distance formula.
+
+ • For the closest point, do not use the distance as the value of t. Write the normal line first, then solve
+   for t by substituting into the plane.
+
+ • The normal line must use the normal vector of the plane, not a random direction vector in the plane.
+
+Problem 4 Solution
+The two lines are
+                                      L1 : r = ⟨1, 2, 0⟩ + t⟨2, −1, 1⟩,
+                                      L2 : r = ⟨3, 0, 4⟩ + s⟨1, 1, −2⟩.
+The direction vectors are
+                                   v1 = ⟨2, −1, 1⟩,      v2 = ⟨1, 1, −2⟩.
+They are not scalar multiples, so the lines are not parallel.
+Now test whether they intersect. Set the components equal:
+
+                                              1 + 2t = 3 + s,
+
+                                                 2 − t = s,
+                                                t = 4 − 2s.
+From the first equation,
+                                                s = 2t − 2.
+From the second equation,
+                                                 s = 2 − t.
+Set them equal:
+                                               2t − 2 = 2 − t
+                                                   3t = 4
+
+Prof. M. Youssef                                                                                         13
+                                                     4
+                                                   t= .
+                                                     3
+Then
+                                                        4 2
+                                               s = 2−    = .
+                                                        3 3
+Check the third equation:
+                                                            
+                                4                           2      4 8
+                              t= ,          4 − 2s = 4 − 2     = 4− = .
+                                3                           3      3 3
+
+Because
+                                                4 8
+                                                   ̸= ,
+                                                3 3
+the third equation does not work. Therefore the lines do not intersect.
+Since the lines are not parallel and do not intersect, they are
+
+                                                skew lines.
+
+Common mistakes to avoid.
+
+ • Do not stop after checking only two coordinates. All three component equations must be satisfied.
+
+ • Lines in 3D can be skew. This does not happen for lines in the same plane, but it happens often in
+   space.
+
+Problem 5 Solution
+The correct matching is
+
+                            (a) D,   (b) F,    (c) A,   (d) C,    (e) E,   ( f ) B.
+
+ • (a) is a saddle surface, so it matches D : z = x2 − y2 .
+                                                           p
+ • (b) is a cone opening upward, so it matches F : z = x2 + y2 .
+
+ • (c) is a cylinder with circular cross sections, so it matches A : x2 + y2 = 9.
+
+ • (d) is a downward-opening paraboloid, so it matches C : z = 1 − x2 − y2 .
+
+ • (e) is a hyperboloid of one sheet, so it matches E : x2 + y2 − z2 = 1.
+                                            x2 y2
+ • (f) is an ellipsoid, so it matches B :     + + z2 = 1.
+                                            4  9
+
+Common mistakes to avoid.
+
+ • A cylinder is missing one variable in its equation. For example, x2 + y2 = 9 has no z, so it extends
+   vertically.
+
+Prof. M. Youssef                                                                                    14
+                                                        p
+ • A cone often comes from an equation like z =             x2 + y2 or z2 = x2 + y2 .
+
+ • A saddle has the form one squared variable minus another squared variable.
+
+Problem 6 Solution
+The position function is
+                                        r(t) = ⟨t 2 + 1, 3t − 2, t 3 + 2t⟩.
+
+(a) Differentiate component by component:
+
+                                        v(t) = r′ (t) = ⟨2t, 3, 3t 2 + 2⟩.
+
+Differentiate again:
+                                           a(t) = r′′ (t) = ⟨2, 0, 6t⟩.
+Thus
+                                v(t) = ⟨2t, 3, 3t 2 + 2⟩,       a(t) = ⟨2, 0, 6t⟩.
+
+(b) At t = −1,
+
+                      r(−1) = ⟨(−1)2 + 1, 3(−1) − 2, (−1)3 + 2(−1)⟩ = ⟨2, −5, −3⟩.
+
+Also
+                                              v(−1) = ⟨−2, 3, 5⟩.
+The tangent line is
+                                       L(s) = ⟨2, −5, −3⟩ + s⟨−2, 3, 5⟩.
+Equivalently,
+                              x = 2 − 2s,        y = −5 + 3s,         z = −3 + 5s.
+
+Common mistakes to avoid.
+
+ • The tangent line uses r(t0 ) as the point and r′ (t0 ) as the direction.
+
+ • Do not use acceleration as the tangent direction.
+
+Problem 7 Solution
+The curve is
+                                                                                π
+                               r(t) = ⟨5t, 12 cost, 12 sint⟩,          0≤t ≤      .
+                                                                                3
+Differentiate:
+                                        r′ (t) = ⟨5, −12 sint, 12 cost⟩.
+Compute the speed:                       q
+                                   ′
+                                ∥r (t)∥ = 52 + (−12 sint)2 + (12 cost)2 .
+
+
+Prof. M. Youssef                                                                        15
+                                          p
+                                    ′
+                                 ∥r (t)∥ = 25 + 144 sin2 t + 144 cos2 t.
+Since
+                                                sin2 t + cos2 t = 1,
+we get                                           √          √
+                                    ∥r′ (t)∥ =    25 + 144 = 169 = 13.
+The arc length is
+                                                                               13π
+                                          Z π/3
+                                                                     π/3
+                                     L=           13 dt = 13 [t]0          =       .
+                                            0                                   3
+So
+                                                             13π
+                                                     L=          .
+                                                              3
+The arc-length function measured from t = 0 is
+                                                     Z t
+                                            s(t) =          13 du = 13t.
+                                                       0
+
+Thus
+                                                    s(t) = 13t.
+
+Common mistakes to avoid.
+
+ • Arc length uses the magnitude of r′ (t), not r(t).
+
+ • Do not forget the square root when computing speed.
+
+ • Simplify with sin2 t + cos2 t = 1 before integrating.
+
+Problem 8 Solution
+The curve is
+                                                r(t) = ⟨2t,t 2 ,t 3 ⟩.
+Differentiate:
+                                 r′ (t) = ⟨2, 2t, 3t 2 ⟩,       r′′ (t) = ⟨0, 2, 6t⟩.
+At t = 0,
+                                  r′ (0) = ⟨2, 0, 0⟩,          r′′ (0) = ⟨0, 2, 0⟩.
+
+(a) The unit tangent vector is
+
+                                             r′ (0)   ⟨2, 0, 0⟩
+                                 T(0) =       ′
+                                                    =           = ⟨1, 0, 0⟩ .
+                                            ∥r (0)∥       2
+
+(b) At t = 0, r′ (0) and r′′ (0) are perpendicular. Also ∥r′ (0)∥ = 2. Therefore the direction in which T
+
+
+
+Prof. M. Youssef                                                                                      16
+changes is the direction of r′′ (0):
+
+                                               r′′ (0)   ⟨0, 2, 0⟩
+                                   T′ (0) =     ′
+                                                       =           = ⟨0, 1, 0⟩.
+                                              ∥r (0)∥        2
+
+Then
+                                                   T′ (0)
+                                        N(0) =             = ⟨0, 1, 0⟩ .
+                                                  ∥T′ (0)∥
+
+(c) The binormal vector is
+                                              B(0) = T(0) × N(0).
+So
+                                   B(0) = ⟨1, 0, 0⟩ × ⟨0, 1, 0⟩ = ⟨0, 0, 1⟩ .
+
+(d) Use the cross-product curvature formula:
+
+                                                     ∥r′ (0) × r′′ (0)∥
+                                           κ(0) =                       .
+                                                          ∥r′ (0)∥3
+
+Compute
+                               r′ (0) × r′′ (0) = ⟨2, 0, 0⟩ × ⟨0, 2, 0⟩ = ⟨0, 0, 4⟩.
+Thus
+                                ∥r′ (0) × r′′ (0)∥ = 4,        ∥r′ (0)∥3 = 23 = 8.
+Therefore
+                                                          1
+                                                    κ(0) = .
+                                                          2
+
+Common mistakes to avoid.
+
+ • N is not the same as r′′ . The vector N must be a unit vector.
+
+ • B is found from T × N, not N × T.
+
+ • Curvature is a scalar, so it should be nonnegative.
+
+Problem 9 Solution
+The curve is
+                                                   2     1    3
+                                           r(t) = i + 2 j + 3 k.
+                                                   t    t    t
+The given point is (2, 1, 3). We first identify the corresponding t value:
+
+                                                r(1) = ⟨2, 1, 3⟩ .
+
+So the point corresponds to
+                                                      t = 1.
+
+
+Prof. M. Youssef                                                                       17
+Now compute velocity and acceleration:
+                                                                  
+                                           ′          2     2    9
+                                    v(t) = r (t) = − 2 , − 3 , − 4 .
+                                                     t     t    t
+                                                               
+                                               ′′       4 6 36
+                                      a(t) = r (t) = 3 , 4 , 5 .
+                                                       t t t
+At t = 1,
+                                v(1) = ⟨−2, −2, −9⟩,        a(1) = ⟨4, 6, 36⟩.
+Compute the speed:
+                               q                       √            √
+                       ∥v(1)∥ = (−2)2 + (−2)2 + (−9)2 = 4 + 4 + 81 = 89.
+
+The tangential component is
+                                                       v·a
+                                                aT =       .
+                                                       ∥v∥
+Compute the dot product:
+
+                 v(1) · a(1) = (−2)(4) + (−2)(6) + (−9)(36) = −8 − 12 − 324 = −344.
+
+Therefore
+                                                      344
+                                               aT = − √ .
+                                                       89
+
+For the normal component,
+                                                      ∥v × a∥
+                                               aN =           .
+                                                        ∥v∥
+Compute
+                                              i  j k
+                               v(1) × a(1) = −2 −2 −9 = ⟨−18, 36, −4⟩.
+                                              4 6 36
+Then
+                              q                      √                 √        √
+            ∥v(1) × a(1)∥ =    (−18)2 + 362 + (−4)2 = 324 + 1296 + 16 = 1636 = 2 409.
+
+So                                                  √
+                                                   2 409
+                                               aN = √    .
+                                                     89
+
+Interpretation. The negative value of aT means the speed is decreasing at that instant. The normal
+component aN is positive because it measures how much acceleration is turning the direction of motion.
+Common mistakes to avoid.
+
+ • Always find the parameter value corresponding to the point first.
+
+Prof. M. Youssef                                                                                   18
+ • aT can be negative. It measures whether speed is increasing or decreasing.
+
+ • aN is a magnitude, so it must be nonnegative.
+
+
+
+
+Prof. M. Youssef                                                                19
+Additional Practice Set Solutions
+Problem 10(a). The xz-plane has equation y = 0, so a normal vector to the xz-plane is
+
+                                                  ⟨0, 1, 0⟩.
+
+A line perpendicular to the xz-plane must use this normal vector as its direction vector. Through (1, 2, 3),
+the parametric equations are
+                                     x = 1,     y = 2 + t,     z = 3.
+Since two direction components are zero, the usual quotient-style symmetric form is not appropriate. A
+symmetric-style description is
+                                  x = 1,       z = 3,     y is free.
+
+Common mistake to avoid. Do not say the direction vector is in the xz-plane. A line perpendicular to
+a plane points in the normal direction to that plane.
+
+Problem 10(b). The line x = y = z has direction vector
+
+                                                  ⟨1, 1, 1⟩.
+
+So a line through (1, 2, 3) parallel to it has parametric equations
+
+                                 x = 1 + t,      y = 2 + t,         z = 3 + t.
+
+The symmetric equations are
+                                           x − 1 = y − 2 = z − 3.
+
+Common mistake to avoid. The line x = y = z does not mean the new line must pass through the origin.
+It only gives the direction ⟨1, 1, 1⟩.
+
+Problem 10(c). The planes are
+
+                                 3x − 3y − 7z = −4,            x − y + 2z = 3.
+
+Their normal vectors are
+                                  n1 = ⟨3, −3, −7⟩,        n2 = ⟨1, −1, 2⟩.
+The direction vector of the line of intersection is
+
+                                          i j  k
+                                n1 × n2 = 3 −3 −7 = ⟨−13, −13, 0⟩.
+                                          1 −1 2
+
+We may use the simpler parallel direction vector
+
+                                                  ⟨1, 1, 0⟩.
+
+
+Prof. M. Youssef                                                                                         20
+Now find one point on the line. From the second plane,
+
+                                   x − y + 2z = 3      ⇒       x − y = 3 − 2z.
+
+Substitute x − y = 3 − 2z into the first plane:
+
+                                            3(x − y) − 7z = −4.
+
+Then
+                                            3(3 − 2z) − 7z = −4
+                                             9 − 6z − 7z = −4
+                                                  −13z = −13
+                                                      z = 1.
+So
+                                    x − y + 2(1) = 3         ⇒     x − y = 1.
+Choose y = 0, so x = 1. One point is (1, 0, 1). Therefore
+
+                                      x = 1 + t,        y = t,        z = 1.
+
+The symmetric form is
+                                           x − 1 = y,            z = 1.
+
+Common mistake to avoid. The direction of the intersection line is not one of the normals. It is
+perpendicular to both normals, so use a cross product.
+
+Problem 10(d). The line must be perpendicular to both
+
+                                u = ⟨2, −5, 1⟩         and         v = ⟨−3, 1, 4⟩.
+
+So its direction vector must be parallel to u × v:
+
+                                         i j k
+                                u × v = 2 −5 1 = ⟨−21, −11, −13⟩.
+                                        −3 1 4
+
+We may use the opposite direction vector
+
+                                                   ⟨21, 11, 13⟩.
+
+Through (0, 1, 4), the parametric equations are
+
+                                x = 21t,      y = 1 + 11t,           z = 4 + 13t.
+
+
+
+
+Prof. M. Youssef                                                                             21
+The symmetric equations are
+                                             x   y−1 z−4
+                                               =     =    .
+                                            21    11   13
+
+Common mistake to avoid. A vector perpendicular to two given vectors is found by a cross product,
+not by a dot product.
+
+Problem 11(a). First rewrite each line in parametric form.
+For
+                                             x−1
+                                                 = y = z + 1,
+                                              −2
+let the common value be t. Then
+
+                                    x = 1 − 2t,        y = t,       z = t − 1.
+
+So this line passes through
+                                              P1 = (1, 0, −1)
+and has direction vector
+                                                  d = ⟨−2, 1, 1⟩.
+
+For
+                                           x+1
+                                               = y − 1 = z − 2,
+                                            −2
+let the common value be s. Then
+
+                              x = −1 − 2s,            y = 1 + s,       z = 2 + s.
+
+This line passes through
+                                              P2 = (−1, 1, 2)
+and has the same direction vector
+                                                  d = ⟨−2, 1, 1⟩.
+The two lines are parallel. A plane containing both lines must contain the direction vector
+
+                                                  d = ⟨−2, 1, 1⟩
+
+and the vector connecting the two lines:
+                                        −−→
+                                        P1 P2 = P2 − P1 = ⟨−2, 1, 3⟩.
+
+A normal vector to the plane is
+                                                          −−→
+                                                  n = d × P1 P2 .
+
+
+
+
+Prof. M. Youssef                                                                              22
+So
+                                           i j k
+                                      n = −2 1 1 = ⟨2, 4, 0⟩.
+                                          −2 1 3
+Use the simpler normal vector ⟨1, 2, 0⟩. The plane through P1 = (1, 0, −1) is
+
+                                  1(x − 1) + 2(y − 0) + 0(z + 1) = 0.
+
+Thus
+                                              x + 2y = 1.
+
+Common mistake to avoid. When a plane contains two parallel lines, use the line direction vector and
+a vector connecting the two lines.
+
+Problem 11(b). Let
+
+                       A = (−3, −4, 2),      B = (−3, 4, 1),      C = (1, 1, −2).
+
+Form two vectors in the plane:
+                                       →
+                                       −
+                                       AB = B − A = ⟨0, 8, −1⟩,
+                                       →
+                                       −
+                                       AC = C − A = ⟨4, 5, −4⟩.
+A normal vector is
+                                        i j k
+                              → −
+                              −    →
+                              AB × AC = 0 8 −1 = ⟨−27, −4, −32⟩.
+                                        4 5 −4
+We may use the opposite normal vector
+
+                                            n = ⟨27, 4, 32⟩.
+
+Using point A = (−3, −4, 2), the plane equation is
+
+                                 27(x + 3) + 4(y + 4) + 32(z − 2) = 0.
+
+Simplify:
+                                  27x + 81 + 4y + 16 + 32z − 64 = 0
+                                       27x + 4y + 32z + 33 = 0.
+Therefore
+                                       27x + 4y + 32z + 33 = 0.
+
+Common mistake to avoid. Do not try to use the three points directly as a normal vector. First form
+two vectors in the plane, then take their cross product.
+
+
+
+
+Prof. M. Youssef                                                                                 23
+Problem 11(c). The plane contains the line
+
+                                  x = 2t,        y = 3 − t,        z = 1 + 3t.
+
+A point on the line is obtained by setting t = 0:
+
+                                                 P0 = (0, 3, 1).
+
+The direction vector of the line is
+                                                d = ⟨2, −1, 3⟩.
+The plane also passes through
+                                                Q = (1, −2, 3).
+A second vector in the plane is
+                                          −−→
+                                          P0 Q = Q − P0 = ⟨1, −5, 2⟩.
+A normal vector to the plane is
+                                                         −−→
+                                                 n = d × P0 Q.
+Compute
+                                           i j k
+                                       n = 2 −1 3 = ⟨13, −1, −9⟩.
+                                           1 −5 2
+Use point Q = (1, −2, 3):
+                                      13(x − 1) − 1(y + 2) − 9(z − 3) = 0.
+Simplify:
+                                        13x − 13 − y − 2 − 9z + 27 = 0
+                                            13x − y − 9z + 12 = 0.
+Thus
+                                            13x − y − 9z + 12 = 0.
+
+Common mistake to avoid. The point (1, −2, 3) is not necessarily on the given line. Use one point
+from the line and the outside point to build a second vector in the plane.
+
+
+
+
+Prof. M. Youssef                                                                              24
+

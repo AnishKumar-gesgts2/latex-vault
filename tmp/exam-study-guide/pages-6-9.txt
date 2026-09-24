@@ -1,0 +1,132 @@
+Part 2. Practice Questions
+1. Given the points
+                                A(0, 1, 2),      B(2, −1, 3),         C(1, 3, 5),
+calculate each of the following.
+     →
+     −       →
+             −
+ (a) AB and AC
+            →
+            −
+ (b) proj−
+         → AB
+         AC
+
+ (c) The area of triangle ABC
+
+
+2. Find the line of intersection of the planes
+
+                                x − 2y + z = 3         and       2x + y − z = 4.
+
+Give your answer in both parametric form and symmetric form.
+
+3. Find the distance from the point P(−1, 2, 4) to the plane
+
+                                              3x − y + 2z = 6.
+
+Then find the coordinates of the point on the plane that is closest to P.
+
+4. Consider the lines
+
+                   L1 : r = ⟨1, 2, 0⟩ + t⟨2, −1, 1⟩,         L2 : r = ⟨3, 0, 4⟩ + s⟨1, 1, −2⟩.
+
+Determine whether the lines are parallel, intersecting, or skew. If they intersect, find the point of inter-
+section.
+
+5. Match each 3-D graph with the equation that best describes it. Write the correct letter in each blank.
+Each letter will be used exactly once.
+
+                           x2 y2
+ A. x2 + y2 = 9         B.    + + z2 = 1               C. z = 1 − x2 − y2
+                            4    9                           p
+ D. z = x2 − y2         E. x2 + y2 − z2 = 1            F. z = x2 + y2
+
+
+
+
+Prof. M. Youssef                                                                                          6
+          (a)                                  (b)                              (c)
+
+
+
+
+          (d)                                   (e)                             (f)
+
+6. A particle moves according to
+
+                                      r(t) = ⟨t 2 + 1, 3t − 2, t 3 + 2t⟩.
+
+ (a) Find the velocity vector v(t) and the acceleration vector a(t).
+
+ (b) Find an equation of the tangent line to the curve at t = −1.
+
+
+7. Let
+                                                                        π
+                               r(t) = ⟨5t, 12 cost, 12 sint⟩,           0≤t ≤
+                                                                          .
+                                                                        3
+Find the arc length of the curve on the interval. Then find the arc length function s(t) measured from
+t = 0.
+
+8. For the curve
+                                             r(t) = ⟨2t, t 2 , t 3 ⟩,
+find the following at t = 0:
+
+ (a) the unit tangent vector T(0)
+
+ (b) the principal unit normal vector N(0)
+
+ (c) the binormal vector B(0)
+
+ (d) the curvature κ(0)
+
+Prof. M. Youssef                                                                                    7
+9. Find the tangential and normal components of the acceleration vector at the given point:
+
+                                         2    1     3
+                                   r(t) = i + 2 j + 3 k,        (2, 1, 3).
+                                         t   t     t
+Be sure to identify the value of t corresponding to the point first.
+
+
+
+
+Prof. M. Youssef                                                                              8
+Additional Practice Set: Lines and Planes
+10. Find a set of parametric equations and a set of symmetric equations, when possible, for each line.
+
+ (a) The line passes through the point (1, 2, 3) and is perpendicular to the xz-plane.
+
+ (b) The line passes through (1, 2, 3) and is parallel to the line x = y = z.
+
+ (c) The line is the intersection of the planes
+
+                                3x − 3y − 7z = −4          and       x − y + 2z = 3.
+
+ (d) The line passes through (0, 1, 4) and is perpendicular to both
+
+                                  u = ⟨2, −5, 1⟩       and         v = ⟨−3, 1, 4⟩.
+
+11. Find the equation of the plane.
+
+ (a) The plane contains the lines
+
+                             x−1                                 x+1
+                                 = y = z+1           and             = y − 1 = z − 2.
+                              −2                                  −2
+
+ (b) The plane passes through the points
+
+                                  (−3, −4, 2),       (−3, 4, 1),       (1, 1, −2).
+
+ (c) The plane passes through (1, −2, 3) and contains the line
+
+                                      x = 2t,      y = 3 − t,       z = 1 + 3t.
+
+
+
+
+Prof. M. Youssef                                                                                         9
+

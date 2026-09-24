@@ -1,0 +1,488 @@
+Chapter 13: Vector
+    Functions
+     Anish Kumar
+    MW 6:00–8:35 PM
+13.1 Vector Functions and Space Curves
+1.
+      D             √           E
+r(t) = ln(t + 1), t/ 9 − t2 , 2t . Logarithm needs t + 1 > 0, or t > −1. Square root denomiator needs
+9 − t2 > 0, so −3 < t < 3. The exponential takes any real t. (−1, 3) .
+
+5.
+Limit of componenets t → ∞:
+
+                          1 + t2   t−2 + 1                                  1 − e−2t
+                                 =         = −1,       tan−1 t = π/2,                = 0.
+                          1 − t2   t−2 − 1                                     t
+
+              π
+                     
+lim r(t) = −1, , 0 .
+              2
+
+11.
+x = t, y = 2 − t, z = 2t is the line r = ⟨0, 2, 0⟩ + t ⟨1, −1, 2⟩. As t increases, x, z increase and y decreases.
+
+
+
+
+17.
+yz-plane: x=0.                                    D            E
+                                         ryz (t) = 0, t3 , t−3 ,   t ̸= 0
+                                                      yz = 1
+                                                 x = 0, yz = 1
+
+
+
+
+                                                        1
+31.
+In the plane,
+                                            y=4,         z = x2
+
+42.
+Since z=t,
+                        z = t,      x = zez ,     y = e−z ,        xy = z,   y>0
+                                   x′ = et (1 + t) = 0       =⇒    t = −1.
+As t increases, the curve passes through (−e−1 , e, −1) and (0, 1, 0) in the arrow’s direction.
+
+
+
+
+43.
+About the y-axis,
+                                     x2 + z 2 = sin2 (3t),        y = t/4
+                                      x=z=0         ⇐⇒        t = nπ/3
+
+                                                     2
+45.
+One period:
+                −1 ≤ x, y, z ≤ 1,     0 ≤ t ≤ 2π
+              z = cos 4t = 2 cos2 (2t) − 1 = 2x2 − 1
+                          r(−t) = r(t)
+
+
+
+
+                                3
+13.2 Derivatives and Integrals of Vector Functions
+3.
+(a) Since x=t-2,
+                                      t = x + 2,         y = (x + 2)2 + 1
+(b)
+                                                 r′ (t) = ⟨1, 2t⟩
+(c)
+                                  r(−1) = ⟨−3, 2⟩ ,          r′ (−1) = ⟨1, −2⟩
+
+
+
+
+13.
+Componentwise:
+                                        (t sin t)′ = sin t + t cos t,
+                                      (et cos t)′ = et cos t − et sin t,
+                                   (sin t cos t)′ = cos2 t − sin2 t = cos 2t.
+                                       D                                              E
+                               r′ (t) = sin t + t cos t, et (cos t − sin t), cos 2t
+
+
+15.
+For constant a,b,c,
+                                           (a + tb + t2 c)′ = b + 2tc
+
+17.
+                              D                 E
+                      r′ (t) = 2t − 2, 3, t2 + t ,       r′ (2) = ⟨2, 3, 6⟩ ,     |r′ (2)| = 7
+
+                                               T (2) = ⟨2, 3, 6⟩ /7
+
+                                                         4
+19.
+                 r′ (t) = ⟨− sin t, 3, 4 cos 2t⟩ ,               r′ (0) = ⟨0, 3, 4⟩ ,      |r′ (0)| = 5
+                                                   T (0) = ⟨0, 3/5, 4/5⟩
+
+21.
+At (2,-2,4),
+                                             3t − 5 = −2            =⇒     t=1
+                          D                    E                                                      √
+                 r′ (t) = 3t2 , 3, −4/t2 ,                  r′ (1) = ⟨3, 3, −4⟩ ,        |r′ (1)| =       34
+                                                                   √
+                                                   T = ⟨3, 3, −4⟩ / 34
+
+25.
+At (2,4,1),                               √
+                                        4 t = 4 =⇒ t = 1
+                                 D      √             2
+                                                         E
+                         r′ (t) = 2t, 2/ t, (2t − 1)et −t , r′ (1) = ⟨2, 2, 1⟩
+
+                                       x = 2 + 2s, y = 4 + 2s, z = 1 + s
+
+27.
+At (1,0,1),
+                                               e−t = 1          =⇒        t=0
+                                   D                                                             E
+                          ′              −t                          −t
+                         r (t) = −e (cos t + sin t), e (cos t − sin t), −e−t .
+
+                                                   r′ (0) = ⟨−1, 1, −1⟩
+                                          x = 1 − s, y = s, z = 1 − s
+
+35.
+At the origin,
+                              t = 0,         r1′ (0) = ⟨1, 0, 0⟩ ,         r2′ (0) = ⟨1, 2, 1⟩
+                                                1
+                                       cos θ = √                =⇒          θ ≈ 66◦
+                                                 6
+
+37.
+                   Z 2D                  E           hD                       Ei2
+                          t, −t3 , 3t5 dt =               t2 /2, −t4 /4, t6 /2       = ⟨2, −4, 32⟩ .
+                     0                                                           0
+
+
+39.
+Componentwise,           Z 1
+                                  1     1      t
+                                                               
+                                     ,       ,                      dt = ⟨ln 2, π/4, (ln 2)/2⟩
+                          0
+                                           2
+                                t + 1 1 + t 1 + t2
+
+
+
+
+                                                                5
+41.
+                                         2 √
+                    Z D                      E    D                        E
+                                                              2
+                        (1 + t2 )−1 , tet , t dt = tan−1 t, et /2, 2t3/2 /3 + C .
+
+                                          t ≥ 0,         C ∈ R3
+
+51.
+                                v(2) = ⟨2, 4, 8⟩ ,       v ′ (2) = ⟨1, 4, 12⟩
+      f ′ (2) = ⟨3, 0, 4⟩ · ⟨2, 4, 8⟩ + ⟨1, 2, −1⟩ · ⟨1, 4, 12⟩ = (6 + 0 + 32) + (1 + 8 − 12) = 35 .
+
+
+
+
+                                                     6
+13.3 Arc Length and Curvature
+1.
+(a)                                                                               √
+                                    r′ (t) = ⟨−1, 2, 4⟩ ,            |r′ (t)| =       21
+                                                 Z 3√            √
+                                            L=          21 dt = 2 21
+                                                   1
+(b)
+                                    r(1) = (2, 2, 5),     r(3) = (0, 6, 13)
+                                          q                     √
+                                             (−2)2 + 42 + 82 = 2 21
+
+3.
+                                                                                      √
+                                  r′ = ⟨1, −3 sin t, 3 cos t⟩ ,            |r′ | =        10
+                                                Z 5 √             √
+                                           L=           10 dt = 10 10
+                                                  −5
+
+
+5.
+                                                       D√                  E
+                                               r′ =         2, et , −e−t
+                               p                        q
+                                  2 + e2t + e−2t =           (et + e−t )2 = et + e−t .
+                                    Z 1
+                              L=          (et + e−t ) dt = [et − e−t ]10 = e − e−1
+                                     0
+
+
+11.
+Endpoints:   t = 0, 2.
+                                                              Z 2p
+               r′ = ⟨−π sin πt, 2, 2π cos 2πt⟩ ,       L=             π 2 sin2 πt + 4 + 4π 2 cos2 2πt dt.
+                                                                 0
+
+                                                   L ≈ 10.3311
+
+15.
+(a)                                                                 √
+                                 t = 1,                     |r′ | = 26
+                                               r′ = ⟨−1, 4, 3⟩ ,
+                                       √                          s
+                                   s = 26(t − 1),    t=1+ √
+                                                                  26
+                                D      √           √             √ E
+                          r(s) = 4 − s/ 26, 1 + 4s/ 26, 3 + 3s/ 26 , s ≥ 0 .
+
+(b)
+                                          √           √           √
+                                   (4 − 4/ 26, 1 + 16/ 26, 3 + 12/ 26)
+
+
+
+
+                                                             7
+17.
+                                                                p
+                                  t = 0,        |r′ (t)| =          9 cos2 t + 16 + 9 sin2 t = 5
+One unit of arc length:                           Z t
+                                            5=             5 du = 5t           =⇒         t=1
+                                                      0
+
+                                                          (3 sin 1, 4, 3 cos 1)
+
+19.
+(a)
+                  r′ = ⟨2t, sin t − (cos t − t sin t), − sin t + (sin t + t cos t)⟩ = t ⟨2, sin t, cos t⟩ .
+                                √                ⟨2, sin t, cos t⟩             ⟨0, cos t, − sin t⟩
+                        |r′ | = 5t,        T =          √          ,    T′ =          √
+                                                          5                              5
+                                                      N = ⟨0, cos t, − sin t⟩
+(b)
+                                                                          1
+                                                                 κ=
+                                                                          5t
+
+21.
+              √
+(a) Let q =       1 + 4t2 .
+                                                           ⟨1, 2t, 0⟩                     4t
+                                                T =                   ,            q′ =
+                                                               q                          q
+                                             ⟨0, 2, 0⟩ 4t ⟨1, 2t, 0⟩   ⟨−4t, 2, 0⟩
+                                     T′ =             −              =             .
+                                                 q          q3            q3
+                                                      2
+                                           |T ′ | =      ,          N = ⟨−2t, 1, 0⟩ /q
+                                                      q2
+(b)
+                                                          κ = 2/(1 + 4t2 )3/2
+
+25.
+r = t3 , 0, t2 , r′ = 3t2 , 0, 2t , r′′ = ⟨6t, 0, 2⟩.
+
+                                          i j k
+                              r′ × r′′ = 3t2 0 2t
+                                         6t 0 2
+                                                                                                D   E
+                                    = i(0 − 0) − j(6t2 − 12t2 ) + k(0 − 0) = 0, 6t2 , 0 .
+                                                                                      p
+                                        |r′ × r′′ | = 6t2 ,               |r′ | = |t| 9t2 + 4
+                                                                  6
+                                               κ=                              ,     t ̸= 0
+                                                          |t|(9t2 + 4)3/2
+                                      t = 0 : not regular; curvature undefined
+
+
+
+                                                                      8
+27.
+    D √          E         D √         E
+r′ = 2 6t, 2, 6t2 and r′′ = 2 6, 0, 12t .
+
+
+                                  √i   j k
+                      r′ × r′′ = 2 √6t 2 6t2
+                                 2 6 0 12t
+                                                √        √               √
+                             = i(24t − 0) − j(24 6t2 − 12 6t2 ) + k(0 − 4 6)
+                               D         √        √ E
+                             = 24t, −12 6t2 , −4 6 .
+
+                          |r′ × r′′ |2 = 96(1 + 3t2 )2 ,    |r′ |2 = 4(1 + 3t2 )2
+                                          √                      √
+                                         4 6(1 + 3t2 )             6
+                                    κ=            2  3
+                                                         =               .
+                                          8(1 + 3t )       2(1 + 3t2 )2
+
+31.
+                                       y ′ = 4x3 ,         y ′′ = 12x2
+
+                                                         12x2
+                                         κ(x) =
+                                                     (1 + 16x6 )3/2
+
+37.
+(a)
+                                              κ(P ) > κ(Q)
+(b)
+                                     RP ≈ 0.8–1,            RQ ≈ 2–3
+                                 κ(P ) ≈ 1–1.3,            κ(Q) ≈ 0.3–0.5
+
+
+
+
+                                                       9
+13.4 Motion in Space: Velocity and Acceleration
+3.
+                                                                              p
+                                      v = ⟨−t, 1⟩ ,   a = ⟨−1, 0⟩ ,   |v| =       t2 + 1
+At t = 2:                                                                                   √
+                            r = (−2, 2),        v = ⟨−2, 1⟩ ,    a = ⟨−1, 0⟩ ,      |v| =       5
+Path:
+                                                       x = −y 2 /2
+
+
+
+
+5.
+                                           x2 y 2
+                                             +    =1       (counterclockwise)
+                                           9   4
+                                                                                      p
+              v = ⟨−3 sin t, 2 cos t⟩ ,        a = ⟨−3 cos t, −2 sin t⟩ ,     |v| =       9 sin2 t + 4 cos2 t .
+At t = π/3:
+                            √              D √       E              D       √ E                     √
+                r = (3/2,       3),     v = −3 3/2, 1 ,          a = −3/2, − 3 ,            |v| =       31/2
+
+
+
+
+                                                            10
+7.
+                                                                              p
+                     v = ⟨1, 2t, 0⟩ ,         a = ⟨0, 2, 0⟩ ,         |v| =       1 + 4t2
+At t = 1:                                                                                   √
+                 r = (1, 1, 2),      v = ⟨1, 2, 0⟩ ,            a = ⟨0, 2, 0⟩ ,     |v| =       5
+Path:
+                                            y = x2 ,            z=2
+
+
+
+
+9.
+                               D                            E
+                         v = 2t + 1, 2t − 1, 3t2 ,                   a = ⟨2, 2, 6t⟩ .
+                         q                                               p
+                 |v| =       (2t + 1)2 + (2t − 1)2 + 9t4 =                   9t4 + 8t2 + 2
+
+11.
+                                   D√                  E             D             E
+                             v=         2, et , −e−t ,          a = 0, et , e−t
+                                        p
+                               |v| =      2 + e2t + e−2t = et + e−t
+
+13.
+                          v = et ⟨cos t − sin t, sin t + cos t, t + 1⟩ .
+
+                                   a = et ⟨−2 sin t, 2 cos t, t + 2⟩
+For the speed,
+                              (cos t − sin t)2 + (sin t + cos t)2 = 2
+                                                  q
+                                        |v| = et 2 + (t + 1)2
+
+
+
+
+                                                       11
+15.
+                                             D                          E
+                                       v = 2t + C1 , C2 , t2 + C3 .
+
+                         v(0) = ⟨3, −1, 0⟩       =⇒     C1 = 3, C2 = −1, C3 = 0
+                                                 D                  E
+                                            v = 2t + 3, −1, t2 .
+                                   D                                         E
+                               r = t2 + 3t + D1 , −t + D2 , t3 /3 + D3 .
+
+                          r(0) = ⟨0, 1, 1⟩       =⇒     D1 = 0, D2 = 1, D3 = 1
+                                            D                           E
+                                       r = t2 + 3t, 1 − t, 1 + t3 /3 .
+
+
+19.
+                                             v = ⟨2t, 5, 2t − 16⟩
+Minimize |v|2 :
+                      4t2 + 25 + (2t − 16)2 = 8t2 − 64t + 281 = 8(t − 4)2 + 153.
+                                                            √
+                                      t=4,        |v|min = 3 17
+
+23.
+Horizontal and vertical components:
+                                                                                √
+                       v0x = 200 cos 60◦ = 100,          v0y = 200 sin 60◦ = 100 3
+                                                             √
+                                x = 100t,             y = 100 3t − 4.9t2
+                             √
+ (a) y = 0, t > 0 :   T = 200 3/9.8
+                                                 √
+                                 R = 100T = 20000 3/9.8 ≈ 3534.80 m
+
+             √                          √
+ (b) vy = 100 3 − 9.8t = 0 :    tp = 100 3/9.8
+                                           √
+                                      (100 3)2
+                                 H=            = 15000/9.8 ≈ 1530.61 m
+                                        2(9.8)
+
+ (c)                      D         √ E                        √
+                       v = 100, −100 3 ,               |v| =       10000 + 30000 = 200 m/s
+
+27.
+With H = 1600 ft,
+                                                       v02 sin2 36◦
+                                              1600 =
+                                                             64
+                                      √
+                                          1600 · 64     320
+                               v0 =             ◦
+                                                    =         ≈ 544.42 ft/s .
+                                          sin 36      sin 36◦
+
+
+
+
+                                                       12
+37.
+                                     D          E
+                                v = 2t, 3t2 , 0 ,          a = ⟨2, 6t, 0⟩
+For t > 0,                           p
+                               |v| = t 4 + 9t2 ,         v · a = 4t + 18t3
+
+                                                 4 + 18t2
+                                            aT = √         .
+                                                   4 + 9t2
+
+                          i  j k                                  D         E
+                 v × a = 2t 3t2 0 = i(0) − j(0) + k(12t2 − 6t2 ) = 0, 0, 6t2 .
+                         2 6t 0
+                                                     p
+                                           aN = 6t/ 4 + 9t2
+                   t = 0 : the formulas are undefined;               aT → 2,   aN → 0
+
+39.
+                        v = ⟨− sin t, cos t, 1⟩ ,        a = ⟨− cos t, − sin t, 0⟩
+                                             √
+                                      |v| = 2,            v·a=0
+                                         aT = 0 ,         aN = 1
+
+41.
+At (0,4,4),
+                                       ln t = 0 =⇒ t = 1
+                           D                 √E        D              E
+                         v = 1/t, 2t + 3, 2/ t , a = −1/t2 , 2, −t−3/2 .
+                                                                 √
+              v(1) = ⟨1, 5, 2⟩ ,  a(1) = ⟨−1, 2, −1⟩ ,   |v(1)| = 30,    v·a=7
+                                                    √
+                                             aT = 7/ 30
+
+
+                        i j k
+                  v×a= 1 5 2
+                       −1 2 −1
+                       = i[5(−1) − 2(2)] − j[1(−1) − 2(−1)] + k[1(2) − 5(−1)]
+                       = ⟨−9, −1, 7⟩ .
+
+                                           √                     q
+                               |v × a| =    131,          aN =       131/30
+
+
+
+
+                                                    13
+
