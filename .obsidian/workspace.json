@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Multi Chapter 14/Chapter_14_Solutions.pdf"
+                "file": "Multi Chapter 13/Chapter_13_Solutions.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Chapter_14_Solutions"
+              "title": "Chapter_13_Solutions"
             }
           }
         ]
@@ -198,20 +198,21 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
-  "active": "d7b88a4bc7b5ffdc",
+  "active": "82ff8bd32367bbbc",
   "lastOpenFiles": [
-    "Multi Chapter 13/Chapter_13_Solutions.pdf",
     "Multi Chapter 14/Chapter_14_Solutions.pdf",
-    "tmp/book-pages/mid-contact.jpg",
-    "tmp/book-pages/mid-470.jpg",
-    "tmp/book-pages/mid-469.jpg",
-    "tmp/book-pages/mid-468.jpg",
-    "tmp/book-pages/mid-467.jpg",
-    "tmp/book-pages/mid-466.jpg",
-    "tmp/book-pages/mid-465.jpg",
-    "tmp/book-pages/mid-464.jpg",
-    "tmp/book-pages/mid-463.jpg",
-    "tmp/book-pages/mid-462.jpg",
+    "tmp/ch14-review/updated-front-02.png",
+    "tmp/ch14-review/updated-front-01.png",
+    "tmp/ch14-review/updated-21.png",
+    "tmp/ch14-review/updated-20.png",
+    "tmp/ch14-review/updated-19.png",
+    "tmp/ch14-review/updated-18.png",
+    "tmp/ch14-review/updated-17.png",
+    "tmp/ch14-review/update_manifest_solutions.py",
+    "tmp/ch14-review/newprompt-crop.png",
+    "tmp/ch14-review/newprompt-336.png",
+    "tmp/ch14-review/latest-front-02.png",
+    "Multi Chapter 13/Chapter_13_Solutions.pdf",
     "tmp/book-pages",
     "tmp/pdf-review",
     "tmp/exam-study-guide/pages-6-9.txt",
@@ -219,8 +220,6 @@
     "tmp/exam-study-guide/pages-15-19.txt",
     "tmp/exam-study-guide/pages-10-14.txt",
     "tmp/exam-study-guide/guide.txt",
-    "tmp/exam-study-guide",
-    "tmp/ch14-review/polish_layout.py",
     "Multi Textbook/Handwriting Glyph Atlas/README.md",
     "GIT_SYNC.md",
     "README.md",
