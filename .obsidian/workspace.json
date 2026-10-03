@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Multi Chapter 13/Chapter_13_Solutions.pdf"
+                "file": "Multi Chapter 14/Chapter_14_Solutions.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Chapter_13_Solutions"
+              "title": "Chapter_14_Solutions"
             }
           }
         ]
@@ -198,8 +198,9 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
-  "active": "82ff8bd32367bbbc",
+  "active": "d7b88a4bc7b5ffdc",
   "lastOpenFiles": [
+    "Multi Chapter 13/Chapter_13_Solutions.pdf",
     "Multi Chapter 14/Chapter_14_Solutions.pdf",
     "tmp/ch14-review/updated-front-02.png",
     "tmp/ch14-review/updated-front-01.png",
@@ -212,7 +213,6 @@
     "tmp/ch14-review/newprompt-crop.png",
     "tmp/ch14-review/newprompt-336.png",
     "tmp/ch14-review/latest-front-02.png",
-    "Multi Chapter 13/Chapter_13_Solutions.pdf",
     "tmp/book-pages",
     "tmp/pdf-review",
     "tmp/exam-study-guide/pages-6-9.txt",
