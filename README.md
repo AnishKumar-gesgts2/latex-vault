@@ -11,6 +11,10 @@ This repository is an Obsidian vault containing the multivariable-calculus work 
 
 The vault's **LaTeX Builder** plugin uses `pdflatex` by default. You can change the compiler and arguments in **Settings â†’ Community plugins â†’ LaTeX Builder**.
 
+## Research learning notes
+
+The [GBS learning path](GBS%20Learning/Learning%20Path.md) contains twelve Markdown lessons, worked examples, exercises with answer checks, a glossary, a progress tracker, and a proposal-writing workshop. Start with Lesson 00 and use the checkpoints to build toward independently drafting the GBS proposal.
+
 ## GitHub sync
 
 Use the command palette commands from the **Git Sync** plugin:
