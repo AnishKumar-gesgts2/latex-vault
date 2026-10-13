@@ -1,0 +1,19 @@
+{
+  "pages": 31,
+  "questions": [
+    1,
+    5,
+    9,
+    15,
+    19,
+    31,
+    39,
+    41
+  ],
+  "math_multiplier": 1.15,
+  "text_multiplier": 1.4,
+  "graph_pixels_unchanged": true,
+  "all_other_pages_unchanged": true,
+  "sampled_membership_symbol": true,
+  "characters_varied": 480
+}

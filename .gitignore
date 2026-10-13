@@ -6,3 +6,8 @@
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+
+# Disposable PDF previews and source-check caches.
+/tmp/
+__pycache__/
+*.pyc

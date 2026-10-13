@@ -1,0 +1,101 @@
+[
+  {
+    "exercise": "14.3.101",
+    "page": 12,
+    "rect": [
+      98,
+      303.3834853515625,
+      590,
+      484.5174853515625
+    ],
+    "purpose": "Part (a): graph of f"
+  },
+  {
+    "exercise": "14.3.101",
+    "page": 12,
+    "rect": [
+      98,
+      504.6434853515625,
+      590,
+      705.9034853515625
+    ],
+    "purpose": "Part (e): graphs of f_xy and f_yx, side by side"
+  },
+  {
+    "exercise": "14.4.11",
+    "page": 14,
+    "rect": [
+      98,
+      283.25748535156254,
+      590,
+      605.2734853515626
+    ],
+    "purpose": "Surface and tangent plane, plus a zoomed view"
+  },
+  {
+    "exercise": "14.5.21",
+    "page": 19,
+    "rect": [
+      98,
+      363.7614853515625,
+      590,
+      544.8954853515625
+    ],
+    "purpose": "Dependency tree"
+  },
+  {
+    "exercise": "14.5.23",
+    "page": 19,
+    "rect": [
+      98,
+      565.0214853515625,
+      590,
+      746.1554853515626
+    ],
+    "purpose": "Dependency tree"
+  },
+  {
+    "exercise": "14.7.5",
+    "page": 28,
+    "rect": [
+      98,
+      122.2494853515625,
+      590,
+      383.88748535156253
+    ],
+    "purpose": "Encouraged graph of the function"
+  },
+  {
+    "exercise": "14.7.9",
+    "page": 28,
+    "rect": [
+      98,
+      404.0134853515625,
+      590,
+      665.6514853515625
+    ],
+    "purpose": "Encouraged graph of the function"
+  },
+  {
+    "exercise": "14.7.15",
+    "page": 29,
+    "rect": [
+      98,
+      102.12348535156251,
+      590,
+      363.76148535156256
+    ],
+    "purpose": "Encouraged graph of the function"
+  },
+  {
+    "exercise": "14.7.41",
+    "page": 29,
+    "rect": [
+      98,
+      383.88748535156253,
+      590,
+      746.1554853515626
+    ],
+    "purpose": "Graph showing both maxima and no local minima"
+  }
+]

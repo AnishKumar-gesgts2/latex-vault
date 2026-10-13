@@ -29,6 +29,10 @@ Each chapter has one self-contained LaTeX source and a compiled PDF. Exercise an
 
 The exact selection is recorded in `assignment_manifest.json`. There are no duplicate or extra exercise labels. 
 
+### Chapter 14 handwritten homework
+
+The [current handwritten homework](output/pdf/Completed%20Multi%20Chapter%2014%20HW%20-%20Right%20Lean%20and%20Reduced%20Vertical%20Variation.pdf) is kept as the single current handwritten export. Its [editing bundle and rebuild instructions](Multi%20Chapter%2014/Handwriting/README.md) preserve the original homework, handwriting samples, character variants, layout base, current placement data, and verification records for further edits. The typeset Chapter 14 source and PDF remain separate reference artifacts. Temporary renders and intermediate rebuilds are ignored.
+
 ### Textbook and Git LFS
 
 `Multi Textbook/*.pdf` is tracked through Git LFS. Install Git LFS before cloning or pulling this repository, then run `git lfs pull` if the textbook initially appears as a short pointer file. The uploaded textbook was verified by downloading its LFS object in a separate checkout and comparing its SHA-256 hash with the local PDF.

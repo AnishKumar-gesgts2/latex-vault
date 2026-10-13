@@ -1,0 +1,103 @@
+{
+  "pages": 31,
+  "numerals_varied": 2157,
+  "changed_rows": 393,
+  "stroke_width": 1.5938,
+  "authentic_versions_per_digit": 3,
+  "consecutive_identical_versions_avoided": true,
+  "non_numeral_pixels_unchanged": true,
+  "graph_spaces_unchanged": true,
+  "counts": {
+    "0": [
+      92,
+      93,
+      89
+    ],
+    "1": [
+      140,
+      135,
+      144
+    ],
+    "2": [
+      261,
+      252,
+      250
+    ],
+    "3": [
+      83,
+      72,
+      79
+    ],
+    "4": [
+      62,
+      63,
+      64
+    ],
+    "5": [
+      48,
+      38,
+      31
+    ],
+    "6": [
+      22,
+      16,
+      17
+    ],
+    "7": [
+      16,
+      18,
+      16
+    ],
+    "8": [
+      9,
+      9,
+      7
+    ],
+    "9": [
+      10,
+      12,
+      9
+    ]
+  },
+  "visual_review_complete": true,
+  "visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "detailed_numeral_checks": [
+    7,
+    11,
+    16,
+    25,
+    31
+  ]
+}
