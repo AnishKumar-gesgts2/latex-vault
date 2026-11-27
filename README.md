@@ -1,31 +1,40 @@
 # LaTeX Vault in Obsidian
 
-This repository is an Obsidian vault containing physics/movement quiz materials, the FRC shoot-on-the-move theory proof, and a multivariable-calculus textbook reference. The `.tex` files are the editable source; the TikZ diagrams are part of the source and can be revised directly.
+An Obsidian vault of LaTeX documents. Each `.tex` file is the editable source, and its compiled PDF sits next to it or in a `Quizzes` subfolder.
+
+## Documents
+
+| Document | Source | PDF |
+|---|---|---|
+| **SOTM Theory Proof**: shoot-on-the-move physics derivation for FRC | [SOTM Theory Proof.tex](SOTM%20Theory%20Proof/SOTM%20Theory%20Proof.tex) | [SOTM Theory Proof.pdf](SOTM%20Theory%20Proof/SOTM%20Theory%20Proof.pdf) |
+| **Free Fall Post-Lab Quiz**, version A | [.tex](Free%20Fall%20Post-Lab%20Quiz/free_fall_post_lab_version_a.tex) | [.pdf](Free%20Fall%20Post-Lab%20Quiz/Quizzes/free_fall_post_lab_version_a.pdf) |
+| Free Fall Post-Lab Quiz, version B | [.tex](Free%20Fall%20Post-Lab%20Quiz/free_fall_post_lab_version_b.tex) | [.pdf](Free%20Fall%20Post-Lab%20Quiz/Quizzes/free_fall_post_lab_version_b.pdf) |
+| Free Fall Post-Lab Quiz, version C | [.tex](Free%20Fall%20Post-Lab%20Quiz/free_fall_post_lab_version_c.tex) | [.pdf](Free%20Fall%20Post-Lab%20Quiz/Quizzes/free_fall_post_lab_version_c.pdf) |
+| Free Fall Post-Lab Quiz, version D | [.tex](Free%20Fall%20Post-Lab%20Quiz/free_fall_post_lab_version_d.tex) | [.pdf](Free%20Fall%20Post-Lab%20Quiz/Quizzes/free_fall_post_lab_version_d.pdf) |
+| Free Fall Post-Lab Quiz, version E | [.tex](Free%20Fall%20Post-Lab%20Quiz/free_fall_post_lab_version_e.tex) | [.pdf](Free%20Fall%20Post-Lab%20Quiz/Quizzes/free_fall_post_lab_version_e.pdf) |
+| **Movement Lab Quiz**, version A | [.tex](Movement%20Lab%20Quiz/movement_lab_version_a.tex) | [.pdf](Movement%20Lab%20Quiz/Quizzes/movement_lab_version_a.pdf) |
+| Movement Lab Quiz, version B | [.tex](Movement%20Lab%20Quiz/movement_lab_version_b.tex) | [.pdf](Movement%20Lab%20Quiz/Quizzes/movement_lab_version_b.pdf) |
+| Movement Lab Quiz, version C | [.tex](Movement%20Lab%20Quiz/movement_lab_version_c.tex) | [.pdf](Movement%20Lab%20Quiz/Quizzes/movement_lab_version_c.pdf) |
 
 ## Export to PDF
 
 1. Install a LaTeX distribution such as MiKTeX or TeX Live, and make sure `pdflatex` is available.
 2. In Obsidian, open `C:\Users\notso\Documents\Latex Vault`.
-3. Use the command palette (`Ctrl+P`) and run **LaTeX: Build current file**, or run **LaTeX: Choose file to build** to select any `.tex` file in the vault.
-4. The resulting PDF is written beside its source file. Run the command again if you later add cross-references.
+3. Press `Ctrl+P` and run **LaTeX: Build current file**. Alternatively, run **LaTeX: Choose file to build** and pick any `.tex` file.
+4. The PDF is written next to its source. Build twice if you add cross-references or a table of contents.
 
-The vault's **LaTeX Builder** plugin uses `pdflatex` by default. You can change the compiler and arguments in **Settings â†’ Community plugins â†’ LaTeX Builder**.
+The vault's **LaTeX Builder** plugin uses `pdflatex` by default. You can change the compiler and its arguments under **Settings → Community plugins → LaTeX Builder**.
+
+Build intermediates (`.aux`, `.log` and similar) are ignored by Git. Only sources and compiled PDFs are kept in the repository.
 
 ## GitHub sync
 
-Use the command palette commands from the **Git Sync** plugin:
+Use the **Git Sync** plugin commands from the command palette:
 
-- **Git: Pull latest vault changes** pulls fast-forward-only updates from `origin/main`.
-- **Git: Commit and push vault changes** stages all changes, creates a dated commit, and pushes to `origin/main`.
+- **Git: Pull latest vault changes**: fast-forward-only pull from `origin/main`.
+- **Git: Commit and push vault changes**: stages all changes, makes a dated commit and pushes to `origin/main`.
 
-## Shoot-on-the-move theory proof
+## Not in this repository
 
-[SOTM Theory Proof](SOTM%20Theory%20Proof/SOTM%20Theory%20Proof.pdf) is the compiled shoot-on-the-move (SOTM) derivation for FRC. Its LaTeX source is in the Second Brain under `Coding Output/Latex/SOTM-Documentation`.
-
-The multivariable-calculus homework (Chapters 13–15) was removed from this vault on 2026-11-27. It is archived outside the vault in `Documents/Latex Vault Archive - Multivariable HW 2026-11-27` and remains in this repository's Git history.
-
-### Textbook and Git LFS
-
-`Multi Textbook/*.pdf` is tracked through Git LFS. Install Git LFS before cloning or pulling this repository, then run `git lfs pull` if the textbook initially appears as a short pointer file. The uploaded textbook was verified by downloading its LFS object in a separate checkout and comparing its SHA-256 hash with the local PDF.
-
-Build a document with `pdflatex` twice to update its table of contents. Build intermediates are ignored; editable sources and compiled PDFs are kept in the repository.
+- The multivariable-calculus homework was removed on 2026-11-27. Earlier versions remain in Git history.
+- The multivariable-calculus textbook is stored locally in `Documents\Multivariable Calculus Textbook`, outside this repository.
