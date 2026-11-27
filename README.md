@@ -1,6 +1,6 @@
 # LaTeX Vault in Obsidian
 
-This repository is an Obsidian vault containing the multivariable-calculus work and physics/movement quiz materials. The `.tex` files are the editable source; the TikZ diagrams are part of the source and can be revised directly.
+This repository is an Obsidian vault containing physics/movement quiz materials, the FRC shoot-on-the-move theory proof, and a multivariable-calculus textbook reference. The `.tex` files are the editable source; the TikZ diagrams are part of the source and can be revised directly.
 
 ## Export to PDF
 
@@ -18,23 +18,14 @@ Use the command palette commands from the **Git Sync** plugin:
 - **Git: Pull latest vault changes** pulls fast-forward-only updates from `origin/main`.
 - **Git: Commit and push vault changes** stages all changes, creates a dated commit, and pushes to `origin/main`.
 
-## Assigned calculus solutions
+## Shoot-on-the-move theory proof
 
-Each chapter has one self-contained LaTeX source and a compiled PDF. Exercise and subpart labels follow the assignment screenshot. Graphs use editable TikZ/PGFPlots.
+[SOTM Theory Proof](SOTM%20Theory%20Proof/SOTM%20Theory%20Proof.pdf) is the compiled shoot-on-the-move (SOTM) derivation for FRC. Its LaTeX source is in the Second Brain under `Coding Output/Latex/SOTM-Documentation`.
 
-| Chapter | Source | PDF | Coverage |
-|---|---|---|---|
-| 13 | [LaTeX](Multi%20Chapter%2013/Chapter_13_Solutions.tex) | [PDF](Multi%20Chapter%2013/Chapter_13_Solutions.pdf) | 46/46 |
-
-
-The exact selection is recorded in `assignment_manifest.json`. There are no duplicate or extra exercise labels. 
-
-### Chapter 14 handwritten homework
-
-The [current handwritten homework](output/pdf/Completed%20Multi%20Chapter%2014%20HW%20-%20Right%20Lean%20and%20Reduced%20Vertical%20Variation.pdf) is kept as the single current handwritten export. Its [editing bundle and rebuild instructions](Multi%20Chapter%2014/Handwriting/README.md) preserve the original homework, handwriting samples, character variants, layout base, current placement data, and verification records for further edits. The typeset Chapter 14 source and PDF remain separate reference artifacts. Temporary renders and intermediate rebuilds are ignored.
+The multivariable-calculus homework (Chapters 13–15) was removed from this vault on 2026-11-27. It is archived outside the vault in `Documents/Latex Vault Archive - Multivariable HW 2026-11-27` and remains in this repository's Git history.
 
 ### Textbook and Git LFS
 
 `Multi Textbook/*.pdf` is tracked through Git LFS. Install Git LFS before cloning or pulling this repository, then run `git lfs pull` if the textbook initially appears as a short pointer file. The uploaded textbook was verified by downloading its LFS object in a separate checkout and comparing its SHA-256 hash with the local PDF.
 
-Build a chapter with `pdflatex` twice to update its table of contents. Build intermediates are ignored; editable sources and compiled PDFs are kept in the repository.
+Build a document with `pdflatex` twice to update its table of contents. Build intermediates are ignored; editable sources and compiled PDFs are kept in the repository.
